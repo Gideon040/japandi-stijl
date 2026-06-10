@@ -1,0 +1,52 @@
+---
+titel: "Voorbeeldpagina (verwijderen na eerste echte pagina)"
+title_tag: "Voorbeeld"
+beschrijving: "Demonstreert alle componenten en het frontmatter-format."
+template: "koopgids"
+gepubliceerd: false
+datum: "2026-06-10"
+---
+
+Dit bestand toont het format. Direct antwoord van 40-60 woorden komt hier, meteen onder de H1, zonder sfeerintro.
+
+<ImagePlaceholder id="voorbeeld-hero" priority />
+
+## Wat maakt een salontafel Japandi? [#wat-maakt-japandi]
+
+Lopende tekst in prose. Geen em dashes.
+
+<VergelijkingsTabel
+  bijschrift="Materialen vergeleken"
+  kolommen={["Materiaal", "Prijsindicatie", "Onderhoud"]}
+  rijen={[
+    ["Massief eiken", "300 tot 700 euro", "1 a 2x per jaar olien"],
+    ["Walnootfineer", "150 tot 400 euro", "vochtige doek"],
+  ]}
+/>
+
+<ProductCard
+  naam="Voorbeeld salontafel"
+  merk="Merknaam"
+  prijs="249"
+  url="https://www.bol.com/nl/nl/p/voorbeeld/9300000000000000/"
+  afmetingen="120 x 60 x 40 cm"
+  materiaal="Massief eiken"
+  reviewscore="4,5 (120 reviews)"
+  voordelen={["Echt massief, geen fineer", "Lage hoogte past bij Japandi"]}
+  nadeel="Poten vragen montage"
+/>
+
+<KoopNietBlok titel="Dit zou ik niet kopen">
+  Hoogglans salontafels van MerkX. Hoogglans vloekt met de matte, natuurlijke
+  afwerking die Japandi kenmerkt, hoe goedkoop het aanbod ook is.
+</KoopNietBlok>
+
+<FAQ
+  items={[
+    {
+      vraag: "Welke hoogte heeft een Japandi salontafel?",
+      antwoord:
+        "Een Japandi salontafel is bewust laag, meestal 30 tot 40 centimeter. Lage meubels houden de ruimte visueel open, een kernprincipe uit het Japanse interieur.",
+    },
+  ]}
+/>

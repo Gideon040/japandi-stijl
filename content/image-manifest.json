@@ -1,0 +1,34 @@
+[
+  {
+    "id": "japandi-bureau-hero",
+    "page": "/japandi-bureau",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Japandi bureau van licht hout met opgeruimd werkblad bij een raam met zacht daglicht",
+    "prompt": "Japandi home office interior, light oak desk with clean empty top, single laptop and ceramic cup, sheer linen curtains with soft diffused daylight, warm sand and creme palette, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-sectie-1",
+    "page": "/japandi-bureau",
+    "slot": "sectie-formaat",
+    "aspect_ratio": "3:2",
+    "alt": "Compact Japandi bureau van ongeveer 120 centimeter breed met bewust lege muurruimte ernaast",
+    "prompt": "Compact Japandi desk in light wood against a warm off-white wall, generous empty wall space beside it, simple wooden chair, soft morning light from a side window, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-sectie-2",
+    "page": "/japandi-bureau",
+    "slot": "sectie-materiaal",
+    "aspect_ratio": "3:2",
+    "alt": "Detail van een massief eiken bureaublad met zichtbare houtnerf en matte afwerking",
+    "prompt": "Close-up detail of a solid oak desk top, visible wood grain, matte oiled finish, soft window light raking across the surface, small ceramic pen cup, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-sectie-3",
+    "page": "/japandi-bureau",
+    "slot": "sectie-kabels",
+    "aspect_ratio": "3:2",
+    "alt": "Opgeruimde Japandi werkplek met laptop, kleine tafellamp en een plant, zonder zichtbare kabels",
+    "prompt": "Tidy Japandi workspace, light wood desk with laptop, small paper lantern table lamp and a single green plant, no visible cables, linen curtain backdrop, soft diffused daylight, warm sand tones, minimal styling, editorial interior photography, photorealistic"
+  }
+]

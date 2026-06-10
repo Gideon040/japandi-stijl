@@ -1,0 +1,130 @@
+cluster,volume_cluster,aantal_keywords,intent,template,nieuwe_url,huidige_positie,huidige_url,bestaande_handle,content_chars,prioriteit,serp_features
+japandi kast,1750,4,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-kast/,26,/collections/japandi-kasten,japandi-kasten,5902,P1,"Shopping Ads,Thumbnail,Top ads,Shopping,Image pack,People al"
+japandi woonkamer,1600,1,"Informational,Non-branded,Non-local",gids,/japandi-woonkamer/,30,/collections/japandi-woonkamer,japandi-woonkamer,4681,P1,"Image pack,People also ask,Shopping,Thumbnail,Video preview"
+japandi plafondlamp,1500,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-plafondlamp/,19,/collections/plafondlampen,plafondlampen,8569,P1,"Shopping Ads,Thumbnail,Shopping,Image pack,Sitelinks"
+japandi behang,1390,2,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-behang/,27,/collections/japandi-behang,japandi-behang,2907,P1,"Shopping Ads,Thumbnail,Shopping,Image pack,Video preview,Sit"
+japandi spiegel,800,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-spiegel/,26,/collections/japandi-spiegels,japandi-spiegels,2725,P1,"Shopping Ads,Thumbnail,Shopping,People also ask,Image pack,V"
+japandi dressoir,800,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-dressoir/,22,/collections/japandi-kasten,japandi-dressoirs,4554,P1,"Shopping Ads,Thumbnail,Shopping,Image pack,Sitelinks"
+japandi nachtkastje,800,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-nachtkastje/,23,/collections/japandi-nachtkastjes,japandi-nachtkastjes,2091,P1,"Shopping Ads,Thumbnail,Shopping,Sitelinks,Image pack,Bottom "
+japandi vaas,600,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-vaas/,17,/collections/vazen,,0,P1,"Shopping Ads,Thumbnail,Shopping,Image pack,People also ask,V"
+japandi slaapkamer,550,2,"Informational,Non-branded,Non-local",gids,/japandi-slaapkamer/,18,/collections/japandi-slaapkamer,japandi-slaapkamer,2982,P1,"Image pack,People also ask"
+japandi bloempot,340,2,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-bloempot/,11,/collections/japandi-bloempotten,,0,P1,"Image pack,People also ask,Shopping,Thumbnail"
+japandi bureau,300,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-bureau/,9,/collections/japandi-bureaus,japandi-bureaus,1451,P1,"Image pack,People also ask"
+japandi stijl,22770,8,"Informational,Non-branded,Non-local",pillar,/japandi-stijl/,32,/,,0,P2,"AI Overview,Thumbnail,People also ask,Video preview,Image pa"
+japandi lamp,8400,9,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-lamp/,,,lampen,10898,P2,"Shopping Ads,Thumbnail,Top ads,Shopping,People also ask,Imag"
+japandi keuken,7900,3,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-keuken/,,,japandi-keuken,6375,P2,"Image pack,People also ask,Bottom ads,Video preview"
+japandi meubels,7500,2,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-meubels/,,,japandi-meubels,5230,P2,"AI Overview,Thumbnail,People also ask,Video preview,Image pa"
+japandi tv meubel,5850,2,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-tv-meubel/,,,tv-meubels,9513,P2,"Shopping Ads,Thumbnail,Top ads,Shopping,Video preview,Image "
+japandi eetkamerstoel,5450,4,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-eetkamerstoel/,,,eetkamerstoelen,8437,P2,"Shopping Ads,Thumbnail,Top ads,Shopping,Image pack,Bottom ad"
+japandi eettafel,5000,4,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-eettafel/,,,eettafels,8720,P2,"Shopping Ads,Thumbnail,Top ads,Shopping,People also ask,Imag"
+japandi salontafel,4050,2,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-salontafel/,47,/collections/salontafels,salontafels,5976,P2,"Shopping,Thumbnail,Image pack,People also ask,Video preview"
+japandi vloerkleed,3700,6,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-vloerkleed/,,,,0,P2,"Shopping Ads,Thumbnail,Top ads,Shopping,Image pack,People al"
+japandi badkamer,2400,2,"Informational,Non-branded,Non-local",gids,/japandi-badkamer/,,,japandi-badkamer,4814,P2,"Shopping Ads,Thumbnail,Image pack,People also ask,Shopping,B"
+japandi,2350,4,"Informational,Non-branded,Non-local",pillar,/japandi/,,,,0,P2,"AI Overview,People also ask,Video preview,Thumbnail,Image pa"
+japandi bank,2250,4,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-bank/,32,/collections/japandi-banken,japandi-banken,5381,P2,"Shopping Ads,Thumbnail,Image pack,People also ask,Video prev"
+japandi schilderij,1940,5,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-schilderij/,48,/collections/japandi-schilderijen,japandi-schilderijen,2987,P2,"Shopping Ads,Thumbnail,Image pack,Shopping,People also ask"
+japandi kleuren,1100,3,"Informational,Non-branded,Non-local",gids,/japandi-kleuren/,40,/collections/japandi-kleuren,japandi-kleuren,5432,P2,"Image pack,People also ask,Thumbnail,Video preview"
+japandi bed,1000,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-bed/,37,/collections/japandi-bedden,,0,P2,"Shopping,Thumbnail,Image pack,People also ask,Video preview,"
+japandi woonstijl,850,2,"Informational,Non-branded,Non-local",gids,/japandi-woonstijl/,,,,0,P2,"AI Overview,Thumbnail,People also ask,Video preview,Image pa"
+japandi wanddecoratie,850,2,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-wanddecoratie/,,,japandi-wanddecoratie,3128,P2,"Shopping Ads,Thumbnail,Top ads,Paid sitelinks,Shopping,Image"
+japandi stijl slaapkamer,800,1,"Informational,Non-branded,Non-local",gids,/japandi-stijl-slaapkamer/,,,,0,P2,"Shopping Ads,Thumbnail,Image pack,People also ask,Shopping,B"
+japandi vloerlamp,800,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-vloerlamp/,34,/collections/japandi-vloerlampen,japandi-vloerlampen,2487,P2,"Shopping Ads,Thumbnail,Shopping,Sitelinks,People also ask,Vi"
+wandlamp japandi,600,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-wandlamp/,31,/collections/japandi-wandlampen,japandi-wandlampen,2345,P2,"Shopping,Thumbnail,Image pack,Bottom ads,Video preview"
+eetkamerstoelen japandi,500,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-eetkamerstoelen/,43,/collections/eetkamerstoelen,eetkamerstoelen,8437,P2,"Shopping,Thumbnail,Image pack,Sitelinks"
+japandi klok,500,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-klok/,2,/collections/japandi-klokken,,0,P2,"Shopping,Thumbnail,Image pack,People also ask"
+japandi fauteuil,500,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-fauteuil/,28,/collections/fauteuils,fauteuils,2420,P2,"Shopping Ads,Thumbnail,Top ads,Paid sitelinks,Shopping,Image"
+vloerlamp japandi,400,2,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-vloerlamp/,39,/collections/japandi-vloerlampen,japandi-vloerlampen,2487,P2,"Shopping,Thumbnail,Image pack,Sitelinks,Video preview"
+japandi poef,150,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-poef/,13,/collections/poefs,poefs,1649,P2,"Image pack,Shopping,Thumbnail,Video preview"
+tafellamp japandi,600,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-tafellamp/,,,tafellampen,3329,P3,"Shopping Ads,Thumbnail,Shopping,Sitelinks,Image pack,Video p"
+japandi tv meubel beige,600,1,,gids,/japandi-tv-meubel-beige/,,,tv-meubel-beige,1494,P3,
+bijzettafel japandi,600,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-bijzettafel/,,,japandi-bijzettafels,2277,P3,"Shopping,Thumbnail,Image pack,Sitelinks"
+japandi eettafel rond,500,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-eettafel-rond/,,,eettafel-rond,2124,P3,"Shopping,Thumbnail,Sitelinks,People also ask,Image pack"
+japandi barkruk,500,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-barkruk/,,,,0,P3,"Shopping,Thumbnail,Image pack"
+japandi salontafel walnoot,500,1,,gids,/japandi-salontafel-walnoot/,,,salontafel-walnoot,2408,P3,
+japandi eettafel ovaal,450,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-eettafel-ovaal/,,,japandi-eettafel-ovaal,3498,P3,"Image pack,Sitelinks,Thumbnail,Shopping,People also ask"
+japandi tv kast,450,1,,gids,/japandi-tv-kast/,,,japandi-tv-kasten,1604,P3,
+japandi stijl kleuren,450,1,,gids,/japandi-stijl-kleuren/,,,,0,P3,
+japandi chique,400,1,"Informational,Non-branded,Non-local",gids,/japandi-chique/,,,,0,P3,"AI Overview,Image pack,People also ask"
+japandi eetkamerstoel walnoot,400,1,,gids,/japandi-eetkamerstoel-walnoot/,,,,0,P3,
+japandi kast woonkamer,400,1,,gids,/japandi-kast-woonkamer/,,,,0,P3,
+japandi interior,400,2,"Informational,Non-branded,Non-local",gids,/japandi-interior/,,,,0,P3,"AI Overview,Thumbnail,People also ask"
+salontafel japandi,350,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-salontafel/,,,salontafels,5976,P3,"Image pack,Sitelinks,Shopping,Thumbnail,People also ask"
+japandi kapstok,350,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-kapstok/,,,,0,P3,"Image pack,Shopping,Thumbnail,Video preview"
+tuin japanse stijl,350,1,"Informational,Non-branded,Non-local",gids,/tuin-japanse-stijl/,,,,0,P3,"Thumbnail,Image pack,People also ask,Shopping"
+japandi badkamermeubel,350,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-badkamermeubel/,,,,0,P3,"Shopping,Thumbnail,Image pack,People also ask"
+japandi tv meubel walnoot,300,1,,gids,/japandi-tv-meubel-walnoot/,,,japandi-tv-meubel-walnoot,1514,P3,
+japandi servies,300,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-servies/,,,japandi-servies,2840,P3,"Thumbnail,Image pack,People also ask,Shopping,Sitelinks"
+japandi wall art,300,2,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-wall-art/,,,,0,P3,"Thumbnail,People also ask,Image pack"
+japandi toilet,250,1,"Informational,Non-branded,Non-local",gids,/japandi-toilet/,,,japandi-toilet,2415,P3,"Image pack,People also ask"
+japandi eettafel uitschuifbaar,250,1,,gids,/japandi-eettafel-uitschuifbaar/,,,japandi-eettafel-uitschuifbaar,2616,P3,
+japandi hanglamp,250,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-hanglamp/,,,hanglampen,8964,P3,"Shopping Ads,Thumbnail,Image pack,Shopping,People also ask"
+japandi eettafel lamp,250,1,,gids,/japandi-eettafel-lamp/,,,,0,P3,
+japandi deurmat,250,1,,gids,/japandi-deurmat/,,,,0,P3,
+japandi decoratie,250,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-decoratie/,,,decoratie,0,P3,"Image pack,Thumbnail"
+japandi boekenkast,250,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-boekenkast/,,,japandi-boekenkasten,1918,P3,"Shopping,Thumbnail,Image pack,People also ask,Video preview,"
+japandi bedroom,250,1,"Informational,Non-branded,Non-local",gids,/japandi-bedroom/,,,,0,P3,"Image pack,People also ask,Shopping,Thumbnail"
+japandi eetkamer,250,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-eetkamer/,,,japandi-eetkamer,3410,P3,"Image pack,People also ask"
+japandi wandpaneel,250,1,,gids,/japandi-wandpaneel/,,,,0,P3,
+japandi hanglamp woonkamer,200,1,,gids,/japandi-hanglamp-woonkamer/,,,,0,P3,
+japandi vloer,200,1,"Informational,Non-branded,Non-local",gids,/japandi-vloer/,,,,0,P3,"Image pack,People also ask,Thumbnail,Shopping,Bottom ads,Pai"
+japandi verf,200,1,,gids,/japandi-verf/,,,,0,P3,
+japandi boxspring,200,1,,gids,/japandi-boxspring/,,,,0,P3,
+japandi kussen,200,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-kussen/,,,japandi-kussens,2500,P3,"Shopping Ads,Thumbnail,Image pack,Shopping,People also ask"
+japandi tuinset,200,1,,gids,/japandi-tuinset/,,,,0,P3,
+japandi poster,200,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-poster/,,,japandi-posters,1500,P3,"Sitelinks,Thumbnail,Shopping,Image pack"
+japandi plant,200,1,"Informational,Non-branded,Non-local",gids,/japandi-plant/,,,,0,P3,"Shopping Ads,Thumbnail,AI Overview,People also ask,Bottom ad"
+japandi deur,200,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-deur/,,,,0,P3,"Image pack,Videos,Shopping,Thumbnail,People also ask"
+japandi stijl tv meubel,200,1,,gids,/japandi-stijl-tv-meubel/,,,,0,P3,
+japandi ronde eettafel,150,1,,gids,/japandi-ronde-eettafel/,,,,0,P3,
+japandi wc,150,1,"Informational,Non-branded,Non-local",gids,/japandi-wc/,,,,0,P3,"Image pack,People also ask,Thumbnail,Shopping,Bottom ads,Pai"
+japandi vloerkleed organisch,150,1,,gids,/japandi-vloerkleed-organisch/,,,,0,P3,
+japandi tv meubel zwevend,150,1,,gids,/japandi-tv-meubel-zwevend/,,,,0,P3,
+japandi schilderij groot,150,1,,gids,/japandi-schilderij-groot/,,,,0,P3,
+japandi lamp staand,150,1,,gids,/japandi-lamp-staand/,,,,0,P3,
+japandi buffetkast,150,1,,gids,/japandi-buffetkast/,,,japandi-buffetkasten,1716,P3,
+japandi eetkamer lamp,150,1,,gids,/japandi-eetkamer-lamp/,,,,0,P3,
+japandi tegels,150,1,"Informational,Commercial,Non-branded,Non-local",koopgids,/japandi-tegels/,,,,0,P3,"Image pack,Shopping,Thumbnail,People also ask"
+japandi binnendeur,150,1,,gids,/japandi-binnendeur/,,,,0,P3,
+japandi lamp slaapkamer,150,1,,gids,/japandi-lamp-slaapkamer/,,,,0,P3,
+japandi gordijnen,150,1,"Informational,Commercial,Transactional,Non-branded,Non-local",koopgids,/japandi-gordijnen/,,,japandi-gordijnen,3188,P3,"Thumbnail,Image pack,People also ask,Shopping"
+japandi bed 180x200,150,1,,gids,/japandi-bed-180x200/,,,,0,P3,
+japandi fotolijst,150,1,,gids,/japandi-fotolijst/,,,,0,P3,
+japandi vakkenkast,150,1,,gids,/japandi-vakkenkast/,,,,0,P3,
+japandi onderzetters,150,1,,gids,/japandi-onderzetters/,,,,0,P3,
+japandi eetkamerbank,150,1,,gids,/japandi-eetkamerbank/,,,eetkamerbanken,2004,P3,
+japandi keukenstijl,150,1,,gids,/japandi-keukenstijl/,,,,0,P3,
+japandi stijl stoelen,150,1,,gids,/japandi-stijl-stoelen/,,,,0,P3,
+japandi stijl eetkamerstoel,150,1,,gids,/japandi-stijl-eetkamerstoel/,,,,0,P3,
+plafondlamp japandi stijl,150,1,,gids,/japandi-plafondlamp-stijl/,,,,0,P3,
+japandi dienblad,100,1,,gids,/japandi-dienblad/,,,,0,P3,
+japandi eettafel organisch,100,1,,gids,/japandi-eettafel-organisch/,,,,0,P3,
+japandi vitrinekast,100,1,,gids,/japandi-vitrinekast/,,,,0,P3,
+japandi tv meubel zwart,100,1,,gids,/japandi-tv-meubel-zwart/,,,japandi-tv-meubel-zwart,1526,P3,
+japandi plafonniere,100,1,,gids,/japandi-plafonniere/,,,,0,P3,
+japandi vaas groot,100,1,,gids,/japandi-vaas-groot/,,,,0,P3,
+japandi ladekast,100,1,,gids,/japandi-ladekast/,,,,0,P3,
+japandi vloerkleed 200x300,100,1,,gids,/japandi-vloerkleed-200x300/,,,,0,P3,
+japandi dekbedovertrek,100,1,,gids,/japandi-dekbedovertrek/,,,,0,P3,
+japandi accessoires kwantum,100,1,,gids,/japandi-accessoires-kwantum/,,,,0,P3,
+japandi plantenpot,100,1,,gids,/japandi-plantenpot/,,,,0,P3,
+japandi cinewall,100,1,,gids,/japandi-cinewall/,,,japandi-cinewall,2150,P3,
+japandi dressoir kast,100,1,,gids,/japandi-dressoir-kast/,,,,0,P3,
+japandi huis,100,1,,gids,/japandi-huis/,,,,0,P3,
+japandi prullenbak,100,1,,gids,/japandi-prullenbak/,,,,0,P3,
+japandi vazen,100,1,,gids,/japandi-vazen/,,,vazen,5219,P3,
+japandi vloerkleed action,100,1,,gids,/japandi-vloerkleed-action/,,,,0,P3,
+japandi colors,100,1,"Informational,Non-branded,Non-local",gids,/japandi-colors/,,,,0,P3,"Image pack,People also ask"
+japandi raambekleding,100,1,,gids,/japandi-raambekleding/,,,,0,P3,
+japandi zwevend tv meubel,100,1,,gids,/japandi-zwevend-tv-meubel/,,,zwevend-tv-meubel,1388,P3,
+japandi eettafel beige,100,1,,gids,/japandi-eettafel-beige/,,,,0,P3,
+japandi hanglamp beige,100,1,,gids,/japandi-hanglamp-beige/,,,,0,P3,
+japandi inspiratie,100,1,,gids,/japandi-inspiratie/,,,,0,P3,
+japandi fruitschaal,100,1,,gids,/japandi-fruitschaal/,,,,0,P3,
+japandi wasmand,100,1,,gids,/japandi-wasmand/,,,,0,P3,
+dressoir japandi stijl,100,1,,gids,/japandi-dressoir-stijl/,,,,0,P3,
+japandi stijl accessoires,100,1,,gids,/japandi-stijl-accessoires/,,,,0,P3,
+japandi stijl meubels,100,1,,gids,/japandi-stijl-meubels/,,,,0,P3,
+staande lamp japandi stijl,100,1,,gids,/japandi-staande-lamp-stijl/,,,,0,P3,
+vloerlamp japandi stijl,100,1,,gids,/japandi-vloerlamp-stijl/,,,,0,P3,
+japandi stijl tuin,100,1,,gids,/japandi-stijl-tuin/,,,,0,P3,
+nachtkastje japandi stijl,100,1,,gids,/japandi-nachtkastje-stijl/,,,,0,P3,

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design-voorbeeld pillar: japandi-stijl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papier:#FBF9F5; --zand:#F2EDE4; --zand-diep:#EAE3D6;
+    --inkt:#2B2520; --klei:#8C7A68; --walnoot:#5C4633;
+    --lijn:#E3DCD0; --groen:#6B7259;
+    --display:'Fraunces',serif; --body:'Inter',sans-serif;
+    --wide:72rem; --content:44rem;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--papier);color:var(--inkt);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  .wide{max-width:var(--wide);margin:0 auto;padding:0 1.5rem}
+
+  /* ===== Placeholders (productie: ImagePlaceholder) ===== */
+  .ph{position:relative;overflow:hidden;border-radius:2px;background:linear-gradient(165deg,#E8DFD0 0%,#DCCDB6 45%,#C9B294 100%)}
+  .ph.linnen{background:linear-gradient(150deg,#F0EAE0 0%,#E5DCCC 60%,#D8CBB4 100%)}
+  .ph.hout{background:linear-gradient(120deg,#C9A87C 0%,#B08D5F 55%,#9A7748 100%)}
+  .ph.donker{background:linear-gradient(160deg,#8C7A68 0%,#6E5D4C 100%)}
+  .ph::after{content:attr(data-alt);position:absolute;inset:auto 0 0 0;padding:.6rem .9rem;font-size:.7rem;color:rgba(43,37,32,.5)}
+  .ph .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .ph:has(.foto)::after{content:none}
+
+  /* Gouden sterren: fractionele vulling via breedte op de overlay */
+  .sterren{display:inline-flex;align-items:center;gap:.5rem;margin-top:.35rem;font-size:1.1rem}
+  .sterren .s{position:relative;display:inline-block;line-height:1;letter-spacing:.06em;color:#E0D5BF;
+    text-shadow:0 0 0 #E0D5BF}
+  .sterren .s::before{content:"\2605\2605\2605\2605\2605"}
+  .sterren .s i{position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;color:#D9A520;font-style:normal}
+  .sterren .s i::before{content:"\2605\2605\2605\2605\2605"}
+  .sterren small{color:var(--klei);font-size:.8rem}
+  .sterren b{font-size:.85rem;color:var(--inkt)}
+
+  /* ===== Header + breadcrumb ===== */
+  header{border-bottom:1px solid var(--lijn);background:var(--papier);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;max-width:var(--wide);margin:0 auto}
+  .logo{font-family:var(--display);font-size:1.45rem;text-decoration:none}
+  .logo span{color:var(--klei)}
+  nav.menu{display:flex;gap:2rem;font-size:.9rem}
+  nav.menu a{text-decoration:none}
+  nav.menu a:hover{color:var(--walnoot)}
+  .crumbs{font-size:.8rem;color:var(--klei);padding:1.1rem 1.5rem .4rem;max-width:var(--wide);margin:0 auto}
+  .crumbs a{text-decoration:none}
+  .crumbs a:hover{text-decoration:underline}
+
+  /* ===== Typografie: Eijerkamp-patroon = italic aanloop + romein statement ===== */
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08}
+  .kop em{display:block;font-style:italic;font-weight:400;font-size:.62em;color:var(--inkt);margin-bottom:.2rem}
+  h1.kop{font-size:clamp(2.3rem,4.6vw,3.4rem)}
+  h2.kop{font-size:clamp(1.8rem,3.2vw,2.5rem);margin-bottom:1.4rem}
+  p{margin-bottom:1.15rem;max-width:var(--content)}
+  p:last-child{margin-bottom:0}
+  .inline-link{text-decoration:underline;text-decoration-color:var(--lijn);text-underline-offset:4px}
+  .inline-link:hover{text-decoration-color:var(--walnoot)}
+
+  /* ===== HERO: zand-band waar het beeld onderuit zakt ===== */
+  .hero{background:var(--zand)}
+  .hero-grid{display:grid;width:100%}
+  @media(min-width:1000px){.hero-grid{grid-template-columns:1fr 1fr;min-height:26rem}}
+  .hero-tekst{display:flex;flex-direction:column;justify-content:center;padding:2.8rem 1.5rem;padding-left:max(1.5rem,calc((100vw - 72rem)/2 + 1.5rem))}
+  @media(min-width:1000px){.hero-tekst{padding-top:3.5rem;padding-bottom:3.5rem;padding-right:3.5rem}
+    .hero-tekst>*{max-width:32rem}}
+  .hero-intro{margin-top:1.5rem;max-width:32rem}
+  .hero-meta{display:flex;gap:2rem;margin-top:2.2rem;font-size:.82rem;color:var(--klei)}
+  .hero-meta b{display:block;font-family:var(--display);font-size:1.2rem;color:var(--inkt);font-weight:500}
+  /* beeld vult de hele rechterhelft van de band, tot de rand */
+  .hero-beeld{position:relative;aspect-ratio:16/10}
+  @media(min-width:1000px){.hero-beeld{aspect-ratio:auto}}
+  .hero-beeld .ph{position:absolute;inset:0;border-radius:0}
+  .na-hero{padding-top:4.5rem}
+
+  section{padding:4.5rem 0}
+  .band{background:var(--zand)}
+
+  /* ===== COLLAGE: drie beelden, drie verhoudingen, verspringend ===== */
+  .collage{display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem;align-items:start;margin-top:3.5rem}
+  .collage .c1{grid-column:1/6}
+  .collage .c1 .ph{aspect-ratio:3/4}
+  .collage .c2{grid-column:6/10;margin-top:3.5rem}
+  .collage .c2 .ph{aspect-ratio:4/5}
+  .collage .c3{grid-column:10/13;margin-top:1.2rem}
+  .collage .c3 .ph{aspect-ratio:3/5}
+  @media(max-width:760px){
+    .collage{gap:1rem}
+    .collage .c1{grid-column:1/8}
+    .collage .c2{grid-column:8/13;margin-top:2.5rem}
+    .collage .c3{display:none}
+  }
+
+  /* ===== SPLIT met rond accentbeeld ===== */
+  .split{display:grid;gap:2.5rem;align-items:center}
+  @media(min-width:900px){.split{grid-template-columns:6fr 5fr;gap:4.5rem}}
+  .split-beeld{position:relative}
+  .split-beeld .ph{aspect-ratio:4/5}
+  .split-beeld.zacht .ph{aspect-ratio:4/3}
+  .rond{position:absolute;width:9rem;height:9rem;border-radius:50%;overflow:hidden;bottom:-2.2rem;left:-2.2rem;box-shadow:0 10px 26px rgba(43,37,32,.16);border:5px solid var(--papier)}
+  .rond .ph{position:absolute;inset:0;border-radius:0;aspect-ratio:auto}
+  @media(max-width:899px){.rond{width:7rem;height:7rem;left:auto;right:1rem}}
+
+  /* ===== MATERIAALKAART: editorial tabel met stalen ===== */
+  .materialen{max-width:54rem;margin-top:2.5rem;border-top:2px solid var(--inkt)}
+  .mat-rij{display:grid;grid-template-columns:3.4rem 1fr;gap:1.3rem;padding:1.4rem 0;border-bottom:1px solid var(--lijn);align-items:start}
+  @media(min-width:760px){.mat-rij{grid-template-columns:3.4rem 1.3fr 1fr 1.6fr;align-items:center}}
+  .staal{width:3.4rem;height:3.4rem;border-radius:2px}
+  .staal.eiken{background:linear-gradient(135deg,#D7B98C,#BE9C68)}
+  .staal.grenen{background:linear-gradient(135deg,#EBD4A8,#D9BC85)}
+  .staal.bamboe{background:linear-gradient(135deg,#E9DBB8,#D2BE8E)}
+  .staal.mdf{background:linear-gradient(135deg,#E3D5C2,#CDBA9F)}
+  .mat-naam{font-family:var(--display);font-size:1.25rem;font-weight:500;line-height:1.2}
+  .mat-naam small{display:block;font-family:var(--body);font-size:.8rem;color:var(--klei);font-weight:400;margin-top:.15rem}
+  .mat-prijs{font-weight:600;color:var(--walnoot);font-size:.95rem}
+  .mat-prijs small{display:block;font-weight:400;color:var(--klei);font-size:.78rem}
+  .mat-let{font-size:.88rem;color:var(--inkt);opacity:.85;font-style:italic}
+  @media(max-width:759px){
+    .mat-rij{grid-template-rows:auto auto}
+    .mat-prijs,.mat-let{grid-column:2}
+  }
+  .mat-caption{font-family:var(--display);font-style:italic;color:var(--klei);font-size:.95rem;margin-top:.8rem;text-align:right;max-width:54rem}
+
+  /* ===== PRODUCTEN: hoog beeld links, kop verspringt rechts ===== */
+  .producten{background:var(--zand-diep);overflow:visible;margin-top:3rem;padding-top:5rem}
+  .prod-kop{display:grid;gap:2rem;align-items:end}
+  @media(min-width:1000px){.prod-kop{grid-template-columns:4fr 7fr;gap:4rem}}
+  .prod-kop .hoog{margin-top:-10.5rem}
+  .prod-kop .hoog .ph{aspect-ratio:3/4;box-shadow:0 14px 32px rgba(43,37,32,.12)}
+  @media(max-width:999px){.prod-kop .hoog{display:none}}
+  .prod-intro{max-width:36rem;margin-top:1rem}
+
+  .situatie{margin-top:3.6rem}
+  .situatie-kop{display:flex;align-items:baseline;gap:1.2rem;margin-bottom:.4rem}
+  .situatie-kop h3{font-size:1.5rem;white-space:nowrap}
+  .situatie-kop::after{content:"";flex:1;height:1px;background:rgba(43,37,32,.25);transform:translateY(-5px)}
+  .situatie>p{font-size:.95rem;opacity:.85;max-width:38rem}
+  .cards{display:grid;grid-template-columns:1fr;gap:1.4rem;margin-top:1.6rem}
+  @media(min-width:760px){.cards{grid-template-columns:1fr 1fr}
+    .cards .card:nth-child(2){transform:translateY(1.6rem)}}
+  .card{background:var(--papier);border-radius:2px;box-shadow:0 1px 2px rgba(43,37,32,.06),0 4px 14px rgba(43,37,32,.05);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(43,37,32,.07),0 10px 24px rgba(43,37,32,.09)}
+  @media(min-width:760px){.cards .card:nth-child(2):hover{transform:translateY(calc(1.6rem - 3px))}}
+  .card-beeld{aspect-ratio:4/3;background:#fff;border-radius:2px 2px 0 0;position:relative;overflow:hidden}
+  .card-beeld .ph{position:absolute;inset:0;border-radius:0}
+  .card-body{padding:1.5rem 1.5rem 1.6rem;display:flex;flex-direction:column;flex:1}
+  .merk{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--klei)}
+  .card h4{font-family:var(--display);font-weight:500;font-size:1.3rem;margin:.25rem 0 .35rem}
+  .prijs{color:var(--walnoot);font-weight:600}
+  .prijs small{color:var(--klei);font-weight:400;font-size:.74rem}
+  .specs{font-size:.85rem;color:var(--klei);margin:.8rem 0 0;line-height:1.55}
+  .specs b{color:var(--inkt);font-weight:500}
+  .punten{list-style:none;margin:1.1rem 0 0;font-size:.9rem}
+  .punten li{padding-left:1.7rem;position:relative;margin-bottom:.5rem}
+  .punten li::before{position:absolute;left:0;top:.12em;width:1.15rem;height:1.15rem;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;line-height:1}
+  .punten li.plus::before{content:"+";background:rgba(107,114,89,.16);color:var(--groen)}
+  .punten li.min::before{content:"\2212";background:rgba(166,77,57,.14);color:#A64D39}
+  .card .knop{margin-top:auto;padding-top:1.3rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:#0000A4;color:#fff;text-decoration:none;font-size:.88rem;font-weight:500;padding:.7rem 1.4rem;border-radius:24px;transition:gap .15s,background .15s}
+  .btn::after{content:"\2192"}
+  .btn:hover{background:#000080;gap:.75rem}
+
+  /* ===== KoopNiet ===== */
+  .koopniet{background:var(--papier);border-left:3px solid var(--walnoot);border-radius:2px;padding:1.8rem 2rem;max-width:34rem;box-shadow:0 1px 2px rgba(43,37,32,.05)}
+  .koopniet p{font-size:.95rem;margin:0}
+
+  /* ===== FAQ: smalle gecentreerde kolom (Eijerkamp "Zo verwerk je") ===== */
+  .faq-sectie .inner{max-width:42rem;margin:0 auto;padding:0 1.5rem}
+  .faq details{border-bottom:1px solid var(--lijn);padding:1.15rem 0}
+  .faq details:first-of-type{border-top:1px solid var(--lijn)}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:500;font-family:var(--display);font-size:1.08rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--klei);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{margin-top:.8rem;font-size:.95rem}
+
+  /* ===== Auteur ===== */
+  .auteur{background:var(--zand);text-align:center}
+  .auteur .inner{max-width:38rem;margin:0 auto;padding:0 1.5rem}
+  .stempel{width:3.4rem;height:3.4rem;border:1px solid var(--klei);border-radius:50%;margin:0 auto 1.4rem;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--walnoot)}
+  .auteur p{font-size:.95rem;margin:0 auto}
+
+  footer{border-top:1px solid var(--lijn);padding:2.5rem 0;font-size:.82rem;color:var(--klei)}
+
+  /* Linkkaarten: doorverwijzing naar koopgidsen/gidsen */
+  .linkkaarten{display:grid;grid-template-columns:1fr;gap:1.4rem;margin-top:2rem}
+  @media(min-width:700px){.linkkaarten{grid-template-columns:repeat(3,1fr)}
+    .linkkaarten .linkkaart:nth-child(2){transform:translateY(1.4rem)}}
+  .linkkaart{display:block;text-decoration:none;background:var(--papier);border-radius:2px;box-shadow:0 1px 2px rgba(43,37,32,.06),0 4px 14px rgba(43,37,32,.05);overflow:hidden;transition:transform .2s,box-shadow .2s}
+  .linkkaart:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(43,37,32,.07),0 10px 24px rgba(43,37,32,.09)}
+  @media(min-width:700px){.linkkaarten .linkkaart:nth-child(2):hover{transform:translateY(calc(1.4rem - 3px))}}
+  .linkkaart .ph{aspect-ratio:4/3;border-radius:0}
+  .linkkaart .lk-body{padding:1.2rem 1.4rem 1.3rem;display:flex;justify-content:space-between;align-items:baseline;gap:.8rem}
+  .linkkaart h3{font-size:1.2rem;margin:0}
+  .linkkaart .pijl{color:var(--walnoot);transition:transform .15s}
+  .linkkaart:hover .pijl{transform:translateX(4px)}
+  .linkkaart .lk-sub{display:block;font-size:.82rem;color:var(--klei);margin-top:.2rem;font-family:var(--body)}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="/">japandi-stijl<span>.nl</span></a>
+    <nav class="menu"><a href="/japandi-stijl/">Wat is Japandi</a><a href="/japandi-woonkamer/">Per ruimte</a><a href="/japandi-meubels/">Meubels</a></nav>
+  </div>
+</header>
+
+<div class="crumbs"><a href="/">Home</a> &rsaquo; Japandi stijl</div>
+
+<div class="hero">
+  <div class="hero-grid">
+    <div class="hero-tekst">
+      <h1 class="kop"><em>Japandi stijl</em>Minimalisme met warmte</h1>
+      <p class="hero-intro">Japandi is de combinatie van Japans minimalisme en Scandinavische warmte: natuurlijke materialen, neutrale tinten, weinig maar goedgekozen meubels. Deze gids legt uit waar de stijl vandaan komt, waaraan je hem herkent en hoe je hem per ruimte toepast.</p>
+      <div class="hero-meta">
+        <div><b>2 tradities</b>Japan en Scandinavi&euml;</div>
+        <div><b>8 ruimtes</b>uitgewerkt in gidsen</div>
+        <div><b>20+ koopgidsen</b>per meubelcategorie</div>
+      </div>
+    </div>
+    <div class="hero-beeld"><div class="ph hout"><img class="foto" src="https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?auto=format&fit=crop&q=70&w=1400" alt="Japandi woonkamer met houten salontafel en lichte bank" loading="lazy"></div></div>
+  </div>
+</div>
+
+<section class="na-hero">
+  <div class="wide">
+    <h2 class="kop"><em>De definitie</em>Wat is de Japandi stijl?</h2>
+    <p>Japandi voegt twee ontwerptradities samen die hetzelfde geloven: minder, maar beter. Uit Japan komt wabi-sabi, de waardering voor eenvoud en imperfectie. Uit Scandinavi&euml; komt hygge, de warmte van een huiselijk interieur. Samen leveren ze interieurs op met natuurlijke materialen, een neutraal palet en meubels met een strakke maar zachte vormgeving.</p>
+    <p>Herkenbaar aan: licht hout naast donkere accenten, keramiek en linnen, lage meubels, en vooral lege ruimte die bewust leeg blijft. Het verschil met puur minimalisme is de warmte; het verschil met Scandinavisch is de soberheid.</p>
+    <div class="collage">
+      <div class="c1"><div class="ph hout"><img class="foto" src="https://images.unsplash.com/photo-1623903800664-a840b8be323b?auto=format&fit=crop&q=70&w=1400" alt="Houten eettafel met rieten stoelen in warm licht" loading="lazy"></div></div>
+      <div class="c2"><div class="ph linnen"><img class="foto" src="https://images.unsplash.com/photo-1699869653495-fe26f4c70b3e?auto=format&fit=crop&q=70&w=1400" alt="Japandi slaapkamer met ronde spiegel" loading="lazy"></div></div>
+      <div class="c3"><div class="ph "><img class="foto" src="https://images.unsplash.com/photo-1678121039070-fedd1e9c2cf4?auto=format&fit=crop&q=70&w=1400" alt="Keramische vazen met droogbloemen" loading="lazy"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wide">
+    <h2 class="kop"><em>Per ruimte</em>Japandi toepassen in jouw huis</h2>
+    <p>Elke ruimte heeft een eigen gids met de keuzes die er echt toe doen, van kleurpalet tot meubelvolgorde.</p>
+    <div class="linkkaarten">
+      <a class="linkkaart" href="/japandi-woonkamer/"><div class="ph linnen"><img class="foto" src="https://images.unsplash.com/photo-1698675610962-2e4ee6a71d31?auto=format&fit=crop&q=70&w=800&h=600" alt="Japandi woonkamer" loading="lazy"></div><div class="lk-body"><h3>Woonkamer<span class="lk-sub">de basis van de stijl</span></h3><span class="pijl">&rarr;</span></div></a>
+      <a class="linkkaart" href="/japandi-slaapkamer/"><div class="ph "><img class="foto" src="https://images.unsplash.com/photo-1699869653495-fe26f4c70b3e?auto=format&fit=crop&q=70&w=800&h=600" alt="Japandi slaapkamer" loading="lazy"></div><div class="lk-body"><h3>Slaapkamer<span class="lk-sub">slapen in eenvoud</span></h3><span class="pijl">&rarr;</span></div></a>
+      <a class="linkkaart" href="/japandi-keuken/"><div class="ph hout"><img class="foto" src="https://images.unsplash.com/photo-1676088933950-bae87cf34fee?auto=format&fit=crop&q=70&w=800&h=600" alt="Japandi keuken" loading="lazy"></div><div class="lk-body"><h3>Keuken<span class="lk-sub">warm en opgeruimd</span></h3><span class="pijl">&rarr;</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wide">
+    <div class="split beeld-links">
+      <div class="split-beeld hoog"><div class="ph hout"><img class="foto" src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&q=70&w=1400" alt="Massief houten meubels als basis van Japandi" loading="lazy"></div></div>
+      <div>
+        <h2 class="kop"><em>De materialen</em>Waar Japandi van gemaakt is</h2>
+        <p>Massief hout draagt de stijl: eiken en essen voor licht, walnoot voor diepte. Daaromheen keramiek, linnen, wol, bamboe en papier. Wat je niet ziet: hoogglans, chroom, glas in grote vlakken en kunststof dat hout imiteert.</p>
+        <p>De materiaalkeuze per meubel, met prijzen en onderhoud, staat in de koopgidsen per categorie, van <a class="inline-link" href="/japandi-salontafel/">salontafels</a> tot <a class="inline-link" href="/japandi-plafondlamp/">plafondlampen</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="band">
+  <div class="wide">
+    <h2 class="kop"><em>De afbakening</em>Japandi naast de buren: Scandinavisch, wabi-sabi en minimalisme</h2>
+    <p>Scandinavisch is de gezelligste van de vier: lichter hout, meer textiel, meer decoratie en geen bezwaar tegen een volle vensterbank. Japandi neemt de warmte over maar haalt de helft van de spullen weg en voegt donkere accenten toe.</p>
+    <p>Wabi-sabi is strenger en filosofischer: het omarmt slijtage, asymmetrie en onafgewerkte materialen als esthetiek op zich. Japandi leent de waardering voor imperfectie, maar blijft comfortabel en woonbaar waar wabi-sabi bijna kaal durft te zijn. Het volledige verschil staat in <a class="inline-link" href="/japandi-vs-wabi-sabi/">Japandi versus wabi-sabi</a>.</p>
+    <p>Puur minimalisme tenslotte is koeler: wit, glas, staal en zo min mogelijk van alles. Japandi deelt het "minder is meer" maar kiest consequent warm materiaal boven kil materiaal. Wie minimalisme te klinisch vindt en Scandinavisch te druk, komt vrijwel altijd bij Japandi uit.</p>
+  </div>
+</section>
+<section style="background:var(--zand-diep)">
+  <div class="wide">
+    <div class="split" style="grid-template-columns:5fr 6fr;align-items:start">
+      <div class="split-beeld"><div class="ph linnen"><img class="foto" src="https://images.unsplash.com/photo-1632334994174-d505252a397e?auto=format&fit=crop&q=70&w=1400" alt="Houten tafel in avondlicht" loading="lazy"></div></div>
+      <div class="faq">
+        <h2 class="kop"><em>Nog vragen</em>Veelgestelde vragen</h2>
+        <details><summary>Wat is het verschil tussen Japandi en Scandinavisch?</summary><p>Scandinavisch is lichter en huiselijker met meer decoratie; Japandi is soberder, met meer lege ruimte en donkere houtaccenten uit de Japanse traditie.</p></details>
+        <details><summary>Is Japandi duur?</summary><p>Niet per definitie. De stijl vraagt minder meubels dan gemiddeld; het budget gaat naar kwaliteit per stuk in plaats van kwantiteit.</p></details>
+        <details><summary>Welke kleuren horen bij Japandi?</summary><p>Gebroken wit, zand, klei, warmgrijs en gedempt groen, met hout als verbindende tint.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="auteur">
+  <div class="inner">
+    <div class="stempel">js</div>
+    <h2 class="kop"><em>Onafhankelijk</em>Over japandi-stijl.nl</h2>
+    <p>Japandi-stijl.nl is een onafhankelijke gids over de Japandi interieurstijl. Wij verkopen zelf geen producten. Onze koopgidsen bevatten affiliate links naar webwinkels zoals Bol.com waarvoor wij een commissie kunnen ontvangen. Dat verandert niets aan onze selectie: producten die niet bij Japandi passen, raden wij gewoon af.</p>
+  </div>
+</section>
+<footer><div class="wide">Japandi-stijl.nl bevat affiliate links naar webwinkels. Zie het over-ons blok op elke pagina voor hoe wij selecteren.</div></footer>
+</body>
+</html>

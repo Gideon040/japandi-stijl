@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-papier text-inkt font-body antialiased;
+}
+
+/* Prose-regels in de components-layer met :where(), zodat utility-classes
+   op componenten (ProductCard, FAQ) altijd winnen van deze defaults. */
+@layer components {
+  .prose-japandi :where(h2) {
+    @apply font-display text-3xl sm:text-4xl mt-16 mb-5 scroll-mt-24 max-w-content;
+  }
+  .prose-japandi :where(h3) {
+    @apply font-display text-2xl mt-12 mb-6 scroll-mt-24 max-w-content;
+  }
+  .prose-japandi :where(.sectie-inner > h3)::after {
+    content: "";
+    @apply block w-10 h-px bg-lijn mt-3;
+  }
+  .prose-japandi :where(p) {
+    @apply text-[17px] leading-relaxed mb-5 max-w-content;
+  }
+  .prose-japandi :where(a) {
+    @apply underline decoration-lijn underline-offset-4 transition-colors;
+  }
+  .prose-japandi :where(a:hover) {
+    @apply decoration-walnoot;
+  }
+  .prose-japandi :where(ul, ol) {
+    @apply mb-5 pl-5 max-w-content text-[17px];
+  }
+  .prose-japandi :where(li) {
+    @apply mb-2 list-disc;
+  }
+  .prose-japandi :where(ol li) {
+    @apply list-decimal;
+  }
+
+  /* Sectieritme: remark-layout wikkelt de body in .sectie-blokken.
+     Zand-banden lopen full-bleed, de inhoud blijft binnen max-w-wide. */
+  .sectie-inner {
+    @apply max-w-wide mx-auto px-6;
+  }
+  .sectie-zand {
+    @apply bg-zand mt-16;
+  }
+  .sectie-zand .sectie-inner {
+    @apply py-12 sm:py-16;
+  }
+  .sectie-zand .sectie-inner > :first-child {
+    @apply mt-0;
+  }
+  .sectie-zand + .sectie-zand {
+    @apply mt-0 border-t border-lijn;
+  }
+
+  .productgrid {
+    @apply grid gap-6 sm:grid-cols-2 items-stretch my-10;
+  }
+}
