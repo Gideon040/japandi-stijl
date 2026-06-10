@@ -2,7 +2,11 @@ import ProductCard from "./ProductCard";
 import VergelijkingsTabel from "./VergelijkingsTabel";
 import FAQ from "./FAQ";
 import ImagePlaceholder from "./ImagePlaceholder";
-import ImageGrid from "./ImageGrid";
+import Collage from "./Collage";
+import SplitSectie from "./SplitSectie";
+import MateriaalKaart from "./MateriaalKaart";
+import LinkKaart from "./LinkKaart";
+import LinkLijst from "./LinkLijst";
 import KoopNietBlok from "./KoopNietBlok";
 import AuteurBlok from "./AuteurBlok";
 
@@ -11,7 +15,12 @@ export const mdxComponents = {
   VergelijkingsTabel,
   FAQ,
   ImagePlaceholder,
-  ImageGrid,
+  Collage,
+  SplitSectie,
+  MateriaalKaart,
+  KleurenKaart: MateriaalKaart,
+  LinkKaart,
+  LinkLijst,
   KoopNietBlok,
   AuteurBlok,
 };

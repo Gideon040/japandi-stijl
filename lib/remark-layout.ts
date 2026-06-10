@@ -1,7 +1,8 @@
 // Wikkelt de MDX-body in <section>-blokken per H2 voor het sectieritme:
-// afwisselend papier en full-bleed zand-banden, productsecties en FAQ
-// altijd op zand, opeenvolgende ProductCards gegroepeerd in een productgrid.
-// Draait na remark-heading-id.
+// drie tinten (papier, zand, zand-diep) rouleren, nooit twee keer dezelfde
+// tint na elkaar. Vaste tinten: productsectie en FAQ op zand-diep, de
+// koopniet-sectie ("Eerlijk gezegd") op zand. Opeenvolgende ProductCards
+// worden gegroepeerd in een productgrid. Draait na remark-heading-id.
 
 type Node = {
   type: string;
@@ -11,9 +12,15 @@ type Node = {
   attributes?: Array<{ type: string; name: string; value: string }>;
 };
 
-type Chunk = { nodes: Node[]; kind: "prose" | "product" | "faq" };
+type Kind = "prose" | "product" | "faq" | "koopniet";
+type Tint = "papier" | "zand" | "diep";
+type Chunk = { nodes: Node[]; kind: Kind };
 
-const PRODUCT_COMPONENTS = new Set(["ProductCard", "KoopNietBlok"]);
+const TINT_CLASS: Record<Tint, string> = {
+  papier: "sectie",
+  zand: "sectie sectie-zand",
+  diep: "sectie sectie-zand-diep",
+};
 
 function jsxName(node: Node): string | undefined {
   return node.type === "mdxJsxFlowElement" ? node.name : undefined;
@@ -74,34 +81,36 @@ export default function remarkLayout() {
     flush();
 
     for (const chunk of chunks) {
-      if (
-        chunk.kind === "prose" &&
-        chunk.nodes.some((n) => PRODUCT_COMPONENTS.has(jsxName(n) ?? ""))
-      ) {
-        chunk.kind = "product";
-      }
+      if (chunk.kind !== "prose") continue;
+      const namen = chunk.nodes.map((n) => jsxName(n) ?? "");
+      if (namen.includes("ProductCard")) chunk.kind = "product";
+      else if (namen.includes("KoopNietBlok")) chunk.kind = "koopniet";
     }
 
-    // Zand: product- en FAQ-secties altijd, prose-secties om en om,
-    // maar nooit twee zand-banden door een prose-sectie laten ontstaan.
-    const zand = chunks.map((c) => c.kind !== "prose");
-    let proseTeller = 0;
-    chunks.forEach((c, i) => {
-      if (c.kind !== "prose") return;
-      if (proseTeller % 2 === 1) zand[i] = true;
-      proseTeller += 1;
-    });
-    chunks.forEach((c, i) => {
-      if (c.kind !== "prose" || !zand[i]) return;
-      if ((i > 0 && zand[i - 1]) || (i + 1 < chunks.length && zand[i + 1])) {
-        zand[i] = false;
+    // Tinten: vaste tinten eerst, prose kiest een tint die afwijkt van de
+    // vorige sectie en van de eerstvolgende vaste tint. De hero erboven is
+    // zand, dus de eerste prose-sectie wordt papier.
+    const vast: Partial<Record<Kind, Tint>> = { product: "diep", faq: "diep", koopniet: "zand" };
+    const tinten: Tint[] = [];
+    let vorige: Tint = "zand";
+    chunks.forEach((chunk, i) => {
+      const eigen = vast[chunk.kind];
+      if (eigen) {
+        tinten.push(eigen);
+        vorige = eigen;
+        return;
       }
+      const volgendeVast = i + 1 < chunks.length ? vast[chunks[i + 1].kind] : undefined;
+      const keuze =
+        (["papier", "zand", "diep"] as Tint[]).find(
+          (t) => t !== vorige && t !== volgendeVast
+        ) ?? "papier";
+      tinten.push(keuze);
+      vorige = keuze;
     });
 
     tree.children = chunks.map((c, i) =>
-      el("section", zand[i] ? "sectie sectie-zand" : "sectie", [
-        el("div", "sectie-inner", groupProductCards(c.nodes)),
-      ])
+      el("section", TINT_CLASS[tinten[i]], [el("div", "sectie-inner", groupProductCards(c.nodes))])
     );
   };
 }

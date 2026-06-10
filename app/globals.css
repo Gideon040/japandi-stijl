@@ -12,6 +12,14 @@ body {
   .prose-japandi :where(h2) {
     @apply font-display text-3xl sm:text-4xl mt-16 mb-5 scroll-mt-24 max-w-content;
   }
+  /* Koppatroon (designreferentie): italic aanloopregel boven, romein statement
+     eronder. In MDX: "## *De aanloop* Het statement". PageHero gebruikt .kop. */
+  .prose-japandi :where(h2 > em:first-child),
+  .kop em {
+    @apply block font-normal italic;
+    font-size: 0.62em;
+    margin-bottom: 0.2rem;
+  }
   .prose-japandi :where(h3) {
     @apply font-display text-2xl mt-12 mb-6 scroll-mt-24 max-w-content;
   }
@@ -39,24 +47,57 @@ body {
   }
 
   /* Sectieritme: remark-layout wikkelt de body in .sectie-blokken.
-     Zand-banden lopen full-bleed, de inhoud blijft binnen max-w-wide. */
+     Drie tinten rouleren (papier, zand, zand-diep), banden lopen full-bleed,
+     de inhoud blijft binnen max-w-wide. Nooit twee keer dezelfde tint na elkaar. */
   .sectie-inner {
     @apply max-w-wide mx-auto px-6;
   }
   .sectie-zand {
     @apply bg-zand mt-16;
   }
-  .sectie-zand .sectie-inner {
+  .sectie-zand-diep {
+    @apply bg-zand-diep mt-16;
+  }
+  .sectie-zand .sectie-inner,
+  .sectie-zand-diep .sectie-inner {
     @apply py-12 sm:py-16;
   }
-  .sectie-zand .sectie-inner > :first-child {
+  .sectie-zand .sectie-inner > :first-child,
+  .sectie-zand-diep .sectie-inner > :first-child {
     @apply mt-0;
   }
-  .sectie-zand + .sectie-zand {
+  .sectie-zand + .sectie-zand,
+  .sectie-zand-diep + .sectie-zand-diep {
     @apply mt-0 border-t border-lijn;
+  }
+  .sectie-zand + .sectie-zand-diep,
+  .sectie-zand-diep + .sectie-zand {
+    @apply mt-0;
   }
 
   .productgrid {
-    @apply grid gap-6 sm:grid-cols-2 items-stretch my-10;
+    @apply grid gap-6 sm:grid-cols-2 items-start my-10;
+  }
+  /* Designreferentie: de tweede kaart in elk paar verspringt iets. */
+  .productgrid > :nth-child(even) {
+    @apply lg:translate-y-6;
+  }
+  .linkkaart-grid {
+    @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3 my-10;
+  }
+  .linkkaart-grid > :nth-child(2) {
+    @apply lg:translate-y-6;
+  }
+
+  /* Pill-knop met uitschuivende pijl (ProductCard, hero-CTA's). */
+  .knop-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-papier no-underline transition-colors;
+  }
+  .knop-pill::after {
+    content: "\2192";
+    @apply transition-transform duration-200;
+  }
+  .knop-pill:hover::after {
+    transform: translateX(4px);
   }
 }

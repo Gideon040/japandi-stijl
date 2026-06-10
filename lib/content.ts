@@ -11,6 +11,7 @@ export type PageMeta = {
   template: "pillar" | "gids" | "koopgids" | "longtail";
   gepubliceerd?: boolean;
   datum?: string;
+  kerncijfers?: { waarde: string; label: string }[];
 };
 
 export function getAllPages(): PageMeta[] {

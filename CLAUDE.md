@@ -69,27 +69,39 @@ Voor elke koopgids, voordat je schrijft:
 
 ## Componenten
 
-- `ProductCard`: Bol-productfoto bovenin, naam, prijs, specs (afmetingen, materiaal), voordelen/nadeel, Bol-knop met sponsored rel. De `prijs`-prop bevat ALLEEN het bedrag (`prijs="118"`); de component rendert zelf "ca. € 118 (prijs bij publicatie)". Geen "ca." of valutateken in MDX.
-- `VergelijkingsTabel`: vergelijking van producttypes of materialen, met concrete waardes
-- `FAQ`: vraag/antwoord-items, rendert FAQPage JSON-LD schema EN zijn eigen H2 "Veelgestelde vragen". Schrijf dus NOOIT een eigen FAQ-heading in de MDX, alleen de `<FAQ items={...} />` component.
+- `ProductCard`: productfoto van de winkel bovenin (4:3), merk in caps, naam in Fraunces, prijs, sterren, specs, voordelen/nadeel als ronde badges, pill-knop "Bekijk bij {winkel}". Props:
+  - `prijs`: ALLEEN het bedrag (`prijs="118"`); de component rendert zelf "ca. € 118 (prijs bij publicatie)". Geen "ca." of valutateken in MDX.
+  - `winkel`: verplicht ("Bol.com", "Olivine", ...). De knop kleurt Bol-blauw bij Bol, walnoot bij andere winkels. De link loopt via de router in `lib/affiliate.ts` (sponsored rel voor affiliate-winkels, nofollow voor de rest); nooit zelf affiliate-parameters in MDX zetten.
+  - `score` (getal, `score={4.2}`) en `reviews` (aantal): renderen sterren met fractionele vulling. Zonder reviews toont de card "nog geen reviews", nooit lege sterren.
+  - `stijltip` (op minimaal de helft van de cards): combinatieadvies van 1-2 zinnen inclusief een vermijd-advies. De component rendert het label "Combineer met:", dat dus niet in de prop-tekst herhalen.
+- `Sterren`: losse reviewsterren (intern gebruikt door ProductCard)
+- `VergelijkingsTabel`: alleen voor echte tabeldata met concrete waardes
+- `MateriaalKaart` / `KleurenKaart` (zelfde component): editoriale rijenlijst met gekleurde staal, naam, prijsindicatie en let-op. Gebruik deze in plaats van een tabel bij materiaal- of kleurvergelijkingen. Props: `items=[{staal, naam, subtitel?, prijs?, opmerking}]`, optionele `caption`.
+- `FAQ`: vraag/antwoord-items, rendert FAQPage JSON-LD schema EN zijn eigen H2 "Veelgestelde vragen". Schrijf dus NOOIT een eigen FAQ-heading in de MDX, alleen `<FAQ beeldId="{slug}-faq" items={...} />`. Met `beeldId` wordt het de FAQ-band: sfeerbeeld links, accordeon rechts.
 - `ImagePlaceholder`: zie image-workflow hieronder
-- `ImageGrid`: 2 of 3 sfeerbeelden naast elkaar, `<ImageGrid ids={["slug-grid-1", "slug-grid-2"]} />`, gestapeld op mobiel
-- `AuteurBlok`: E-E-A-T blok onderaan elke pagina (naam, rol, korte bio), naar voorbeeld van het Eijerkamp "Marcel" blok. Wordt door de paginaroute gerenderd, niet in MDX zetten.
-- `KoopNietBlok`: visueel onderscheiden blok voor afraders/waarschuwingen
+- `Collage`: 3 sfeerbeelden met verspringende toppen, `<Collage ids={["slug-collage-1", "slug-collage-2", "slug-collage-3"]} />`. Aspect ratios in het manifest: 3:4, 4:5, 3:5. Mobiel verschijnen alleen de eerste twee. Elke pagina heeft minimaal 1 collage.
+- `SplitSectie`: beeld naast tekst, `<SplitSectie beeldId="..." beeldLinks rondId="...">tekst</SplitSectie>`. Wissel `beeldLinks` per gebruik. Het ronde accentbeeld (`rondId`) is het overlap-moment dat elke pagina minimaal een keer nodig heeft.
+- `KoopNietBlok`: waarschuwingskaart voor afraders. Met `beeldId="{slug}-koopniet"` wordt het de eerlijk-gezegd-band: kaart naast sfeerbeeld. De H2-sectie eromheen komt automatisch op zand.
+- `LinkKaart`: beeldkaart als interne link (`href`, `titel`, `subtitel?`, `beeldId`). In een grid van 3 (`linkkaart-grid`) verspringt de middelste automatisch.
+- `LinkLijst`: kolommenlijst met interne links, gevoed uit `lib/koopgidsen.ts` (keyword-mapping gekruist met gepubliceerde pagina's, groeit automatisch mee met elke publicatie).
+- `Breadcrumb`: kruimelpad boven elke hero, gerenderd door de paginaroute (niet in MDX), zelfde databron als het BreadcrumbList-schema.
+- `AuteurBlok`: E-E-A-T blok onderaan elke pagina, gecentreerd op een zand-band met het ronde "js"-stempel. Wordt door de paginaroute gerenderd, niet in MDX zetten.
 
 Elke pagina rendert ook: Article of CollectionPage JSON-LD, BreadcrumbList, en bij koopgidsen ItemList schema voor de productselectie.
 
 ## Design
 
-Referentie: eijerkamp.nl/woonstijlen/japandi. Vertaling naar deze site (GEIMPLEMENTEERD in layout, globals.css en componenten; nieuwe pagina's volgen dit automatisch zolang ze het MDX-patroon aanhouden):
+Designwaarheid: de vier HTML-mockups in `docs/design-referentie/` (koopgids, gids, pillar, homepage), een per paginatype. De Unsplash-beelden daarin zijn alleen mockup-sfeer; productie gebruikt altijd ImagePlaceholder + image-manifest, productfoto's komen van de winkel zelf. Alles hieronder is GEIMPLEMENTEERD in layout, globals.css en componenten; nieuwe pagina's volgen dit automatisch zolang ze het MDX-patroon aanhouden:
 
-- Warm palet via de Tailwind-tokens papier, zand, inkt, klei, walnoot, lijn, groen. GEEN nieuwe kleuren toevoegen.
+- Warm palet via de Tailwind-tokens papier, zand, zand-diep, inkt, klei, walnoot, lijn, groen, sterrengoud, terracotta, bolblauw. GEEN nieuwe kleuren toevoegen.
 - Fraunces (serif, normal + italic geladen) voor headings, Inter voor leestekst (17px, leading-relaxed).
-- **PageHero**: de paginaroute tilt het directe antwoord plus het hero-beeld uit de MDX en rendert ze in een full-width zand-band: links H1 + antwoord, rechts het hero-beeld tot de rand (mobiel: beeld boven). De H1 splitst op de dubbele punt in de titel: deel ervoor regular, rest cursief op een nieuwe regel. Voorwaarde in MDX: direct antwoord als eerste alinea, daarna `<ImagePlaceholder id="{slug}-hero" priority />`.
-- **Sectieritme**: `lib/remark-layout.ts` wikkelt de body per H2 in secties. Prose-secties wisselen papier en full-bleed zand af; de productsectie en de FAQ staan altijd op zand. Content blijft binnen max-w-wide, lopende tekst binnen max-w-content, losse beelden mogen breder (max-w-4xl, gecentreerd). Niets hiervoor in de MDX doen, dit gebeurt automatisch.
-- **ProductCards**: opeenvolgende cards worden automatisch gegroepeerd in een 2-koloms grid (1 kolom mobiel). Card: bg-papier, shadow-sm, geen border, productfoto bovenin (4:3). Situatie-H3's ("Voor een kleine ruimte") krijgen automatisch een korte hairline eronder.
+- **Koppatroon** (sitewide): italic aanloopregel boven, romein statement eronder. In de H1 splitst de paginatitel op de dubbele punt: deel ervoor wordt de italic aanloop, de rest het statement. In H2's schrijf je in MDX `## *De aanloop* Het statement`; de cursieve aanloop rendert automatisch als blokregel erboven.
+- **PageHero**: de paginaroute tilt het directe antwoord plus het hero-beeld uit de MDX en rendert ze in een full-width zand-band, echt 50/50: links breadcrumb + H1 + antwoord op de contentmarge, rechts het hero-beeld tot de schermrand (mobiel: beeld boven). Onder het antwoord 2-3 kerncijfers uit frontmatter `kerncijfers: [{waarde, label}]` (waarde groot in Fraunces, label klein in klei). Voorwaarde in MDX: direct antwoord als eerste alinea, daarna `<ImagePlaceholder id="{slug}-hero" priority />`.
+- **Sectieritme**: `lib/remark-layout.ts` wikkelt de body per H2 in secties. Drie tinten rouleren (papier, zand, zand-diep), nooit twee keer dezelfde tint na elkaar. Vast: productsecties en de FAQ-band op zand-diep, de koopniet-sectie op zand. Content blijft binnen max-w-wide, lopende tekst binnen max-w-content. Niets hiervoor in de MDX doen, dit gebeurt automatisch.
+- **Beeldritme**: elke pagina heeft minimaal een hero, een collage en een overlap-moment (SplitSectie met rondId of de verspringende cards). Beelden raken elkaar nooit: collages en grids houden altijd een gap. Wissel de accenten per pagina af (rond beeld links of rechts, collage vroeg of laat), zodat pagina's niet identiek aanvoelen.
+- **ProductCards**: opeenvolgende cards worden automatisch gegroepeerd in een 2-koloms grid (1 kolom mobiel); de tweede kaart van elk paar verspringt iets. Card: bg-papier, shadow-sm, geen border, hover-lift. Situatie-H3's ("Voor een kleine ruimte") krijgen automatisch een korte hairline eronder.
 - H2's: text-3xl/4xl met ruime marge erboven. Tabellen: caption in klei, headers in Fraunces.
-- Rustig, veel witruimte, geen schreeuwende CTA's. De Bol-knoppen zijn ingetogen.
+- Rustig, veel witruimte, geen schreeuwende CTA's. De winkel-knoppen zijn ingetogen pills met een uitschuivende pijl.
 - Mobile first: het meeste verkeer is mobiel.
 
 ## Image-workflow (BELANGRIJK)
@@ -111,9 +123,9 @@ Wij genereren sfeerbeelden achteraf in batch via Higgsfield. Daarom:
 ```
 
 3. Promptstijl is vast (consistente sfeer over de hele site): editorial interior photography, warm neutral palette (sand, creme, walnoot, eiken), zacht daglicht, minimal styling, photorealistic, geen mensen prominent in beeld, geen tekst in beeld.
-4. Aspect ratios: hero 16:9, grid-beelden 4:5 of 1:1, sectie-beelden 3:2.
-5. id-conventie: `{pagina-slug}-{slot}`, bijv. `japandi-vloerkleed-grid-2`. De id wordt later de bestandsnaam in `/public/images/{id}.webp`, dus de ImagePlaceholder component resolvet automatisch zodra het bestand bestaat.
-6. Per pagina: 1 hero + 2-4 sfeerbeelden, afgestemd op de sectie waar ze staan. Alt-teksten beschrijvend en met natuurlijke keyword-integratie, nooit keyword stuffing.
+4. Aspect ratios: hero 16:9, collage-beelden 3:4 / 4:5 / 3:5 (in die volgorde), sectie- en splitbeelden 3:2, rond accentbeeld 1:1, FAQ- en koopniet-beelden 4:5.
+5. id-conventie: `{pagina-slug}-{slot}`, bijv. `japandi-vloerkleed-collage-2`, `japandi-bureau-koopniet`, `japandi-bureau-faq`. De id wordt later de bestandsnaam in `/public/images/{id}.webp`, dus de ImagePlaceholder component resolvet automatisch zodra het bestand bestaat.
+6. Per pagina: 1 hero + collage + 2-4 sfeerbeelden (waaronder de koopniet- en faq-beelden bij koopgidsen), afgestemd op de sectie waar ze staan. Alt-teksten beschrijvend en met natuurlijke keyword-integratie, nooit keyword stuffing.
 
 Aan het einde van het project (of per batch) leest Gideon het manifest uit en genereert alle beelden in een keer via de Higgsfield MCP.
 

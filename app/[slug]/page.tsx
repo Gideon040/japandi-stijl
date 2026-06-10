@@ -7,6 +7,7 @@ import remarkHeadingId from "@/lib/remark-heading-id";
 import remarkLayout from "@/lib/remark-layout";
 import AuteurBlok from "@/components/AuteurBlok";
 import PageHero from "@/components/PageHero";
+import Breadcrumb, { type Crumb } from "@/components/Breadcrumb";
 
 // Intro (direct antwoord) plus hero-beeld worden uit de MDX-body getild
 // en in de PageHero gerenderd; de rest van de body krijgt het sectieritme.
@@ -37,18 +38,32 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const heroId = heroMatch ? heroMatch[2] : undefined;
   const body = heroMatch ? page.content.slice(heroMatch[0].length) : page.content;
 
+  // Kruimelpad: zelfde databron voor de zichtbare Breadcrumb en het schema.
+  // De korte naam is het deel voor de dubbele punt in de paginatitel.
+  const korteNaam = page.data.titel.split(":")[0].trim();
+  const crumbs: Crumb[] = [{ naam: "Home", href: "/" }];
+  if (slug !== "japandi-stijl") crumbs.push({ naam: "Japandi stijl", href: "/japandi-stijl/" });
+  crumbs.push({ naam: korteNaam });
+
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://japandi-stijl.nl/" },
-      { "@type": "ListItem", position: 2, name: page.data.titel, item: `https://japandi-stijl.nl/${slug}/` },
-    ],
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.naam,
+      item: `https://japandi-stijl.nl${c.href ?? `/${slug}/`}`,
+    })),
   };
 
   return (
     <article>
-      <PageHero titel={page.data.titel} heroId={heroId}>
+      <PageHero
+        titel={page.data.titel}
+        heroId={heroId}
+        kerncijfers={page.data.kerncijfers}
+        breadcrumb={<Breadcrumb items={crumbs} />}
+      >
         {intro && (
           <MDXRemote
             source={intro}

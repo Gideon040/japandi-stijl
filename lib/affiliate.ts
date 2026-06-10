@@ -14,3 +14,19 @@ export function bolLink(productUrl: string): string {
   u.searchParams.set("utm_content", "txl");
   return u.toString();
 }
+
+// Winkel-neutrale router: het beste product wint, ongeacht winkel.
+// Affiliate-winkels krijgen hun eigen linkbuilder en rel="sponsored noopener",
+// niet-affiliate winkels een normale link met rel="nofollow noopener".
+function isBol(winkel: string): boolean {
+  return winkel.toLowerCase().includes("bol");
+}
+
+export function winkelLink(winkel: string, productUrl: string): string {
+  if (isBol(winkel)) return bolLink(productUrl);
+  return productUrl;
+}
+
+export function winkelRel(winkel: string): string {
+  return isBol(winkel) ? "sponsored noopener" : "nofollow noopener";
+}
