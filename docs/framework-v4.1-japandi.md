@@ -8,29 +8,57 @@ v4.0 kent niveau A/B/C/D voor webshopcollecties. Voor dit project:
 
 | v4.0 | Dit project | Voorbeeld | Woorden | FAQ's |
 |------|-------------|-----------|---------|-------|
-| A Pillar | **pillar** | /japandi-stijl/ | 1500-2000 | 6-8 |
-| B Ruimte-sub | **gids** (ruimte/concept) | /japandi-slaapkamer/, /japandi-kleuren/ | 900-1300 | 4-6 |
-| (nieuw) | **koopgids** (productcategorie) | /japandi-salontafel/ | 1200-1800 | 3-5 |
+| A Pillar | **pillar** | /japandi-stijl/ | 1600-2200 | 6-8 |
+| B Ruimte-sub | **gids** (ruimte/concept) | /japandi-slaapkamer/, /japandi-kleuren/ | 1300-1700 | 4-6 |
+| (nieuw) | **koopgids** (productcategorie) | /japandi-salontafel/ | 1500-2000 | 3-5 |
 | C Kleur/stijl-sub | bestaat hier meestal niet als eigen pagina | anchor-sectie binnen koopgids | n.v.t. | 0 |
 | D Long-tail | **longtail** | /japandi-deurmat/ | 400-600 | 2-3 |
+
+Woordaantallen zijn INHOUDSWOORDEN: lopende tekst die iets toevoegt. Componentprops, FAQ-antwoorden en productspecs tellen mee, opsomvulsel en herhaling niet. Padding om een aantal te halen is verboden; de depth-score per H2 blijft leidend. Liever 1400 diepe woorden dan 1700 met lucht.
 
 Belangrijkste verschil met v4.0: de productcategorie-pagina (koopgids) is hier GEEN dunne collectiepagina waar Shopify de producten rendert. De producten zijn redactionele content (ProductCard-componenten met eigen beoordeling). Daarom is het woordaantal hoger dan v4.0 niveau B.
 
 Subvarianten (rond, ovaal, eiken, walnoot, beige) zijn anchor-secties binnen de koopgids, geen eigen pagina's. Uitzondering: als de keyword-mapping een subvariant als eigen rij heeft met prioriteit P1 of P2.
 
-## 2. Koopgids-structuur (nieuw paginatype)
+## 2. Sectiemenu's per paginatype
 
-Verplichte opbouw, in deze volgorde:
+Elke pagina bouwt uit een vast verplicht deel plus keuzesecties. De keuzesecties zorgen dat pagina's niet identiek aanvoelen: wissel de patronen af tussen pagina's binnen hetzelfde type.
 
-1. Direct antwoord (40-60 woorden): wat maakt een [product] Japandi
-2. H2: Wat maakt een [product] Japandi? Kenmerken, materialen, vormen
-3. H2: Waar let je op bij het kiezen? Keuzehulp met concrete maten, materialen, prijsranges. Hier hoort een VergelijkingsTabel.
-4. H2: De beste Japandi [producten] per situatie. 5-10 ProductCards, gegroepeerd per use case (klein budget, groot gezin, kleine ruimte). Per product eigen oordeel met minimaal 1 nadeel.
-5. KoopNietBlok: minimaal 1 afrader of waarschuwing met onderbouwing, zonder link
-6. H2's voor subvarianten met anchor-id's (#rond, #eiken) waar de redirect-map naar verwijst
-7. FAQ (gededupliceerd)
+### Koopgids
+
+Verplicht, in deze volgorde:
+
+1. Hero: direct antwoord (40-60 woorden) wat een [product] Japandi maakt, plus 2-3 kerncijfers in de frontmatter (`kerncijfers: [{waarde, label}]`, bijv. aantal geteste producten, prijsrange, aantal materialen)
+2. H2: Wat maakt een [product] Japandi? Kenmerken, materialen, vormen, met een Collage
+3. H2: Waar let je op bij het kiezen? Keuzehulp met concrete maten en prijsranges. Materiaal- of kleurvergelijking via MateriaalKaart; VergelijkingsTabel alleen voor echte tabeldata.
+4. H2: De beste Japandi [producten] per situatie. Minimaal 3 situatiegroepen (H3's), samen 8-10 ProductCards. Per product eigen oordeel met minimaal 1 nadeel.
+5. H2 "Eerlijk gezegd" of "Dit zou ik niet kopen": KoopNietBlok met beeldId, minimaal 1 afrader met merk en onderbouwing, zonder link
+6. FAQ-band: `<FAQ beeldId="{slug}-faq" items={...} />`, gededupliceerd
+
+Plus MINIMAAL 2 keuzesecties uit dit menu:
+
+- Onderhoud (per materiaal, concreet: middelen, korrels, verboden)
+- Stijlcombinaties (welke andere meubels/kleuren erbij passen, met links naar verwante gidsen zodra die bestaan)
+- Formaten en opstelling (maatvoering per ruimte, loopruimtes)
+- Prijsopbouw (waarom kost het ene 3x het andere, waar zit het verschil)
+
+Kleurencombinatie-element is verplicht per koopgids: stijltips op de cards en/of een KleurenKaart. H2's voor subvarianten met anchor-id's (#rond, #eiken) waar de redirect-map naar verwijst blijven gelden.
+
+### Gids
+
+Verplicht: hero met direct antwoord en kerncijfers, H2 basis/uitleg met Collage, 2-3 themasecties, KleurenKaart waar kleur of materiaal relevant is, linkkaarten of LinkLijst naar de relevante koopgidsen, FAQ-band.
+
+Plus MINIMAAL 1 keuzesectie uit: veelgemaakte fouten, aanpak per stijlvariant (licht/donker, klein/groot), volgorde van aanschaf bij beperkt budget.
+
+### Longtail
+
+Een ingekorte gids: hero met direct antwoord, EEN inhoudssectie, FAQ. Geen keuzesecties.
 
 De gouden regel uit v4.0 blijft: content die net zo goed op de pillar of een gids past, hoort hier niet. De koopgids gaat over het PRODUCT, de gids over de RUIMTE, de pillar over de STIJL.
+
+### Stijltips op ProductCards
+
+De `stijltip`-prop is een combinatieadvies van 1-2 zinnen, altijd inclusief een vermijd-advies ("Vermijd grijze muren, die maken eiken geel"). Verplicht op minimaal de helft van de producten per koopgids. De component rendert zelf het label "Combineer met:".
 
 ## 3. Output-formaat
 
@@ -57,8 +85,9 @@ CollectionPage vervalt overal: dit zijn geen collecties meer.
 
 Nieuw ten opzichte van v4.0, want de webshopvariant had dit niet:
 
-- Elke productvermelding met link loopt via ProductCard (sponsored rel zit in de component)
-- Productfoto's in ProductCard zijn altijd de officiele Bol-productfoto (beeld-prop, hotlink naar media.s-bol.com, op te halen via og:image van de productpagina). Nooit AI-beelden voor echte producten, dat is misleidend. AI-sfeerbeelden alleen via ImagePlaceholder.
+- **Winkel-neutraal selecteren**: het beste product wint, ongeacht winkel. Selecteer nooit een zwakker product omdat het bij een affiliate-partner staat. Site-copy is nooit Bol-exclusief ("links naar webshops", niet "links naar Bol.com").
+- Elke productvermelding met link loopt via ProductCard met de `winkel`-prop. De router in `lib/affiliate.ts` bepaalt de link en de rel: affiliate-winkels (nu Bol.com; Daisycon/TradeTracker voorbereid) krijgen hun linkbuilder en `rel="sponsored noopener"`, niet-affiliate winkels een normale link met `rel="nofollow noopener"`. Nooit affiliate-parameters in MDX of componenten hardcoden.
+- Productfoto's in ProductCard zijn altijd de officiele productfoto van de winkel (beeld-prop, op te halen via og:image van de productpagina). Nooit AI-beelden voor echte producten, dat is misleidend. AI-sfeerbeelden alleen via ImagePlaceholder.
 - Afraders: merk en naam benoemen, reden geven, GEEN link
 - Prijzen alleen in ProductCards ("prijs bij publicatie"), nooit in lopende tekst, zodat tekst niet veroudert
 - Eerlijkheid is het differentiatiepunt: elke koopgids bevat minstens 1 nadeel per product en 1 afrader. Een koopgids zonder kritisch element is niet af.

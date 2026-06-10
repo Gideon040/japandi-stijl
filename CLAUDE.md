@@ -25,16 +25,17 @@ Drie templates in `/components/templates/`:
 De hoofdpagina over Japandi als stijl. Volledig informatief, linkt naar alle gidsen en koopgidsen. Doel: de AI Overview op "japandi stijl" (18K volume, AI Overview aanwezig in SERP) en alle definitievragen.
 
 **gids** (informational intent: ruimtes en concepten)
-Voorbeelden: /japandi-woonkamer/, /japandi-slaapkamer/, /japandi-kleuren/, /japandi-vs-wabi-sabi/. Opbouw: direct antwoord, uitleg met praktische stappen, concrete voorbeelden per situatie, interne links naar relevante koopgidsen, FAQ.
+Voorbeelden: /japandi-woonkamer/, /japandi-slaapkamer/, /japandi-kleuren/, /japandi-vs-wabi-sabi/. 1300-1700 inhoudswoorden. Verplicht: hero met direct antwoord en kerncijfers, basis/uitleg met Collage, 2-3 themasecties, KleurenKaart waar relevant, linkkaarten of LinkLijst naar de relevante koopgidsen, FAQ-band. Plus minimaal 1 keuzesectie (veelgemaakte fouten, per-stijlvariant, budgetvolgorde). Longtail-pagina's zijn een ingekorte gids (400-600 woorden): hero, een inhoudssectie, FAQ.
 
 **koopgids** (commercial intent: productcategorieen)
-Voorbeelden: /japandi-salontafel/, /japandi-plafondlamp/, /japandi-vloerkleed/. Dit is GEEN kale productlijst. Verplichte opbouw:
-1. Direct antwoord: wat maakt een [product] Japandi (40-60 woorden)
-2. Uitleg: kenmerken, materialen, vormen, wat wel en niet past
-3. Keuzehulp: waar let je op bij aanschaf (afmetingen, materiaal, prijsindicatie)
-4. Productselectie: 5-10 producten via Bol.com met ProductCard, inclusief eerlijke voor- en nadelen per product
-5. Minimaal 1 "dit zou ik niet kopen" of "let hierop" blok met onderbouwing
-6. FAQ (3-5 vragen, gededupliceerd tegen andere pagina's)
+Voorbeelden: /japandi-salontafel/, /japandi-plafondlamp/, /japandi-vloerkleed/. Dit is GEEN kale productlijst. 1500-2000 inhoudswoorden (pillar: 1600-2200). Verplichte opbouw:
+1. Hero: direct antwoord wat een [product] Japandi maakt (40-60 woorden) plus 2-3 kerncijfers in frontmatter
+2. Kenmerken: materialen, vormen, wat wel en niet past, met Collage
+3. Keuzehulp: waar let je op bij aanschaf (afmetingen, materiaal, prijsindicatie), materiaalvergelijking via MateriaalKaart
+4. Productselectie per situatie: minimaal 3 situatiegroepen, samen 8-10 producten met ProductCard, inclusief eerlijke voor- en nadelen per product; stijltips op minimaal de helft
+5. H2 "Eerlijk gezegd" of "Dit zou ik niet kopen": KoopNietBlok met beeld en onderbouwing
+6. FAQ-band (3-5 vragen, gededupliceerd tegen andere pagina's)
+Plus minimaal 2 keuzesecties uit: onderhoud, stijlcombinaties, formaten/opstelling, prijsopbouw. Een kleurencombinatie-element (stijltips en/of KleurenKaart) is verplicht. Woordaantallen zijn inhoudswoorden: padding is verboden, de depth-score blijft leidend.
 Subvarianten (rond, ovaal, eiken, walnoot) worden secties met een anchor op de hoofdpagina, geen eigen pagina, tenzij de keyword-mapping anders zegt.
 
 ## Search intent werkwijze
@@ -54,15 +55,16 @@ Voor ELKE pagina, voor het schrijven (naast de differentiatie-check):
 ## Onderzoeksprotocol per koopgids
 
 Voor elke koopgids, voordat je schrijft:
-1. Zoek op Bol.com naar de productcategorie met "japandi" als term
-2. Selecteer 5-10 producten op basis van: past echt bij Japandi (natuurlijke materialen, strakke vormen, neutrale tinten; papier-mache en hout = ja, faux fur en hoogglans = nee), reviewscore 4+ waar mogelijk, spreiding in prijs (budget, midden, hoger)
+1. Zoek winkel-neutraal naar de productcategorie met "japandi" als term (Bol.com plus gespecialiseerde winkels). Het beste product wint, ongeacht winkel; selecteer nooit een zwakker product omdat het bij een affiliate-partner staat.
+2. Selecteer 8-10 producten op basis van: past echt bij Japandi (natuurlijke materialen, strakke vormen, neutrale tinten; papier-mache en hout = ja, faux fur en hoogglans = nee), reviewscore 4+ waar mogelijk, spreiding in prijs (budget, midden, hoger)
 3. Leg per product vast: naam, merk, prijs, afmetingen, materiaal, reviewscore, 1-2 voordelen, 1 nadeel of kanttekening
 4. Niet aanbevolen producten: benoem ze met merk en reden, ZONDER link
 5. Prijzen dateren: schrijf "prijs bij publicatie" logica in de ProductCard, niet hardcoded in lopende tekst
 
 ## Linkbeleid
 
-- Alle affiliate links naar Bol.com: `rel="sponsored noopener"`, target blank. Partner-ID komt in een centrale config (`/lib/affiliate.ts`), nooit hardcoded in MDX.
+- Alle productlinks lopen via de router in `/lib/affiliate.ts` (per-winkel linkbuilders, nu Bol.com, voorbereid op Daisycon/TradeTracker). Affiliate-winkels: `rel="sponsored noopener"`, target blank. Niet-affiliate winkels: normale link met `rel="nofollow noopener"`. Partner-ID's komen in de centrale config, nooit hardcoded in MDX.
+- Site-copy is nooit Bol-exclusief: schrijf "links naar webshops", niet "links naar Bol.com".
 - Producten die we afraden krijgen GEEN link, alleen merk en productnaam met de reden.
 - Externe informatieve bronnen (als die er zijn): normale links, spaarzaam.
 - Interne links: elke koopgids linkt naar de pillar en naar 2-4 verwante gidsen/koopgidsen. Elke gids linkt naar de relevante koopgidsen. Gebruik beschrijvende anchorteksten, geen "klik hier".
