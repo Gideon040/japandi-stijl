@@ -118,5 +118,213 @@
     "aspect_ratio": "3:4",
     "alt": "Hand voelt aan de houtnerf van een eiken tafelblad naast een opengeslagen notitieboek",
     "prompt": "Close-up of a hand touching the wood grain of an oak table top, open notebook with pen beside it, soft window light, warm walnut and creme tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-hero",
+    "page": "/japandi-bloempot",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Groep matte keramieken Japandi bloempotten in zandtinten met groene kamerplanten bij een raam",
+    "prompt": "Group of matte ceramic plant pots in sand and off-white tones with architectural green houseplants near a window, light wood floor, soft diffused daylight, generous negative space, warm neutral palette, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-collage-1",
+    "page": "/japandi-bloempot",
+    "slot": "collage-1",
+    "aspect_ratio": "3:4",
+    "alt": "Grote terracotta bloempot met monstera in een lichte hoek met daglicht",
+    "prompt": "Large unglazed terracotta plant pot with a monstera in a bright corner, warm off-white wall, soft side daylight, visible clay texture, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-collage-2",
+    "page": "/japandi-bloempot",
+    "slot": "collage-2",
+    "aspect_ratio": "4:5",
+    "alt": "Drie keramieken bloempotten in verschillende hoogtes op een houten vensterbank",
+    "prompt": "Three matte ceramic plant pots of varying heights on a wooden windowsill, sheer linen curtain backdrop, soft diffused daylight, sand and stone grey tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-collage-3",
+    "page": "/japandi-bloempot",
+    "slot": "collage-3",
+    "aspect_ratio": "3:5",
+    "alt": "Detail van een gespikkelde steengoed bloempot met ruwe textuur",
+    "prompt": "Close-up detail of a speckled stoneware plant pot with rough texture, raking window light revealing the surface, warm creme backdrop, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-sectie-1",
+    "page": "/japandi-bloempot",
+    "slot": "split-maat",
+    "aspect_ratio": "4:5",
+    "alt": "Kwekerspot wordt in een ruime matte keramieken sierpot gezet",
+    "prompt": "Hands placing a plastic nursery pot into a larger matte ceramic cachepot on a wooden table, soft window light, sand and creme tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-rond",
+    "page": "/japandi-bloempot",
+    "slot": "rond-maat",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van de matte rand van een keramieken bloempot",
+    "prompt": "Close-up detail of the matte rim of a ceramic plant pot in warm sand tone, soft shadow play, visible glaze texture, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-sectie-2",
+    "page": "/japandi-bloempot",
+    "slot": "split-groeperen",
+    "aspect_ratio": "4:5",
+    "alt": "Groepje van drie bloempotten in verschillende vormen en hoogtes naast een linnen fauteuil",
+    "prompt": "Group of three plant pots in different shapes and heights beside a linen armchair, low wooden stool, soft diffused daylight, warm sand and walnut palette, generous negative space, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-koopniet",
+    "page": "/japandi-bloempot",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Glanzende felgekleurde bloempotten die niet bij de matte Japandi stijl passen",
+    "prompt": "Glossy brightly colored plastic plant pots clustered on a shelf, harsh artificial light, cluttered styling, contrast with calm interiors, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bloempot-faq",
+    "page": "/japandi-bloempot",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige leeshoek met een grote kamerplant in een matte zandkleurige pot",
+    "prompt": "Calm reading corner with a large houseplant in a matte sand-colored ceramic pot, linen armchair, soft natural daylight, generous negative space, warm neutral palette, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-hero",
+    "page": "/japandi-vaas",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Stilleven van matte keramieken Japandi vazen met droogbloemen op een eiken dressoir",
+    "prompt": "Still life of matte ceramic vases with dried grasses on an oak sideboard, warm off-white wall, soft diffused daylight, sand and terracotta tones, generous negative space, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-collage-1",
+    "page": "/japandi-vaas",
+    "slot": "collage-1",
+    "aspect_ratio": "3:4",
+    "alt": "Organisch gevormde keramieken vaas met enkele gedroogde tak op een houten tafel",
+    "prompt": "Organically shaped ceramic vase with a single dried branch on a light wood table, warm creme backdrop, soft side daylight, visible handmade texture, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-collage-2",
+    "page": "/japandi-vaas",
+    "slot": "collage-2",
+    "aspect_ratio": "4:5",
+    "alt": "Geribbelde bruine glazen vaas met verse eucalyptus in zacht tegenlicht",
+    "prompt": "Ribbed brown glass vase with fresh eucalyptus stems in soft backlight near a window, sheer linen curtain, warm walnut tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-collage-3",
+    "page": "/japandi-vaas",
+    "slot": "collage-3",
+    "aspect_ratio": "3:5",
+    "alt": "Hoge vloervaas met pampaspluimen in een lege hoek",
+    "prompt": "Tall ceramic floor vase with pampas plumes in an empty corner, warm sand wall, soft shadow play, generous negative space, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-sectie-1",
+    "page": "/japandi-vaas",
+    "slot": "split-waterdicht",
+    "aspect_ratio": "4:5",
+    "alt": "Verse bloemstelen worden in een geglazuurde keramieken vaas met water gezet",
+    "prompt": "Hands placing fresh flower stems into a glazed ceramic vase with water on a wooden table, soft window light, creme and sand tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-rond",
+    "page": "/japandi-vaas",
+    "slot": "rond-waterdicht",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van de hals van een handgemaakte keramieken vaas",
+    "prompt": "Close-up detail of the neck of a handmade ceramic vase, matte glaze with subtle speckles, soft window light, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-sectie-2",
+    "page": "/japandi-vaas",
+    "slot": "split-styling",
+    "aspect_ratio": "4:5",
+    "alt": "Drie vazen in verwante zandtinten als stilleven op een wandplank",
+    "prompt": "Three vases in related sand tones arranged as a still life on a wooden wall shelf, varying heights, generous spacing, soft diffused daylight, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-koopniet",
+    "page": "/japandi-vaas",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Glanzende kunststof vaas met zichtbare printlijnen die niet bij Japandi past",
+    "prompt": "Glossy plastic 3D-printed vase with visible print lines on a cluttered shelf, flat artificial light, contrast with natural materials, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-vaas-faq",
+    "page": "/japandi-vaas",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Lege keramieken vaas als sculptuur op een eiken nachtkastje",
+    "prompt": "Empty ceramic vase as a sculpture on an oak nightstand, warm off-white wall, soft morning light, generous negative space, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-hero",
+    "page": "/japandi-slaapkamer",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Japandi slaapkamer met laag eiken bed en linnen beddengoed in zandtinten",
+    "prompt": "Japandi bedroom interior, low oak platform bed, washed linen bedding in warm sand tones, soft diffused morning light through sheer curtains, minimal styling, single ceramic vase on nightstand, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-collage-1",
+    "page": "/japandi-slaapkamer",
+    "slot": "collage-1",
+    "aspect_ratio": "3:4",
+    "alt": "Laag houten bed met gelaagd linnen beddengoed en een plaid aan het voeteneinde",
+    "prompt": "Low wooden bed with layered linen bedding and a wool throw at the foot end, warm creme wall, soft diffused daylight, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-collage-2",
+    "page": "/japandi-slaapkamer",
+    "slot": "collage-2",
+    "aspect_ratio": "4:5",
+    "alt": "Eiken nachtkastje met kleine lamp en een enkele vaas",
+    "prompt": "Oak nightstand with a small warm table lamp and a single ceramic vase, linen bedding edge visible, soft evening light, warm sand tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-collage-3",
+    "page": "/japandi-slaapkamer",
+    "slot": "collage-3",
+    "aspect_ratio": "3:5",
+    "alt": "Linnen gordijn dat zacht ochtendlicht filtert in een rustige slaapkamer",
+    "prompt": "Sheer linen curtain filtering soft morning light in a calm bedroom, glimpse of a wooden bed frame, warm creme palette, generous negative space, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-sectie-1",
+    "page": "/japandi-slaapkamer",
+    "slot": "split-bed",
+    "aspect_ratio": "4:5",
+    "alt": "Detail van gewassen linnen beddengoed met natuurlijke kreukels in zandtinten",
+    "prompt": "Close-up of washed linen bedding with natural wrinkles in warm sand tones, soft side daylight, layered duvet and throw, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-rond",
+    "page": "/japandi-slaapkamer",
+    "slot": "rond-bed",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een massief houten bedframe met zichtbare nerf",
+    "prompt": "Close-up detail of a solid oak bed frame corner with visible wood grain, linen bedding edge, soft window light, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-sectie-2",
+    "page": "/japandi-slaapkamer",
+    "slot": "split-licht",
+    "aspect_ratio": "4:5",
+    "alt": "Warm verlicht wandlampje naast een bed in een verder gedimde slaapkamer",
+    "prompt": "Warm glowing wall lamp beside a low wooden bed in an otherwise dim bedroom, linen bedding, cozy evening atmosphere, warm 2700K light tone, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-slaapkamer-faq",
+    "page": "/japandi-slaapkamer",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige Japandi slaapkamerhoek met bankje en plaid in ochtendlicht",
+    "prompt": "Calm Japandi bedroom corner with a wooden bench and folded wool throw in soft morning light, warm creme wall, generous negative space, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
   }
 ]
