@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-lijn mt-20">
           <div className="max-w-wide mx-auto px-6 py-10 text-sm text-klei">
             <p>
-              Japandi-stijl.nl bevat affiliate links naar Bol.com. Zie het over-ons blok op
+              Japandi-stijl.nl bevat affiliate links naar webwinkels. Zie het over-ons blok op
               elke pagina voor hoe wij selecteren.
             </p>
           </div>

@@ -30,5 +30,45 @@
     "aspect_ratio": "3:2",
     "alt": "Opgeruimde Japandi werkplek met laptop, kleine tafellamp en een plant, zonder zichtbare kabels",
     "prompt": "Tidy Japandi workspace, light wood desk with laptop, small paper lantern table lamp and a single green plant, no visible cables, linen curtain backdrop, soft diffused daylight, warm sand tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "home-hero",
+    "page": "/",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Lichte Japandi woonkamer met laag eiken meubilair, linnen bank en veel rust en witruimte",
+    "prompt": "Serene Japandi living room interior, low oak furniture, natural linen sofa in warm creme, paper lantern pendant, soft diffused daylight through sheer curtains, generous negative space, warm sand and walnut palette, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "home-ruimte-woonkamer",
+    "page": "/",
+    "slot": "linkkaart-woonkamer",
+    "aspect_ratio": "4:3",
+    "alt": "Japandi woonkamer met linnen bank, lage eiken salontafel en neutrale zandtinten",
+    "prompt": "Japandi living room, linen sofa in warm creme, low oak coffee table with ceramic vase, wool rug in sand tone, soft diffused daylight, minimal styling, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "home-ruimte-slaapkamer",
+    "page": "/",
+    "slot": "linkkaart-slaapkamer",
+    "aspect_ratio": "4:3",
+    "alt": "Japandi slaapkamer met laag houten bed en linnen beddengoed in warme zandtinten",
+    "prompt": "Japandi bedroom, low wooden platform bed, linen bedding in warm sand tones, single ceramic vase on a light oak nightstand, soft morning light through sheer curtains, minimal styling, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "home-ruimte-keuken",
+    "page": "/",
+    "slot": "linkkaart-keuken",
+    "aspect_ratio": "4:3",
+    "alt": "Japandi keuken met houten fronten, leeg werkblad en keramiek in aardetinten",
+    "prompt": "Japandi kitchen, light wood cabinet fronts, clear stone countertop with a few ceramic bowls in earth tones, open shelf with handmade ceramics, soft diffused daylight, minimal styling, warm neutral palette, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "home-werkwijze",
+    "page": "/",
+    "slot": "split-werkwijze",
+    "aspect_ratio": "3:4",
+    "alt": "Hand voelt aan de houtnerf van een eiken tafelblad naast een opengeslagen notitieboek",
+    "prompt": "Close-up of a hand touching the wood grain of an oak table top, open notebook with pen beside it, soft window light, warm walnut and creme tones, minimal styling, editorial interior photography, photorealistic"
   }
 ]
