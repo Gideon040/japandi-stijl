@@ -6,7 +6,7 @@ export default function Sterren({ score, reviews }: Props) {
   if (!score || !reviews) {
     return <span className="text-sm text-klei">nog geen reviews</span>;
   }
-  const pct = Math.max(0, Math.min(100, (score / 5) * 100));
+  const pct = Math.round(Math.max(0, Math.min(100, (score / 5) * 100)) * 10) / 10;
   return (
     <span className="inline-flex items-center gap-2 text-sm">
       <span className="relative inline-block leading-none text-[#E0D5BF]" aria-hidden>

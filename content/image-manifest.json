@@ -8,28 +8,76 @@
     "prompt": "Japandi home office interior, light oak desk with clean empty top, single laptop and ceramic cup, sheer linen curtains with soft diffused daylight, warm sand and creme palette, minimal styling, editorial interior photography, photorealistic"
   },
   {
+    "id": "japandi-bureau-collage-1",
+    "page": "/japandi-bureau",
+    "slot": "collage-1",
+    "aspect_ratio": "3:4",
+    "alt": "Houten Japandi bureau met taps toelopende poten en een stoel met rieten zitting",
+    "prompt": "Light oak Japandi desk with tapered legs, wooden chair with cane seat, warm off-white wall, soft diffused daylight from a side window, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-collage-2",
+    "page": "/japandi-bureau",
+    "slot": "collage-2",
+    "aspect_ratio": "4:5",
+    "alt": "Houten wandplank boven een bureau met keramiek en gedroogde bloemen",
+    "prompt": "Wooden wall shelf above a desk with handmade ceramics and dried flowers, warm creme wall, soft shadow play, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-collage-3",
+    "page": "/japandi-bureau",
+    "slot": "collage-3",
+    "aspect_ratio": "3:5",
+    "alt": "Keramische vaas met droogbloemen als enige decoratie op een houten bureaublad",
+    "prompt": "Tall ceramic vase with dried grasses on a light wood desk top, warm sand backdrop, soft directional daylight, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
+  },
+  {
     "id": "japandi-bureau-sectie-1",
     "page": "/japandi-bureau",
-    "slot": "sectie-formaat",
-    "aspect_ratio": "3:2",
+    "slot": "split-formaat",
+    "aspect_ratio": "4:5",
     "alt": "Compact Japandi bureau van ongeveer 120 centimeter breed met bewust lege muurruimte ernaast",
     "prompt": "Compact Japandi desk in light wood against a warm off-white wall, generous empty wall space beside it, simple wooden chair, soft morning light from a side window, minimal styling, editorial interior photography, warm neutral palette, photorealistic"
   },
   {
+    "id": "japandi-bureau-rond",
+    "page": "/japandi-bureau",
+    "slot": "rond-formaat",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een keramieken kop op een houten bureaublad",
+    "prompt": "Close-up detail of a handmade ceramic cup on a light oak desk top, visible wood grain, soft window light, warm neutral palette, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
     "id": "japandi-bureau-sectie-2",
     "page": "/japandi-bureau",
-    "slot": "sectie-materiaal",
-    "aspect_ratio": "3:2",
+    "slot": "split-onderhoud",
+    "aspect_ratio": "4:5",
     "alt": "Detail van een massief eiken bureaublad met zichtbare houtnerf en matte afwerking",
     "prompt": "Close-up detail of a solid oak desk top, visible wood grain, matte oiled finish, soft window light raking across the surface, small ceramic pen cup, warm neutral palette, editorial interior photography, photorealistic"
   },
   {
     "id": "japandi-bureau-sectie-3",
     "page": "/japandi-bureau",
-    "slot": "sectie-kabels",
-    "aspect_ratio": "3:2",
+    "slot": "split-kabels",
+    "aspect_ratio": "4:5",
     "alt": "Opgeruimde Japandi werkplek met laptop, kleine tafellamp en een plant, zonder zichtbare kabels",
     "prompt": "Tidy Japandi workspace, light wood desk with laptop, small paper lantern table lamp and a single green plant, no visible cables, linen curtain backdrop, soft diffused daylight, warm sand tones, minimal styling, editorial interior photography, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-koopniet",
+    "page": "/japandi-bureau",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Donker industrieel bureau met zwart stalen frame dat niet bij de lichte Japandi stijl past",
+    "prompt": "Dark industrial desk with black steel frame in a moody interior, contrast with light styling absent, dim evening light, editorial interior photography, muted warm tones, photorealistic"
+  },
+  {
+    "id": "japandi-bureau-faq",
+    "page": "/japandi-bureau",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige Japandi werkhoek met natuurlijk licht en een fauteuil",
+    "prompt": "Calm Japandi work corner, light wood desk near a window, linen armchair, natural daylight, generous negative space, warm sand and creme palette, minimal styling, editorial interior photography, photorealistic"
   },
   {
     "id": "home-hero",
