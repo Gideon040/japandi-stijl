@@ -138,6 +138,17 @@ Aan het einde van het project (of per batch) leest Gideon het manifest uit en ge
 - URL-structuur nieuw: plat, `/japandi-{onderwerp}/`. Geen /collections/, geen /blog/ prefix.
 - Sitemap.xml en robots.txt genereren. Canonicals op elke pagina.
 
+## Verificatie en sessie-werkwijze
+
+- **GEEN screenshots of visuele browserchecks**: dat kost te veel tijd, expliciet besluit van Gideon. Verificatie is altijd tekstueel.
+- **NOOIT `npx next build` draaien**: de dev-server van Gideon draait op poort 3000 en een build sloopt diens `.next`. Geen tweede server starten.
+- Verificatie per batch: `node scripts/check-mdx.mjs`, `npx tsc --noEmit`, en `Invoke-WebRequest` tegen `http://localhost:3000/{slug}/` met markercontroles (statuscode, geen em/en dashes in de HTML, aantal `rel="sponsored noopener"` = aantal Bol-cards, `rel="nofollow noopener"` = overige winkels + bronlinks, 3-5 `<summary>`-items, kerncijfers aanwezig).
+- **Commit per batch** met een beschrijvende Nederlandse commitmessage; werk autonoom door zonder tussentijdse toestemming te vragen, maar geef korte statusupdates in het Nederlands.
+- Werk batches af volgens docs/bouwplan.md (het statusbestand) en werk dat bestand na elke batch bij.
+- ProductCards krijgen GEEN `beeld`-prop zolang er geen geverifieerde productfoto-URL van de winkel is; meld ontbrekende foto's en placeholder-URLs (`url="#"`) aan Gideon in het batchverslag.
+- Geen `score`-prop zonder `reviews`-aantal: een score zonder geverifieerd reviewaantal hoort als tekst in de voordelen, niet als prop.
+- Per koopgids draait het onderzoek via research-agents (websearch): SERP-check plus winkel-neutraal productonderzoek, parallel waar mogelijk.
+
 ## Wat NIET doen
 
 - Geen localStorage/sessionStorage

@@ -22,8 +22,8 @@ Werk altijd in deze volgorde. Sla geen fase over.
 - [ ] REVIEW door Gideon. Let op: Olivine Bureau Noor en Kave Home Dilme hebben nog url="#" als placeholder, echte product-URLs nodig.
 
 ## Fase 2: Overige P1 (batches van 3)
-- [ ] /japandi-bloempot/ (p11), /japandi-vaas/ (p17), /japandi-slaapkamer/ (gids, p18)
-- [ ] /japandi-plafondlamp/ (p19), /japandi-dressoir/ (p22), /japandi-nachtkastje/ (p23)
+- [x] /japandi-bloempot/ (p11), /japandi-vaas/ (p17), /japandi-slaapkamer/ (gids, p18) (klaar, commit 081ec3b; status: review. Let op: alle nieuwe ProductCards missen nog productfoto-URLs van de winkels, net als Olivine/Kave eerder)
+- [ ] /japandi-plafondlamp/ (p19), /japandi-dressoir/ (p22), /japandi-nachtkastje/ (p23) (volgende batch)
 - [ ] /japandi-kast/ (p26), /japandi-spiegel/ (p26), /japandi-behang/ (p27)
 - [ ] /japandi-woonkamer/ (gids, p30)
 
