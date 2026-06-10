@@ -12,6 +12,15 @@ Werk altijd in deze volgorde. Sla geen fase over.
 - [x] /japandi-bureau/ (koopgids, P1, huidige positie 9, bron: shopify-export/japandi-bureaus.mdx) (status: review)
 - [ ] STOP na deze pagina. Gideon reviewt toon, diepgang, productselectie en design voordat fase 2 start.
 
+## Fase 1b: Design- en frameworkupgrade (voor start fase 2)
+- [x] Stap 1: designreferenties (4 HTML-mockups) in docs/design-referentie/ (klaar)
+- [x] Stap 2: tokens (zand-diep, sterrengoud, terracotta, bolblauw), 13 componenten en sectieritme naar de mockups (klaar)
+- [x] Stap 3: framework v4.1 aangescherpt (sectiemenu's, woordaantallen, stijltips, winkel-neutraal) + affiliate-router in lib/affiliate.ts (klaar)
+- [x] Stap 4: homepage naar designreferentie (klaar)
+- [x] Stap 5: /japandi-bureau/ herbouwd als kalibratiepagina, 8 producten in 4 situatiegroepen (status: review)
+- [x] Stap 6: controle (build, screenshots 1440/390, checklist) en bouwplan bijgewerkt (klaar)
+- [ ] REVIEW door Gideon. Let op: Olivine Bureau Noor en Kave Home Dilme hebben nog url="#" als placeholder, echte product-URLs nodig.
+
 ## Fase 2: Overige P1 (batches van 3)
 - [ ] /japandi-bloempot/ (p11), /japandi-vaas/ (p17), /japandi-slaapkamer/ (gids, p18)
 - [ ] /japandi-plafondlamp/ (p19), /japandi-dressoir/ (p22), /japandi-nachtkastje/ (p23)

@@ -23,11 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="nl" className={`${display.variable} ${body.variable}`}>
       <body>
         <header className="border-b border-lijn">
-          <div className="max-w-wide mx-auto px-6 py-5 flex items-center justify-between">
-            <Link href="/" className="font-display text-2xl">
+          <div className="max-w-wide mx-auto px-6 py-4 sm:py-5 flex flex-wrap items-center justify-between gap-y-1">
+            <Link href="/" className="font-display text-xl sm:text-2xl">
               japandi-stijl<span className="text-klei">.nl</span>
             </Link>
-            <nav className="text-sm flex gap-6">
+            <nav className="text-sm flex gap-4 sm:gap-6">
               <Link href="/japandi-stijl/">Wat is Japandi</Link>
               <Link href="/japandi-woonkamer/">Per ruimte</Link>
               <Link href="/japandi-meubels/">Meubels</Link>
