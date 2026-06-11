@@ -19,7 +19,7 @@ Werk altijd in deze volgorde. Sla geen fase over.
 - [x] Stap 4: homepage naar designreferentie (klaar)
 - [x] Stap 5: /japandi-bureau/ herbouwd als kalibratiepagina, 8 producten in 4 situatiegroepen (status: review)
 - [x] Stap 6: controle (build, screenshots 1440/390, checklist) en bouwplan bijgewerkt (klaar)
-- [ ] REVIEW door Gideon. Let op: Olivine Bureau Noor en Kave Home Dilme hebben nog url="#" als placeholder, echte product-URLs nodig.
+- [ ] REVIEW door Gideon. Update: Olivine Noor en Kave Dilme bleken niet te bestaan en zijn vervangen door geverifieerde producten (WOOOD Tug via fonQ, Olivine Lenn via Gewoonstijl). Alle productkaarten hebben nu een officiele winkelfoto via de beeld-prop.
 
 ## Fase 2: Overige P1 (batches van 3)
 - [x] /japandi-bloempot/ (p11), /japandi-vaas/ (p17), /japandi-slaapkamer/ (gids, p18) (klaar, commit 081ec3b; status: review. Let op: alle nieuwe ProductCards missen nog productfoto-URLs van de winkels, net als Olivine/Kave eerder)

@@ -21,15 +21,15 @@ export default function ProductCard(p: Props) {
   const winkel = p.winkel ?? "Bol.com";
   const isBol = winkel.toLowerCase().includes("bol");
   return (
-    <div className="bg-papier rounded-sm shadow-sm flex flex-col h-full transition-all duration-200 hover:-translate-y-[3px] hover:shadow-md">
+    <div className="bg-papier rounded-sm shadow-sm flex flex-col h-full transition-shadow duration-200 hover:shadow-md">
       {p.beeld && (
-        <div className="aspect-[4/3] overflow-hidden rounded-t-sm">
+        <div className="aspect-square overflow-hidden rounded-t-sm p-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={p.beeld}
             alt={p.naam}
             loading="lazy"
-            className="w-full h-full object-cover mix-blend-multiply"
+            className="w-full h-full object-contain mix-blend-multiply"
           />
         </div>
       )}

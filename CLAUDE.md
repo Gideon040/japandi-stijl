@@ -56,6 +56,7 @@ Voor ELKE pagina, voor het schrijven (naast de differentiatie-check):
 
 Voor elke koopgids, voordat je schrijft:
 1. Zoek winkel-neutraal naar de productcategorie met "japandi" als term (Bol.com plus gespecialiseerde winkels). Het beste product wint, ongeacht winkel; selecteer nooit een zwakker product omdat het bij een affiliate-partner staat.
+   - Doorzoek Bol.com altijd ook direct met de zoekopdracht "japandi {productsoort}" (bijv. "japandi bank", "japandi vaas"): bovenaan die resultaten staan vaak goede opties die je mag meenemen in de selectie.
 2. Selecteer 8-10 producten op basis van: past echt bij Japandi (natuurlijke materialen, strakke vormen, neutrale tinten; papier-mache en hout = ja, faux fur en hoogglans = nee), reviewscore 4+ waar mogelijk, spreiding in prijs (budget, midden, hoger)
 3. Leg per product vast: naam, merk, prijs, afmetingen, materiaal, reviewscore, 1-2 voordelen, 1 nadeel of kanttekening
 4. Niet aanbevolen producten: benoem ze met merk en reden, ZONDER link
@@ -71,7 +72,7 @@ Voor elke koopgids, voordat je schrijft:
 
 ## Componenten
 
-- `ProductCard`: productfoto van de winkel bovenin (4:3), merk in caps, naam in Fraunces, prijs, sterren, specs, voordelen/nadeel als ronde badges, pill-knop "Bekijk bij {winkel}". Props:
+- `ProductCard`: productfoto van de winkel bovenin (vierkant vak, object-contain zodat elke fotoverhouding volledig past), merk in caps, naam in Fraunces, prijs, sterren, specs, voordelen/nadeel als ronde badges, pill-knop "Bekijk bij {winkel}". Props:
   - `prijs`: ALLEEN het bedrag (`prijs="118"`); de component rendert zelf "ca. € 118 (prijs bij publicatie)". Geen "ca." of valutateken in MDX.
   - `winkel`: verplicht ("Bol.com", "Olivine", ...). De knop kleurt Bol-blauw bij Bol, walnoot bij andere winkels. De link loopt via de router in `lib/affiliate.ts` (sponsored rel voor affiliate-winkels, nofollow voor de rest); nooit zelf affiliate-parameters in MDX zetten.
   - `score` (getal, `score={4.2}`) en `reviews` (aantal): renderen sterren met fractionele vulling. Zonder reviews toont de card "nog geen reviews", nooit lege sterren.
@@ -145,7 +146,7 @@ Aan het einde van het project (of per batch) leest Gideon het manifest uit en ge
 - Verificatie per batch: `node scripts/check-mdx.mjs`, `npx tsc --noEmit`, en `Invoke-WebRequest` tegen `http://localhost:3000/{slug}/` met markercontroles (statuscode, geen em/en dashes in de HTML, aantal `rel="sponsored noopener"` = aantal Bol-cards, `rel="nofollow noopener"` = overige winkels + bronlinks, 3-5 `<summary>`-items, kerncijfers aanwezig).
 - **Commit per batch** met een beschrijvende Nederlandse commitmessage; werk autonoom door zonder tussentijdse toestemming te vragen, maar geef korte statusupdates in het Nederlands.
 - Werk batches af volgens docs/bouwplan.md (het statusbestand) en werk dat bestand na elke batch bij.
-- ProductCards krijgen GEEN `beeld`-prop zolang er geen geverifieerde productfoto-URL van de winkel is; meld ontbrekende foto's en placeholder-URLs (`url="#"`) aan Gideon in het batchverslag.
+- Elke ProductCard krijgt een `beeld`-prop met de officiele productfoto-URL van de winkel (bij Bol: de og:image van de productpagina, host media.s-bol.com). Haal die URL op tijdens het productonderzoek (productpagina fetchen, og:image uitlezen). Geen AI-beelden op productkaarten. Lukt het ophalen echt niet, laat de prop dan weg en meld het, samen met eventuele placeholder-URLs (`url="#"`), aan Gideon in het batchverslag.
 - Geen `score`-prop zonder `reviews`-aantal: een score zonder geverifieerd reviewaantal hoort als tekst in de voordelen, niet als prop.
 - Per koopgids draait het onderzoek via research-agents (websearch): SERP-check plus winkel-neutraal productonderzoek, parallel waar mogelijk.
 
