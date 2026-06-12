@@ -41,7 +41,7 @@ const TEMPLATE_LABEL: Record<PageMeta["template"], string> = {
 const RUIMTES = [
   { href: "/japandi-woonkamer/", titel: "Woonkamer", subtitel: "de basis van de stijl", beeldId: "home-ruimte-woonkamer" },
   { href: "/japandi-slaapkamer/", titel: "Slaapkamer", subtitel: "slapen in eenvoud", beeldId: "home-ruimte-slaapkamer" },
-  { href: "/japandi-eettafel/", titel: "Eetkamer", subtitel: "lage lijn, warm hout", beeldId: "home-ruimte-eetkamer" },
+  { href: "/japandi-eetkamer/", titel: "Eetkamer", subtitel: "lage lijn, warm hout", beeldId: "home-ruimte-eetkamer" },
 ];
 
 const WERKWIJZE = [
@@ -161,7 +161,11 @@ export default function Home() {
               </a>
               ). In een interieur betekent dat een keramieken vaas met een onregelmatige rand of
               een matte steenlook met natuurlijke oneffenheden, niet een goedkope imitatie die
-              alleen de kleur nadoet.
+              alleen de kleur nadoet. Het precieze{" "}
+              <Link href="/japandi-vs-wabi-sabi/" className="inline-link">
+                verschil tussen Japandi en wabi-sabi
+              </Link>{" "}
+              staat in een aparte gids.
             </p>
           </div>
         </div>
@@ -402,11 +406,11 @@ export default function Home() {
               <p className="prose-japandi mt-3">
                 Een Japandi keuken is warm en opgeruimd: greeploze of houten fronten, een aanrecht
                 dat leeg blijft, en natuurlijk materiaal boven hoogglans. Het werkblad in hout of
-                een matte steenlook maakt het verschil. Een aparte keuken-gids volgt; de{" "}
-                <Link href="/japandi-plafondlamp/" className="inline-link">
-                  koopgids voor plafondlampen
+                een matte steenlook maakt het verschil. De{" "}
+                <Link href="/japandi-keuken/" className="inline-link">
+                  gids voor de Japandi keuken
                 </Link>{" "}
-                helpt alvast bij de verlichting boven het eiland of de tafel.
+                behandelt materialen, kleuren en de maten voor een kookeiland.
               </p>
             </div>
 
@@ -454,7 +458,11 @@ export default function Home() {
                 <Link href="/japandi-dressoir/" className="inline-link">
                   dressoir
                 </Link>{" "}
-                tegen de wand houdt servies uit het zicht en de lijn laag.
+                tegen de wand houdt servies uit het zicht en de lijn laag. De{" "}
+                <Link href="/japandi-eetkamer/" className="inline-link">
+                  gids voor de Japandi eetkamer
+                </Link>{" "}
+                behandelt de maten, het licht en de aankleding.
               </p>
             </div>
           </div>

@@ -85,7 +85,108 @@ Batch F: meubels-hub. De brede categorie /japandi-meubels/ kon nu pas gebouwd wo
 
 ## Batch F (japandi-meubels hub) AFGEROND, wacht op review Gideon (2026-06-11).
 
-## Fase 5: P3 (93 paginas, alleen na evaluatie van de eerste rankingresultaten)
+## Fase 5: P3 + migratiegaten (start 2026-06-12, besluit Gideon: nu bouwen, niet wachten op rankings)
+
+### Beslisregel per cluster (LEIDEND, voorkomt kannibalisatie)
+- **Eigen pagina** als het cluster een eigen zoekintentie en eigen productcluster/onderwerp heeft (vrijwel alle koopgidsen en kamer/concept-gidsen).
+- **301-redirect of anchor** als het een variant (-walnoot, -beige, -groot, -organisch, maatvarianten), synoniem, Engelse term of "...-stijl"-variant is van een bestaande pagina. Toevoegen aan `docs/redirect-map.csv`, daarna `python scripts/generate-redirects.py`.
+- Bij twijfel (gemarkeerd met `?`): de SERP-check beslist. Staan webshop-categoriepaginas in de Google top 3 voor de losse term, dan eigen koopgids; staat de hoofdterm-pagina er al, dan anchor/301.
+- Longtail eigen pagina = ingekorte gids (400-600 woorden: hero, 1 inhoudssectie, FAQ). Volwaardige koopgids/gids = normale template-eisen (zie CLAUDE.md).
+
+### HARDE EIS: geen enkele 301 mag op een 404 landen
+Elke redirect-bestemming in `redirect-map.csv` moet bij afronding ofwel een gebouwde pagina zijn, ofwel naar een bestaande pagina/anchor wijzen. Controle aan het eind: `node scripts/check-redirects.mjs` schrijven of handmatig kruisen tegen `content/pages/`.
+
+### PRIORITEITSBESLUIT 2026-06-12 (Gideon): oude collecties EERST, anders 404 op SEO-pagina's
+Een 301 die naar een nog-ongebouwde pagina wijst = effectief een 404 voor Google. Dat is nu het grootste risico. Daarom:
+1. **ALLE oude Shopify-collecties (bestaan in `docs/shopify-export/`) krijgen voorrang.** Pas als elke oude collectie een live bestemming heeft (gebouwde pagina of redirect naar bestaande pagina/anchor), bouwen we nieuwe keyword-only pagina's.
+2. **Nieuwe keyword-only pagina's (GEEN oude collectie) worden uitgesteld naar het laatst.** Dit zijn: /japandi-vloer/, /japandi-fruitschaal/, /japandi-dienblad/, /japandi-onderzetters/, /japandi-prullenbak/, /japandi-wasmand/, /japandi-fotolijst/, /japandi-plant/. Verplaatst naar Batch N (nieuw, onderaan).
+3. **De 5 voormalige dode anchors worden eigen pagina's** (besluit Gideon 2026-06-12, herziening beslisregel): /japandi-schoenenkast/, /japandi-wandkast/, /japandi-kledingkast/, /japandi-salontafel-walnoot/, /japandi-hanglamp-eettafel/. Tot ze bestaan landen die redirects op de top van /japandi-kast/ resp. /japandi-salontafel/ /japandi-hanglamp/ (geen 404, wel suboptimaal). LET OP: hanglamp-eettafel is een use-case, salontafel-walnoot een kleurvariant; bij bouw checken of eigen pagina niet kannibaliseert (anders alsnog anchor-sectie op de hoofdpagina).
+4. **Instant-fix 2026-06-12 uitgevoerd:** 6 variant-collecties die kannibaliseerden omgezet naar bestaande pagina's (geen eigen pagina): /collections/vazen → /japandi-vaas/, eettafel-rond → /japandi-eettafel/#rond, eettafel-ovaal → #ovaal, eettafel-uitschuifbaar → /japandi-eettafel/, zwevend-tv-meubel → /japandi-tv-meubel/, tv-meubel-zwart → /japandi-tv-meubel/. redirects.mjs geregenereerd.
+
+**Nog te bouwen voor 100% oude-collectie-dekking (21 pagina's, 2026-06-12):** gids: toilet, kantoor, tv-kast, cinewall, buffetkast. koopgids: barkruk, decoratie, eetkamerbank, bijzettafel, boekenkast, dekbedovertrek, deurmat, gordijnen, kapstok, kussen, poster, servies, textiel(hub), tv-meubel-walnoot, tv-meubel-beige, accessoires(hub). Plus de 5 eigen-pagina-anchors hierboven. Daarna pas Batch N (nieuwe keywords).
+
+### Batch G (migratiekritiek: hoog volume + 404-redirects). Eigen pagina's. AFGEROND, wacht op review Gideon (2026-06-12).
+- [x] /japandi-keuken/ (P2, **7900 vol**, **gids** i.p.v. koopgids, status: review). AANDACHTSPUNT: als gids gebouwd, GEEN ProductCards. Reden: SERP informationeel (Image pack + People-also-ask, geen Shopping Ads) en een keuken is niet via affiliate koopbaar; consistent met woonkamer/badkamer-gidspatroon (Gideon eerder akkoord). Secties: basis+Collage, werkblad-materialen (SplitSectie + MateriaalKaart keramiek/composiet/massief hout/marmer-vermijd), kleuren (KleurenKaart), indeling (SfeerBand kookeiland/barkruk-maten = uniek), budget (SfeerBand €5.000-25.000), styling (SfeerBand). Kerncijfers max 3 tinten / 90 cm werkbladhoogte / €5.000-25.000. 5 FAQ. Verificatie: 200, 0 dashes, 5 summary, 0 sponsored, 0 nofollow, kern ja. Link-backs vanaf homepage + eetkamer.
+- [x] /japandi-eetkamer/ (250, kamerhub-gids, status: review). Secties: basis+Collage, maten (SplitSectie, #rond/#ovaal anchors = uniek), licht, stoelen (SfeerBand), vloerkleed-gap (SfeerBand = uniek), aankleding (SfeerBand). Kerncijfers 60 cm per couvert / ≥75 cm vrije ruimte / 60-80 cm hanglamp. 4 kamer-FAQ (gededupliceerd tegen eettafel/eetkamerstoel/hanglamp). Verificatie: 200, 0 dashes, 4 summary, 0 sponsored, 0 nofollow, kern ja. Link-backs vanaf homepage (link + LinkKaart) + eettafel.
+- [x] /japandi-vs-wabi-sabi/ (concept-gids, status: review). VergelijkingsTabel (Japandi vs wabi-sabi over 6 dimensies), nofollow Wikipedia kintsugi-link. Secties: kern, wabi-sabi-herkomst (SplitSectie 16e eeuw), japandi, overlap (SfeerBand), praktijk (SfeerBand). Kerncijfers 1 filosofie / 2 culturen / 16e eeuw. 4 FAQ. Verificatie: 200, 0 dashes, 4 summary, 0 sponsored, 1 nofollow, kern ja. Link-backs vanaf homepage (wabi-sabi-sectie) + woonkamer (fouten-punt 4).
+- [x] /japandi-tuin/ (kamer/concept-gids, status: review). Secties: basis, zen-verschil (SplitSectie karesansui/samon = uniek), materialen (MateriaalKaart hardhout/thermohout/natuursteen/grind/mat-zwart), beplanting (SfeerBand acer/siergras/bamboe-let-op), meubels (SfeerBand). Kerncijfers 3 zones / hardhout / gras + acer. 4 FAQ. Geen externe link. Verificatie: 200, 0 dashes, 4 summary, 0 sponsored, 0 nofollow, kern ja. Link-back vanaf bloempot. Redirects toegevoegd: /tuin-japanse-stijl/, /japandi-tuinset/, /japandi-stijl-tuin/ → /japandi-tuin/.
+- [x] /japandi-hal/ (kamer-gids, status: review). Secties: basis, genkan (SplitSectie agarikamachi/tataki = uniek, nofollow Wikipedia genkan-link), opberging (SfeerBand zwevend), ruimte/spiegel (SfeerBand, link spiegel), sfeer (KleurenKaart). Kerncijfers schoenen uit / zwevend / 1 spiegel. 4 FAQ. Verificatie: 200, 0 dashes, 4 summary, 0 sponsored, 1 nofollow, kern ja. Link-back vanaf spiegel (verder-kiezen). Redirect toegevoegd: /japandi-keukenstijl/ → /japandi-keuken/.
+- 35 manifest-entries toegevoegd aan image-manifest-fase5.json (7 per pagina: hero, collage-1/2/3, sectie-1, rond, faq). redirects.mjs geregenereerd (84 totaal). LET OP: 4 nieuwe redirects gaan pas live na herstart dev-server of bij deploy.
+
+### Batch H (gids-pagina's, ALLE oude collecties). Eigen pagina's. IN UITVOERING 2026-06-12.
+- [ ] /japandi-toilet/ (250, gids, oude collectie). japandi-wc (150) → 301 hierheen. Dedup tegen badkamer.
+- [ ] /japandi-kantoor/ (gids/kamer, oude collectie). Link naar bureau.
+- [ ] /japandi-tv-kast/ (450, gids, oude collectie). Afbakenen tegen tv-meubel (kast = dicht/hoog, meubel = laag).
+- [ ] /japandi-cinewall/ (100, gids, oude collectie).
+- VERPLAATST: /japandi-vloer/ (200, gids) is GEEN oude collectie -> naar Batch N (nieuwe keywords, na alle oude collecties).
+
+### Batch I (koopgidsen met eigen productcluster + 404-redirect).
+- [ ] /japandi-kapstok/ (350, koopgids, 404-redirect).
+- [ ] /japandi-servies/ (300, koopgids, 404-redirect).
+- [ ] /japandi-kussen/ (200, koopgids, 404-redirect).
+- [ ] /japandi-gordijnen/ (150, koopgids, 404-redirect). japandi-raambekleding (100) → 301 hierheen.
+- [ ] /japandi-dekbedovertrek/ (100, koopgids, 404-redirect).
+
+### Batch J (accessoires/decoratie-cluster: kies canonieke pagina, rest 301).
+- [ ] /japandi-decoratie/ (250, koopgids, 404-redirect). CANONIEK voor losse decoratie.
+- [ ] /japandi-accessoires/ (404-redirect /collections/japandi-woonaccessoires, geen mapping). EIGEN hub (besluit Gideon 2026-06-12). Afbakenen tegen decoratie (accessoires = breder: ook textiel/opberg). japandi-stijl-accessoires + japandi-accessoires-kwantum → 301 hierheen.
+- [ ] /japandi-textiel/ (404-redirect, geen mapping). EIGEN hub (besluit Gideon 2026-06-12): kussen/gordijnen/dekbed/vloerkleed met LinkKaart-grid naar die koopgidsen.
+- [ ] /japandi-fruitschaal/ (100, gids/koopgids).
+- [ ] /japandi-dienblad/ (100, gids/koopgids).
+- [ ] /japandi-onderzetters/ (150, gids).
+- [ ] /japandi-prullenbak/ (100, gids).
+- [ ] /japandi-wasmand/ (100, gids).
+- [ ] /japandi-fotolijst/ (150, gids). Dedup tegen schilderij/wanddecoratie.
+- [ ] /japandi-plant/ (200, gids).
+
+### Batch K (kast/opberg-cluster + 404-redirects).
+- [ ] /japandi-boekenkast/ (250, koopgids, 404-redirect). EIGEN pagina (besluit Gideon 2026-06-12). Dedup tegen de boekenkast-groep op /japandi-kast/, eigen producten/diepgang.
+- [ ] /japandi-buffetkast/ (150, gids, 404-redirect).
+- [ ] /japandi-bijzettafel/ (600, koopgids, 404-redirect). Hoog volume.
+- [ ] /japandi-vitrinekast/ (100, gids). EIGEN pagina (besluit Gideon 2026-06-12).
+- [ ] /japandi-ladekast/ (100, gids). EIGEN pagina (besluit Gideon 2026-06-12). Afbakenen tegen dressoir/kast.
+
+### Batch L (badkamer/deur-cluster + 404-redirects).
+- [ ] /japandi-badkamermeubel/ (350, koopgids, 404-redirect). Link naar badkamer-gids.
+- [ ] /japandi-tegels/ (150, koopgids). Link naar badkamer-gids.
+- [ ] /japandi-deur/ (200, koopgids). japandi-binnendeur (150) → 301 hierheen.
+- [ ] /japandi-boxspring/ (200, gids). Link naar bed.
+- [ ] /japandi-chique/ (400, gids, AI Overview in SERP). Concept-gids, antwoord-eerst cruciaal.
+
+### Batch M (eet/tv-varianten: SERP beslist pagina vs anchor).
+- [ ] /japandi-eettafel-rond/ (500, koopgids). EIGEN pagina (besluit Gideon 2026-06-12). Eigen productselectie, dedup tegen de rond-groep op /japandi-eettafel/.
+- [ ] /japandi-eettafel-ovaal/ (450, koopgids). EIGEN pagina (besluit Gideon 2026-06-12). Idem, dedup tegen /japandi-eettafel/#ovaal.
+- [ ] /japandi-barkruk/ (500, koopgids, 404-redirect /collections/barkrukken). EIGEN pagina (besluit Gideon 2026-06-12, niet vouwen in eetkamerstoel). Zithoogte 63-78 cm voor bar/keukeneiland, afbakenen tegen eetkamerstoel.
+- [ ] /japandi-eetkamerbank/ (150, gids/koopgids, 404-redirect /collections/eetkamerbanken).
+- [ ] /japandi-tv-meubel-beige/ (600, koopgids, 404-redirect). EIGEN pagina (besluit Gideon 2026-06-12). Kleur-specifieke selectie, dedup tegen /japandi-tv-meubel/.
+- [ ] /japandi-tv-meubel-walnoot/ (300, koopgids, 404-redirect). EIGEN pagina (besluit Gideon 2026-06-12). Walnoot-specifiek.
+- [ ] /japandi-poster/ (200, koopgids, 404-redirect /collections/japandi-posters). EIGEN pagina (besluit Gideon 2026-06-12). Dedup tegen /japandi-schilderij/ (poster = betaalbaar/print, schilderij = canvas/ingelijst).
+
+### Redirect-batch (GEEN eigen pagina: toevoegen aan redirect-map.csv, dan generate-redirects.py)
+Varianten/synoniemen die 301 worden. Verifieer dat de doel-anchor bestaat, anders anchor toevoegen aan de doelpagina.
+- japandi-eetkamerstoel-walnoot, japandi-stijl-stoelen, japandi-stijl-eetkamerstoel → /japandi-eetkamerstoel/ (#hout)
+- japandi-ronde-eettafel, japandi-eettafel-organisch, japandi-eettafel-beige → /japandi-eettafel/ (#rond / #ovaal)
+- japandi-vloerkleed-organisch, japandi-vloerkleed-200x300, japandi-vloerkleed-action → /japandi-vloerkleed/ (#rond / #beige)
+- japandi-schilderij-groot → /japandi-schilderij/  | japandi-wall-art → /japandi-schilderij/ (EN)
+- japandi-vaas-groot, japandi-vazen → /japandi-vaas/
+- japandi-bed-180x200 → /japandi-bed/
+- japandi-lamp-staand, japandi-staande-lamp-stijl, japandi-vloerlamp-stijl → /japandi-vloerlamp/
+- japandi-lamp-slaapkamer → /japandi-slaapkamer/  | japandi-hanglamp-beige, japandi-hanglamp-woonkamer → /japandi-hanglamp/
+- japandi-eettafel-lamp, japandi-eetkamer-lamp → /japandi-hanglamp/#eettafel
+- japandi-plafonniere, japandi-plafondlamp-stijl → /japandi-plafondlamp/
+- japandi-tv-meubel-zwart, japandi-tv-meubel-zwevend, japandi-zwevend-tv-meubel, japandi-stijl-tv-meubel → /japandi-tv-meubel/
+- japandi-dressoir-kast, japandi-dressoir-stijl → /japandi-dressoir/  | japandi-vakkenkast, japandi-kast-woonkamer → /japandi-kast/
+- japandi-plantenpot → /japandi-bloempot/  | japandi-verf → /japandi-kleuren/#verf  | japandi-wandpaneel → /japandi-wanddecoratie/
+- japandi-keukenstijl → /japandi-keuken/  | japandi-nachtkastje-stijl → /japandi-nachtkastje/  | japandi-stijl-meubels → /japandi-meubels/
+- japandi-stijl-kleuren, japandi-colors → /japandi-kleuren/
+- japandi-interior, japandi-huis, japandi-inspiratie → /  | japandi-bedroom → /japandi-slaapkamer/
+
+### Werkwijze Fase 5 (autonoom)
+- **Image-manifest: append aan `content/image-manifest-fase5.json`, NIET aan de oude `image-manifest.json`.** De oude bevat Fase 1-4 (deels al gegenereerd); de nieuwe is Gideons actuele generatielijst. `ImagePlaceholder` leest beide samen, dus alt en aspect ratio blijven werken.
+- Bouw per batch 4-5 pagina's achter elkaar, dan EEN verslag (geen per-pagina pauze; conform afspraak Gideon).
+- Volg de per-pagina checklist hieronder en alle CLAUDE.md-regels (geen dashes, antwoord-eerst, ProductCard beeld-prop via winkel-og:image, score alleen met reviews, winkel-neutraal onderzoek).
+- Werk redirect-batch tussendoor bij zodra een doelpagina bestaat (bv. nadat /japandi-keuken/ er is: japandi-keukenstijl 301 activeren).
+- Werk DEZE status na elke pagina bij (vink af, noteer winkels/prijzen/url's/aandachtspunten).
 
 ## Per pagina altijd (checklist)
 1. Bronbestand lezen in docs/shopify-export/

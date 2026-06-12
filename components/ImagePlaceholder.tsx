@@ -1,17 +1,24 @@
 import fs from "fs";
 import path from "path";
 import manifest from "@/content/image-manifest.json";
+import manifestFase5 from "@/content/image-manifest-fase5.json";
 
 type Props = { id: string; priority?: boolean; fill?: boolean; inGrid?: boolean };
+
+// Fase 1-4 staan in image-manifest.json (deels al gegenereerd), Fase 5 in
+// image-manifest-fase5.json (de actuele generatielijst). Renderen leest beide.
+const beelden = [...manifest, ...manifestFase5] as Array<{
+  id: string;
+  alt: string;
+  aspect_ratio: string;
+}>;
 
 // Rendert /public/images/{id}.webp zodra het bestand bestaat.
 // Tot die tijd: een rustige placeholder met de alt-tekst, zodat de
 // pagina gebouwd kan worden voordat de beelden gegenereerd zijn.
 // fill: vult de ouder (hero), inGrid: cel in een ImageGrid.
 export default function ImagePlaceholder({ id, priority, fill, inGrid }: Props) {
-  const entry = (manifest as Array<{ id: string; alt: string; aspect_ratio: string }>).find(
-    (m) => m.id === id
-  );
+  const entry = beelden.find((m) => m.id === id);
   const alt = entry?.alt ?? id;
   const ratio = entry?.aspect_ratio ?? "16:9";
   const [rw, rh] = ratio.split(":").map(Number);
