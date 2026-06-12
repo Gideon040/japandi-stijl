@@ -2,13 +2,13 @@ oude_url,nieuwe_url,actie
 /collections/salontafels,/japandi-salontafel/,redirect
 /collections/salontafel-rond,/japandi-salontafel/#rond,redirect
 /collections/salontafel-ovaal,/japandi-salontafel/#ovaal,redirect
-/collections/salontafel-walnoot,/japandi-salontafel-walnoot/,redirect
+/collections/salontafel-walnoot,/japandi-salontafel/#walnoot,redirect
 /collections/salontafel-eiken,/japandi-salontafel/#eiken,redirect
 /collections/eettafels,/japandi-eettafel/,redirect
 /collections/eetkamerstoelen,/japandi-eetkamerstoel/,redirect
 /japandi-eetkamerstoelen/,/japandi-eetkamerstoel/,redirect
 /collections/tv-meubels,/japandi-tv-meubel/,redirect
-/collections/barkrukken,/japandi-barkruk/,redirect
+/collections/barkrukken,/japandi-eetkamerstoel/,redirect
 /collections/japandi-tv-kasten,/japandi-tv-kast/,redirect
 /collections/tv-meubel-beige,/japandi-tv-meubel-beige/,redirect
 /collections/zwevend-tv-meubel,/japandi-zwevend-tv-meubel/,redirect
