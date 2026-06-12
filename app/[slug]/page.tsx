@@ -91,15 +91,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <MDXRemote
             source={intro}
             components={mdxComponents}
-            options={{ mdxOptions: { remarkPlugins: [remarkHeadingId] } }}
+            options={{ blockJS: false, mdxOptions: { remarkPlugins: [remarkHeadingId] } }}
           />
         )}
       </PageHero>
       <div className="prose-japandi pb-16">
+        {/* blockJS=false: v6 blokkeert JS-expressies in MDX standaard; onze props
+            (items, ids, score, kerncijfers) zijn vertrouwde repo-content. */}
         <MDXRemote
           source={body}
           components={mdxComponents}
-          options={{ mdxOptions: { remarkPlugins: [remarkHeadingId, remarkLayout] } }}
+          options={{ blockJS: false, mdxOptions: { remarkPlugins: [remarkHeadingId, remarkLayout] } }}
         />
       </div>
       <AuteurBlok />
