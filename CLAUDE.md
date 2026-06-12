@@ -17,6 +17,14 @@ Herbouw van japandi-stijl.nl van Shopify dropshipping-webshop naar een informati
 5. Concrete feiten boven vage adviezen: afmetingen, materialen, prijsranges, onderhoudseisen. LLM's citeren cijfers en definities, geen sfeerteksten.
 6. Volg het MIR Media SEO+GEO Framework: `/docs/framework-v4.md` (origineel) plus `/docs/framework-v4.1-japandi.md` (projectspecifieke aanpassingen, o.a. het koopgids-paginatype en MDX-output). Leesvolgorde: eerst v4.1, dan v4.0 voor de onderbouwing. Bij conflict wint v4.1, en daarboven dit bestand.
 
+## Esthetiek: wat past bij Japandi (wabi-sabi en walnoot)
+
+Deze dingen sturen sitewide de productselectie, de stijltips en de kleurencombinaties:
+
+- **Veranker de stijl af en toe in wat mensen nu echt zien.** Een enkele, terloopse verwijzing naar actuele wooninspiratie (de hoeveelheid walnoot met beige en rotan die voorbijkomt in interieurvideo's op TikTok en Instagram, bijvoorbeeld) maakt een tekst actueel en menselijk. Spaarzaam en natuurlijk, nooit als verplicht trucje op elke pagina en nooit als marketingcliche of hypetaal. Het moet een geloofwaardige observatie zijn, niet een verkooppraatje.
+- **Wabi-sabi hoort erbij.** Producten die als "wabi-sabi" worden verkocht passen vaak juist goed bij Japandi: vooral de steen- en cementlook (steeneffect, "stone craft", "cemento") in gebroken wit, beige en zand, met onregelmatige, organische vormen. Neem die mee in onderzoek en selectie, en gebruik wabi-sabi waar relevant ook als begrip in de content. Let op het materiaal en de afwerking: de matte, minerale steenlook = ja; glanzend of hard kunststof dat alleen de kleur of vorm imiteert = nee.
+- **Walnoot is nu de trend.** Warm, donkerder walnoothout met lichte tinten (beige, creme, zand) is wat mensen nu zoeken: beige met walnoot, organische en ronde vormen. Geef walnoot en warme houttinten expliciet voorrang in selectie, stijltips en kleurencombinaties, naast het bestaande lichte-eiken-palet. Eiken blijft goed, maar noem walnoot als volwaardige, gewilde optie.
+
 ## Paginatypes en templates
 
 Drie templates in `/components/templates/`:
@@ -56,8 +64,8 @@ Voor ELKE pagina, voor het schrijven (naast de differentiatie-check):
 
 Voor elke koopgids, voordat je schrijft:
 1. Zoek winkel-neutraal naar de productcategorie met "japandi" als term (Bol.com plus gespecialiseerde winkels). Het beste product wint, ongeacht winkel; selecteer nooit een zwakker product omdat het bij een affiliate-partner staat.
-   - Doorzoek Bol.com altijd ook direct met de zoekopdracht "japandi {productsoort}" (bijv. "japandi bank", "japandi vaas"): bovenaan die resultaten staan vaak goede opties die je mag meenemen in de selectie.
-2. Selecteer 8-10 producten op basis van: past echt bij Japandi (natuurlijke materialen, strakke vormen, neutrale tinten; papier-mache en hout = ja, faux fur en hoogglans = nee), reviewscore 4+ waar mogelijk, spreiding in prijs (budget, midden, hoger)
+   - Doorzoek Bol.com altijd ook direct met de zoekopdracht "japandi {productsoort}" (bijv. "japandi bank", "japandi vaas") en met "wabi sabi {productsoort}": bovenaan die resultaten staan vaak goede opties die je mag meenemen in de selectie.
+2. Selecteer 8-10 producten op basis van: past echt bij Japandi (natuurlijke materialen, strakke en organische vormen, neutrale tinten; papier-mache, hout, walnoot en de matte wabi-sabi steenlook = ja, faux fur en hoogglans = nee), reviewscore 4+ waar mogelijk, spreiding in prijs (budget, midden, hoger)
 3. Leg per product vast: naam, merk, prijs, afmetingen, materiaal, reviewscore, 1-2 voordelen, 1 nadeel of kanttekening
 4. Niet aanbevolen producten: benoem ze met merk en reden, ZONDER link
 5. Prijzen dateren: schrijf "prijs bij publicatie" logica in de ProductCard, niet hardcoded in lopende tekst
@@ -143,9 +151,10 @@ Aan het einde van het project (of per batch) leest Gideon het manifest uit en ge
 
 - **GEEN screenshots of visuele browserchecks**: dat kost te veel tijd, expliciet besluit van Gideon. Verificatie is altijd tekstueel.
 - **NOOIT `npx next build` draaien**: de dev-server van Gideon draait op poort 3000 en een build sloopt diens `.next`. Geen tweede server starten.
-- Verificatie per batch: `node scripts/check-mdx.mjs`, `npx tsc --noEmit`, en `Invoke-WebRequest` tegen `http://localhost:3000/{slug}/` met markercontroles (statuscode, geen em/en dashes in de HTML, aantal `rel="sponsored noopener"` = aantal Bol-cards, `rel="nofollow noopener"` = overige winkels + bronlinks, 3-5 `<summary>`-items, kerncijfers aanwezig).
-- **Commit per batch** met een beschrijvende Nederlandse commitmessage; werk autonoom door zonder tussentijdse toestemming te vragen, maar geef korte statusupdates in het Nederlands.
-- Werk batches af volgens docs/bouwplan.md (het statusbestand) en werk dat bestand na elke batch bij.
+- Verificatie per pagina: `node scripts/check-mdx.mjs`, `npx tsc --noEmit`, en `Invoke-WebRequest` tegen `http://localhost:3000/{slug}/` met markercontroles (statuscode, geen em/en dashes in de HTML, aantal `rel="sponsored noopener"` = aantal Bol-cards, `rel="nofollow noopener"` = overige winkels + bronlinks, 3-5 `<summary>`-items, kerncijfers aanwezig).
+- **Pauze na ELKE pagina, niet pas na een batch.** Werkwijze: bouw één pagina volledig (onderzoek, MDX, manifest, terugkoppelingslinks vanaf bestaande pagina's), draai de verificatie, en lever dan een kort verslag in het Nederlands: wat er staat, welke ProductCards welke winkel/prijs/url hebben, welke beeld-URLs zijn gebruikt of ontbreken, en welke aandachtspunten Gideon nog moet beoordelen. Wacht daarna op zijn feedback (URL-aanvullingen, productvervangingen, tekstaanpassingen) voordat je aan de volgende pagina begint.
+- **Niet zelf committen** tenzij Gideon er expliciet om vraagt; werk autonoom door zonder tussentijdse toestemming te vragen, maar geef korte statusupdates in het Nederlands. Gideon committet zelf wanneer het hem uitkomt.
+- Werk pagina's af volgens docs/bouwplan.md (het statusbestand) en werk dat bestand na elke afgeronde pagina bij.
 - Elke ProductCard krijgt een `beeld`-prop met de officiele productfoto-URL van de winkel (bij Bol: de og:image van de productpagina, host media.s-bol.com). Haal die URL op tijdens het productonderzoek (productpagina fetchen, og:image uitlezen). Geen AI-beelden op productkaarten. Lukt het ophalen echt niet, laat de prop dan weg en meld het, samen met eventuele placeholder-URLs (`url="#"`), aan Gideon in het batchverslag.
 - Geen `score`-prop zonder `reviews`-aantal: een score zonder geverifieerd reviewaantal hoort als tekst in de voordelen, niet als prop.
 - Per koopgids draait het onderzoek via research-agents (websearch): SERP-check plus winkel-neutraal productonderzoek, parallel waar mogelijk.

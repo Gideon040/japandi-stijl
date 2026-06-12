@@ -1,4 +1,4 @@
-// Gegenereerd uit docs/redirect-map.csv. Niet handmatig bewerken; draai scripts/generate-redirects.py
+// Gegenereerd uit docs/redirect-map.csv. Niet handmatig bewerken.
 export const redirects = [
   { source: '/collections/salontafels', destination: '/japandi-salontafel/', permanent: true },
   { source: '/collections/salontafel-rond', destination: '/japandi-salontafel/#rond', permanent: true },
@@ -6,7 +6,8 @@ export const redirects = [
   { source: '/collections/salontafel-walnoot', destination: '/japandi-salontafel-walnoot/', permanent: true },
   { source: '/collections/salontafel-eiken', destination: '/japandi-salontafel/#eiken', permanent: true },
   { source: '/collections/eettafels', destination: '/japandi-eettafel/', permanent: true },
-  { source: '/collections/eetkamerstoelen', destination: '/japandi-eetkamerstoelen/', permanent: true },
+  { source: '/collections/eetkamerstoelen', destination: '/japandi-eetkamerstoel/', permanent: true },
+  { source: '/japandi-eetkamerstoelen/', destination: '/japandi-eetkamerstoel/', permanent: true },
   { source: '/collections/tv-meubels', destination: '/japandi-tv-meubel/', permanent: true },
   { source: '/collections/barkrukken', destination: '/japandi-barkruk/', permanent: true },
   { source: '/collections/japandi-tv-kasten', destination: '/japandi-tv-kast/', permanent: true },
@@ -51,7 +52,11 @@ export const redirects = [
   { source: '/collections/japandi-keuken', destination: '/japandi-keuken/', permanent: true },
   { source: '/collections/japandi-badkamer', destination: '/japandi-badkamer/', permanent: true },
   { source: '/collections/japandi-toilet', destination: '/japandi-toilet/', permanent: true },
-  { source: '/collections/wat-is-japandi-stijl', destination: '/japandi-stijl/', permanent: true },
+  { source: '/collections/wat-is-japandi-stijl', destination: '/', permanent: true },
+  { source: '/japandi-stijl/', destination: '/', permanent: true },
+  { source: '/japandi-woonstijl/', destination: '/', permanent: true },
+  { source: '/japandi/', destination: '/', permanent: true },
+  { source: '/japandi-stijl-slaapkamer/', destination: '/japandi-slaapkamer/', permanent: true },
   { source: '/collections/japandi-kleuren', destination: '/japandi-kleuren/', permanent: true },
   { source: '/collections/japandi-meubels', destination: '/japandi-meubels/', permanent: true },
   { source: '/collections/japandi-textiel', destination: '/japandi-textiel/', permanent: true },

@@ -5,7 +5,8 @@ oude_url,nieuwe_url,actie
 /collections/salontafel-walnoot,/japandi-salontafel-walnoot/,redirect
 /collections/salontafel-eiken,/japandi-salontafel/#eiken,redirect
 /collections/eettafels,/japandi-eettafel/,redirect
-/collections/eetkamerstoelen,/japandi-eetkamerstoelen/,redirect
+/collections/eetkamerstoelen,/japandi-eetkamerstoel/,redirect
+/japandi-eetkamerstoelen/,/japandi-eetkamerstoel/,redirect
 /collections/tv-meubels,/japandi-tv-meubel/,redirect
 /collections/barkrukken,/japandi-barkruk/,redirect
 /collections/japandi-tv-kasten,/japandi-tv-kast/,redirect
@@ -50,7 +51,11 @@ oude_url,nieuwe_url,actie
 /collections/japandi-keuken,/japandi-keuken/,redirect
 /collections/japandi-badkamer,/japandi-badkamer/,redirect
 /collections/japandi-toilet,/japandi-toilet/,redirect
-/collections/wat-is-japandi-stijl,/japandi-stijl/,redirect
+/collections/wat-is-japandi-stijl,/,redirect
+/japandi-stijl/,/,redirect
+/japandi-woonstijl/,/,redirect
+/japandi/,/,redirect
+/japandi-stijl-slaapkamer/,/japandi-slaapkamer/,redirect
 /collections/japandi-kleuren,/japandi-kleuren/,redirect
 /collections/japandi-meubels,/japandi-meubels/,redirect
 /collections/japandi-textiel,/japandi-textiel/,redirect

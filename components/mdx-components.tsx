@@ -10,6 +10,7 @@ import LinkLijst, { type LinkLijstItem } from "./LinkLijst";
 import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import KoopNietBlok from "./KoopNietBlok";
 import AuteurBlok from "./AuteurBlok";
+import SfeerBand from "./SfeerBand";
 
 export const mdxComponents = {
   ProductCard,
@@ -29,4 +30,5 @@ export const mdxComponents = {
   ),
   KoopNietBlok,
   AuteurBlok,
+  SfeerBand,
 };

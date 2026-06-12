@@ -71,6 +71,11 @@ export default function remarkLayout() {
       if (node.type === "heading" && node.depth === 2) {
         flush();
         current.push(node);
+      } else if (jsxName(node) === "SfeerBand") {
+        // SfeerBand draagt zijn eigen kop in het beeldvlak en vormt een eigen
+        // sectie, zodat de full-bleed band niet in de vorige sectie blijft hangen.
+        flush();
+        current.push(node);
       } else if (jsxName(node) === "FAQ") {
         flush();
         chunks.push({ nodes: [node], kind: "faq" });
