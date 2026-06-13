@@ -83,5 +83,7 @@ export const redirects = [
   { source: '/japandi-keukenstijl/', destination: '/japandi-keuken/', permanent: true },
   { source: '/tuin-japanse-stijl/', destination: '/japandi-tuin/', permanent: true },
   { source: '/japandi-tuinset/', destination: '/japandi-tuin/', permanent: true },
-  { source: '/japandi-stijl-tuin/', destination: '/japandi-tuin/', permanent: true }
+  { source: '/japandi-stijl-tuin/', destination: '/japandi-tuin/', permanent: true },
+  { source: '/japandi-wc/', destination: '/japandi-toilet/', permanent: true },
+  { source: '/japandi-raambekleding/', destination: '/japandi-gordijnen/', permanent: true }
 ];
