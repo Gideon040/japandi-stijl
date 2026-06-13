@@ -55,7 +55,7 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
         <div className="max-w-wide mx-auto px-6 h-9 flex items-center justify-between">
           <span className="tracking-wide">
             Onafhankelijke Japandi koopgids
-            <span className="hidden sm:inline">{" · "}eerlijke, geteste selectie</span>
+            <span className="hidden sm:inline">{" · "}eerlijke, gecureerde selectie</span>
           </span>
           <nav className="hidden sm:flex items-center gap-5">
             <Link href="/#definitie" className="hover:text-papier transition-colors">
