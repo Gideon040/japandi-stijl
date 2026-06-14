@@ -10,6 +10,7 @@ import AuteurBlok from "@/components/AuteurBlok";
 import ClusterCarousel from "@/components/ClusterCarousel";
 import { getClusterCarousels, type ClusterRij } from "@/lib/clusters";
 import PageHero from "@/components/PageHero";
+import QuizCta from "@/components/QuizCta";
 import Breadcrumb, { type Crumb } from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
 import type { PageMeta } from "@/lib/content";
@@ -132,6 +133,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         heroId={heroId}
         kerncijfers={page.data.kerncijfers}
         breadcrumb={<Breadcrumb items={crumbs} />}
+        cta={<QuizCta />}
       >
         {intro && (
           <MDXRemote
