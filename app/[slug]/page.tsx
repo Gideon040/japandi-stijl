@@ -81,7 +81,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const korteNaam = page.data.titel.split(":")[0].trim();
   const crumbs: Crumb[] = [{ naam: "Home", href: "/" }];
   if (slug.startsWith("japandi-") && slug !== "japandi-stijl")
-    crumbs.push({ naam: "Japandi stijl", href: "/japandi-stijl/" });
+    crumbs.push({ naam: "Japandi stijl", href: "/" });
   crumbs.push({ naam: korteNaam });
 
   const meta = page.data as unknown as PageMeta;
