@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import manifest from "@/content/image-manifest.json";
 import manifestFase5 from "@/content/image-manifest-fase5.json";
+import manifestFase6 from "@/content/image-manifest-fase6.json";
 
 type Props = { id: string; priority?: boolean; fill?: boolean; inGrid?: boolean };
 
 // Fase 1-4 staan in image-manifest.json (deels al gegenereerd), Fase 5 in
-// image-manifest-fase5.json (de actuele generatielijst). Renderen leest beide.
-const beelden = [...manifest, ...manifestFase5] as Array<{
+// image-manifest-fase5.json en Fase 6 in image-manifest-fase6.json (de actuele
+// generatielijsten). Renderen leest alle drie.
+const beelden = [...manifest, ...manifestFase5, ...manifestFase6] as Array<{
   id: string;
   alt: string;
   aspect_ratio: string;

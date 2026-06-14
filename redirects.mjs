@@ -85,5 +85,6 @@ export const redirects = [
   { source: '/japandi-tuinset/', destination: '/japandi-tuin/', permanent: true },
   { source: '/japandi-stijl-tuin/', destination: '/japandi-tuin/', permanent: true },
   { source: '/japandi-wc/', destination: '/japandi-toilet/', permanent: true },
-  { source: '/japandi-raambekleding/', destination: '/japandi-gordijnen/', permanent: true }
+  { source: '/japandi-raambekleding/', destination: '/japandi-gordijnen/', permanent: true },
+  { source: '/japandi-binnendeur/', destination: '/japandi-deur/', permanent: true }
 ];

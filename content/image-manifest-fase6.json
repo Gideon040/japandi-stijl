@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "japandi-eettafel-rond-hero",
+    "page": "/japandi-eettafel-rond",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Ronde Japandi eettafel van massief eiken met een centrale poot, omringd door houten stoelen",
+    "prompt": "Round Japandi dining table in solid light oak with a central pedestal base, surrounded by wooden chairs with woven seats, calm dining room, single ceramic vase on the table, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-collage-1",
+    "page": "/japandi-eettafel-rond",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van de ronde tafelrand in massief eiken met zichtbare nerf",
+    "prompt": "Close-up detail of the rounded edge of a solid oak dining table top with visible wood grain, matte finish, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-collage-2",
+    "page": "/japandi-eettafel-rond",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Ronde travertijn eettafel met een organische steenlook in gebroken wit",
+    "prompt": "Round travertine dining table with an organic off-white stone-look surface, soft texture, wabi-sabi feel, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-collage-3",
+    "page": "/japandi-eettafel-rond",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een ronde walnoot eettafel met een enkele houten stoel",
+    "prompt": "Tall narrow composition of a round walnut dining table with one wooden chair, warm brown tones, calm setting, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-sectie-1",
+    "page": "/japandi-eettafel-rond",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Ronde eettafel in een kleine eetkamer met genoeg loopruimte rondom",
+    "prompt": "Round dining table in a small dining room with comfortable walking space around it, four chairs, soft daylight from a window, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-rond",
+    "page": "/japandi-eettafel-rond",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Bovenaanzicht van een rond eikenhouten tafelblad met een keramische schaal",
+    "prompt": "Top view of a round oak table top styled with a single beige ceramic bowl, minimal composition, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-sectie-2",
+    "page": "/japandi-eettafel-rond",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Vergelijking van een houten en een travertijnen rond tafelblad naast elkaar",
+    "prompt": "A round solid oak table top next to a round travertine table top, comparing wood grain and stone texture, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-koopniet",
+    "page": "/japandi-eettafel-rond",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Hoogglans witte ronde tafel met spiegelend blad als voorbeeld van wat niet past",
+    "prompt": "A high-gloss white round dining table with a reflective surface, shown as a contrast to natural materials, cold and shiny, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-rond-faq",
+    "page": "/japandi-eettafel-rond",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Ronde eettafel met houten stoelen in een rustige Japandi eetkamer",
+    "prompt": "Round dining table with wooden chairs in a calm Japandi dining room, single vase, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-hero",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Ovale Japandi eettafel van massief walnoot met afgeronde hoeken en houten stoelen",
+    "prompt": "Oval Japandi dining table in solid walnut with softly rounded corners, surrounded by wooden chairs, calm dining room, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-collage-1",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van de ovale rand in massief walnoot met warme nerf",
+    "prompt": "Close-up detail of the oval edge of a solid walnut table top with rich wood grain, matte finish, warm brown tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-collage-2",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Ovale eiken eettafel met slanke schuine poten",
+    "prompt": "Oval light oak dining table with slim tapered legs, clean lines, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-collage-3",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een lange ovale eettafel langs een wand",
+    "prompt": "Tall narrow composition of a long oval dining table along a wall, warm wood, calm minimal setting, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-sectie-1",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Ovale eettafel die door zijn vorm meer mensen aan tafel laat schuiven",
+    "prompt": "Oval dining table seating several people comfortably thanks to its shape, wooden chairs, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-rond",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Bovenaanzicht van een ovaal walnoot tafelblad met een lopend dienblad",
+    "prompt": "Top view of an oval walnut table top styled with a wooden tray and a ceramic vase, minimal composition, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-sectie-2",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Iemand wrijft olie in een massief houten ovaal tafelblad voor onderhoud",
+    "prompt": "Hands applying oil to a solid wood oval table top for maintenance, soft cloth, close-up, warm wood grain, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-koopniet",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Ovale tafel van melamine met houtprint als voorbeeld van wat niet past",
+    "prompt": "An oval table made of melamine with a printed wood look, shown as a contrast to solid wood, visible fake grain at the edge, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-eettafel-ovaal-faq",
+    "page": "/japandi-eettafel-ovaal",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Ovale walnoot eettafel met houten stoelen in een warme eetkamer",
+    "prompt": "Oval walnut dining table with wooden chairs in a warm Japandi dining room, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-hero",
+    "page": "/japandi-badkamermeubel",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Zwevend Japandi badkamermeubel van eiken met een mat keramische waskom",
+    "prompt": "Floating Japandi bathroom vanity in light oak with a matte ceramic countertop basin, handleless drawers, calm bathroom, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-collage-1",
+    "page": "/japandi-badkamermeubel",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een greeploos eiken badkamermeubel met ingefreesde greep",
+    "prompt": "Close-up detail of a handleless oak bathroom cabinet front with a recessed grip, matte finish, warm grain, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-collage-2",
+    "page": "/japandi-badkamermeubel",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Mat keramische opzetkom op een houten badmeubel in zandtinten",
+    "prompt": "Matte ceramic vessel basin on a wooden bathroom vanity in sand tones, minimal styling, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-collage-3",
+    "page": "/japandi-badkamermeubel",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een zwevend walnoot badmeubel met ronde spiegel",
+    "prompt": "Tall narrow composition of a floating walnut bathroom vanity with a round mirror above, warm tones, calm bathroom, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-sectie-1",
+    "page": "/japandi-badkamermeubel",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Zwevend badkamermeubel dat de vloer vrij laat in een kleine badkamer",
+    "prompt": "Floating bathroom vanity leaving the floor visible in a small bathroom, light oak, matte basin, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-rond",
+    "page": "/japandi-badkamermeubel",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Ronde spiegel boven een houten badkamermeubel met een enkele plant",
+    "prompt": "Round mirror above a wooden bathroom vanity styled with a single small plant and a ceramic dish, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-koopniet",
+    "page": "/japandi-badkamermeubel",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Hoogglans wit badmeubel met fineer-MDF en houtprint als afrader",
+    "prompt": "A high-gloss white bathroom vanity with printed wood-look MDF, shown as a contrast to solid wood, cold and shiny, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-badkamermeubel-faq",
+    "page": "/japandi-badkamermeubel",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige Japandi badkamer met zwevend houten meubel en matte kom",
+    "prompt": "Calm Japandi bathroom with a floating wooden vanity and matte ceramic basin, soft daylight, neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-hero",
+    "page": "/japandi-tegels",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Japandi badkamer met grote betonlook tegels in zandtint en tone-on-tone voegen",
+    "prompt": "Japandi bathroom with large concrete-look tiles in a sand tone, tone-on-tone grout, seamless calm wall, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-collage-1",
+    "page": "/japandi-tegels",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een matte travertijnlook tegel met zachte aderingen",
+    "prompt": "Close-up detail of a matte travertine-look tile with soft veining in off-white, natural stone texture, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-collage-2",
+    "page": "/japandi-tegels",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Houtlook tegels in eiken op een badkamervloer",
+    "prompt": "Oak wood-look tiles on a bathroom floor, warm grain, matte finish, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-collage-3",
+    "page": "/japandi-tegels",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een betonlook tegelwand met een houten kruk",
+    "prompt": "Tall narrow composition of a concrete-look tiled wall with a small wooden stool, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-sectie-1",
+    "page": "/japandi-tegels",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Grootformaat tegels met smalle tone-on-tone voegen voor een rustig vlak",
+    "prompt": "Large format tiles with thin tone-on-tone grout lines creating a calm seamless surface, sand tones, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-rond",
+    "page": "/japandi-tegels",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een tegelhoek waar de voegkleur op de tegel is afgestemd",
+    "prompt": "Close-up of a tiled corner where the grout color matches the tile, sand tones, calm and seamless, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-voeg",
+    "page": "/japandi-tegels",
+    "slot": "voeg",
+    "aspect_ratio": "3:2",
+    "alt": "Twee tegelvlakken naast elkaar, een met contrastvoeg en een tone-on-tone",
+    "prompt": "Two tiled surfaces side by side, one with contrasting grout and one tone-on-tone, showing how grout color changes the look, sand tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-koopniet",
+    "page": "/japandi-tegels",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Glanzende witte zellige witjes en koel helderwit als afrader",
+    "prompt": "Glossy white zellige tiles and a cold pure-white tile, shown as a contrast to warm matte tiles, shiny and cool, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-tegels-faq",
+    "page": "/japandi-tegels",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Japandi badkamer met betonlook tegels en warme houtaccenten",
+    "prompt": "Japandi bathroom with concrete-look tiles and warm wood accents, calm and minimal, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-hero",
+    "page": "/japandi-deur",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Japandi binnendeur in donker eiken met een vlak greeploos front en zwarte beslag",
+    "prompt": "Japandi interior door in dark oak with a flush flat front, slim matte black handle, calm hallway, warm neutral palette, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-collage-1",
+    "page": "/japandi-deur",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een vlakke eiken deur met zichtbare nerf en mat zwart deurkruk",
+    "prompt": "Close-up detail of a flush oak door with visible grain and a slim matte black handle, matte finish, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-collage-2",
+    "page": "/japandi-deur",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Houten schuifdeur in walnoot voor een rustige overgang tussen kamers",
+    "prompt": "Walnut wooden sliding door creating a calm transition between rooms, warm brown tones, minimal hardware, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-collage-3",
+    "page": "/japandi-deur",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een hoge vlakke deur in donker eiken",
+    "prompt": "Tall narrow composition of a tall flush door in dark oak, clean lines, warm tones, calm interior, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-sectie-1",
+    "page": "/japandi-deur",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Vlakke deur die strak in de muur valt met een verdekte montage",
+    "prompt": "Flush door sitting flat in the wall with concealed hinges, seamless calm wall, dark oak, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-rond",
+    "page": "/japandi-deur",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een slanke mat zwarte deurkruk op een eiken deur",
+    "prompt": "Close-up of a slim matte black door handle on an oak door, warm grain, minimal hardware, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-koopniet",
+    "page": "/japandi-deur",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Hoogglans witte opdekdeur en klassieke paneeldeur als afrader",
+    "prompt": "A high-gloss white panel door and a classic moulded panel door, shown as a contrast to flush wooden doors, cold and busy, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-deur-faq",
+    "page": "/japandi-deur",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige hal met een vlakke houten binnendeur in warme tint",
+    "prompt": "Calm hallway with a flush wooden interior door in a warm tone, minimal styling, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-hero",
+    "page": "/japandi-boxspring",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Lage Japandi boxspring met linnen hoofdbord in zandtint en strakke poten",
+    "prompt": "Low Japandi boxspring bed with a linen-upholstered headboard in sand tone, slim wooden legs, calm bedroom, soft morning light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-collage-1",
+    "page": "/japandi-boxspring",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een linnen beklede boxspring in gebroken wit",
+    "prompt": "Close-up detail of a linen-upholstered boxspring in off-white, soft fabric texture, matte tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-collage-2",
+    "page": "/japandi-boxspring",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Boxspring met een laag hoofdbord en een wollen plaid in zandtinten",
+    "prompt": "Boxspring bed with a low headboard and a wool throw in sand tones, linen bedding, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-collage-3",
+    "page": "/japandi-boxspring",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een boxspring met slanke houten pootjes",
+    "prompt": "Tall narrow composition of a boxspring bed with slim wooden legs, calm bedroom, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-sectie-1",
+    "page": "/japandi-boxspring",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Lage boxspring die de horizontale lijn in de slaapkamer rustig houdt",
+    "prompt": "Low boxspring bed keeping a calm horizontal line in the bedroom, linen headboard, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-rond",
+    "page": "/japandi-boxspring",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een linnen hoofdbord met een zachte naad",
+    "prompt": "Close-up of a linen upholstered headboard with a soft seam, off-white fabric, matte texture, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-sectie-2",
+    "page": "/japandi-boxspring",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Boxspring met linnen beddengoed en een enkele houten nachtkast",
+    "prompt": "Boxspring bed with linen bedding and a single wooden nightstand with a ceramic lamp, calm bedroom, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-fouten",
+    "page": "/japandi-boxspring",
+    "slot": "fouten",
+    "aspect_ratio": "3:2",
+    "alt": "Hoge glanzende boxspring met capitonneer hoofdbord als voorbeeld van wat niet past",
+    "prompt": "A tall glossy boxspring with a tufted velvet headboard, shown as a contrast to a calm low linen bed, busy and shiny, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-boxspring-faq",
+    "page": "/japandi-boxspring",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige slaapkamer met een lage linnen boxspring in zandtinten",
+    "prompt": "Calm bedroom with a low linen boxspring in sand tones, minimal styling, soft morning light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-hero",
+    "page": "/japandi-chique",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Chique Japandi woonkamer met walnoot, linnen en een enkel ingetogen messing accent",
+    "prompt": "Refined Japandi living room with walnut furniture, linen sofa, one subtle brushed brass accent, calm and luxurious, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-collage-1",
+    "page": "/japandi-chique",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een walnoot oppervlak met een mat messing object",
+    "prompt": "Close-up detail of a walnut surface with a matte brushed brass object, warm tones, refined minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-collage-2",
+    "page": "/japandi-chique",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Linnen bank in gebroken wit met een enkel travertijnen bijzettafeltje",
+    "prompt": "Off-white linen sofa with a single travertine side table, calm refined living room, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-collage-3",
+    "page": "/japandi-chique",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een chique hoek met walnoot en een hoge vaas",
+    "prompt": "Tall narrow composition of a refined corner with walnut furniture and a tall ceramic vase, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-sectie-1",
+    "page": "/japandi-chique",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Chique interieur waarin materiaalkwaliteit de luxe maakt, niet de glans",
+    "prompt": "Refined interior where material quality creates the luxury rather than shine, walnut and linen, travertine accents, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-rond",
+    "page": "/japandi-chique",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een geborsteld messing object op een walnoot blad",
+    "prompt": "Close-up of a brushed brass object on a walnut surface, warm refined tones, matte finish, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-fouten",
+    "page": "/japandi-chique",
+    "slot": "fouten",
+    "aspect_ratio": "3:2",
+    "alt": "Glanzend goud, marmer en velours als voorbeeld van doorgeslagen glamour",
+    "prompt": "Shiny gold, polished marble and glossy velvet, shown as a contrast to calm refined Japandi, too much glamour, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-chique-faq",
+    "page": "/japandi-chique",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige chique Japandi woonkamer met walnoot en ingetogen accenten",
+    "prompt": "Calm refined Japandi living room with walnut furniture and subtle accents, soft daylight, neutral palette, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-hero",
+    "page": "/japandi-vitrinekast",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Slanke Japandi vitrinekast van eiken met helder glas en rustig gevulde planken",
+    "prompt": "Slim Japandi display cabinet in light oak with clear glass, sparsely styled shelves with a few ceramic objects, calm living room, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-collage-1",
+    "page": "/japandi-vitrinekast",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een dun eiken frame met helder vlak glas",
+    "prompt": "Close-up detail of a thin oak frame with clear flat glass, minimal hardware, warm grain, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-collage-2",
+    "page": "/japandi-vitrinekast",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Vitrineplank met drie keramische objecten en veel lege ruimte",
+    "prompt": "Display shelf styled with three ceramic objects and plenty of empty space, off-white and sand tones, calm composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-collage-3",
+    "page": "/japandi-vitrinekast",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een hoge vitrinekast met walnoot frame",
+    "prompt": "Tall narrow composition of a tall display cabinet with a walnut frame and clear glass, warm tones, calm interior, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-sectie-1",
+    "page": "/japandi-vitrinekast",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Lage vitrinekast met een gesloten onderkast en glazen bovendeel",
+    "prompt": "Low display cabinet with a closed lower cabinet and a glass upper section, light oak, calm styling, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-rond",
+    "page": "/japandi-vitrinekast",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een handgemaakte keramische schaal achter helder glas",
+    "prompt": "Close-up of a handmade ceramic bowl behind clear glass on a display shelf, off-white tones, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-sectie-2",
+    "page": "/japandi-vitrinekast",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Halfgevulde vitrineplank waarin lege ruimte de objecten lucht geeft",
+    "prompt": "Half-empty display shelf where empty space gives a few objects room to breathe, sand and off-white tones, calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-fouten",
+    "page": "/japandi-vitrinekast",
+    "slot": "fouten",
+    "aspect_ratio": "3:2",
+    "alt": "Volle vitrine met felle ledverlichting en rookglas als voorbeeld van wat niet past",
+    "prompt": "An overfilled display cabinet with bright led lighting and smoked glass, shown as a contrast to a calm sparse vitrine, busy, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-vitrinekast-faq",
+    "page": "/japandi-vitrinekast",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige Japandi vitrinekast met helder glas en spaarzaam gevulde planken",
+    "prompt": "Calm Japandi display cabinet with clear glass and sparsely styled shelves, light oak, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-hero",
+    "page": "/japandi-ladekast",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Lage brede Japandi ladekast van walnoot met een greeploos front",
+    "prompt": "Low wide Japandi chest of drawers in walnut with a handleless front, slim wooden legs, calm bedroom, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-collage-1",
+    "page": "/japandi-ladekast",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een greeploze walnoot lade met ingefreesde greep",
+    "prompt": "Close-up detail of a handleless walnut drawer with a recessed grip, warm grain, matte finish, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-collage-2",
+    "page": "/japandi-ladekast",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Lage eiken ladekast als dressoir onder een ronde spiegel",
+    "prompt": "Low oak chest of drawers used as a dresser under a round mirror, calm styling, sand tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-collage-3",
+    "page": "/japandi-ladekast",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een brede ladekast met slanke houten poten",
+    "prompt": "Tall narrow composition of a wide low chest of drawers with slim wooden legs, warm tones, calm interior, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-sectie-1",
+    "page": "/japandi-ladekast",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Lage brede ladekast die een rustige horizontale lijn legt",
+    "prompt": "Low wide chest of drawers creating a calm horizontal line in the room, walnut, handleless, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-rond",
+    "page": "/japandi-ladekast",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een ingefreesde greep aan de bovenkant van een houten lade",
+    "prompt": "Close-up of a recessed grip at the top of a wooden drawer, warm grain, matte finish, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-sectie-2",
+    "page": "/japandi-ladekast",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Bovenop een ladekast twee objecten met lucht ertussen",
+    "prompt": "Two objects styled on top of a chest of drawers with empty space between them, a vase and a small dish, calm composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-fouten",
+    "page": "/japandi-ladekast",
+    "slot": "fouten",
+    "aspect_ratio": "3:2",
+    "alt": "Hoge smalle torenkast met glanzende metalen knoppen als voorbeeld van wat niet past",
+    "prompt": "A tall narrow chest of drawers with shiny metal knobs, shown as a contrast to a low wide handleless dresser, busy, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-ladekast-faq",
+    "page": "/japandi-ladekast",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige slaapkamer met een lage walnoot ladekast als dressoir",
+    "prompt": "Calm bedroom with a low walnut chest of drawers used as a dresser, minimal styling, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-hero",
+    "page": "/japandi-accessoires",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Dressoir met drie Japandi accessoires van keramiek en travertijn met veel lege ruimte",
+    "prompt": "A dresser styled with three Japandi accessories in ceramic and travertine with plenty of empty space, calm composition, sand tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-collage-1",
+    "page": "/japandi-accessoires",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een handgemaakt keramisch object met onregelmatige vorm",
+    "prompt": "Close-up detail of a handmade ceramic object with an organic irregular shape, off-white matte glaze, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-collage-2",
+    "page": "/japandi-accessoires",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Travertijnen schaal en een houten object op een dienblad",
+    "prompt": "A travertine bowl and a wooden object grouped on a tray, sand and off-white tones, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-collage-3",
+    "page": "/japandi-accessoires",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een enkele tak in een keramische vaas",
+    "prompt": "Tall narrow composition of a single branch in a ceramic vase on a console, calm and minimal, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-sectie-1",
+    "page": "/japandi-accessoires",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Groepje van drie objecten in oneven aantal met variatie in hoogte",
+    "prompt": "A group of three objects in odd number with varied heights, a tall vase, a low bowl and one in between, on a tray, calm styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-rond",
+    "page": "/japandi-accessoires",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een enkele steen op een gesloten boek als rustig accent",
+    "prompt": "Close-up of a single stone resting on a closed book as a calm accent, sand tones, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-link-vaas",
+    "page": "/japandi-accessoires",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Keramische Japandi vaas in steenlook met een enkele tak",
+    "prompt": "A ceramic Japandi vase in stone-look finish with a single branch, off-white tones, minimal composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-link-fruitschaal",
+    "page": "/japandi-accessoires",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Travertijnen fruitschaal met een paar stuks fruit",
+    "prompt": "A travertine fruit bowl holding a few pieces of fruit, off-white stone texture, calm styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-link-dienblad",
+    "page": "/japandi-accessoires",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Houten dienblad met een travertijnen schaal erop",
+    "prompt": "A wooden serving tray styled with a travertine bowl, warm wood and stone, minimal composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-link-onderzetters",
+    "page": "/japandi-accessoires",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Set houten en stenen onderzetters op een tafel",
+    "prompt": "A set of wooden and stone coasters on a table, warm neutral tones, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-link-fotolijst",
+    "page": "/japandi-accessoires",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Eiken fotolijst met een brede passe-partout op een dressoir",
+    "prompt": "An oak photo frame with a wide passe-partout standing on a dresser, warm tones, calm styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-link-klok",
+    "page": "/japandi-accessoires",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Strakke stille wandklok met een houten rand",
+    "prompt": "A clean silent wall clock with a wooden rim, minimal face, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-koopniet",
+    "page": "/japandi-accessoires",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Glanzend goud, kristal en bonte decoratie als voorbeeld van wat niet past",
+    "prompt": "Shiny gold, crystal and colourful printed decoration, shown as a contrast to calm natural accessories, busy and glamorous, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-accessoires-faq",
+    "page": "/japandi-accessoires",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustig gestylede dressoir met een paar Japandi accessoires",
+    "prompt": "A calmly styled dresser with a few Japandi accessories in ceramic and wood, empty space, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-hero",
+    "page": "/japandi-textiel",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Japandi woonkamer met linnen gordijnen, een wollen vloerkleed en bouclé kussens",
+    "prompt": "Japandi living room layered with linen curtains, a wool rug and bouclé cushions in sand tones, calm textured setting, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-collage-1",
+    "page": "/japandi-textiel",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van glad linnen naast ruw bouclé in zandtint",
+    "prompt": "Close-up detail of smooth linen next to rough bouclé fabric in sand tones, mixing textures, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-collage-2",
+    "page": "/japandi-textiel",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Wollen plaid over een linnen bank in gebroken wit",
+    "prompt": "A wool throw draped over an off-white linen sofa, soft layered textiles, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-collage-3",
+    "page": "/japandi-textiel",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van linnen gordijnen die daglicht filteren",
+    "prompt": "Tall narrow composition of linen curtains filtering soft daylight, off-white fabric, calm and minimal, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-sectie-1",
+    "page": "/japandi-textiel",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Twee tot drie texturen gemengd in een rustig palet zonder kleurdrukte",
+    "prompt": "Two to three textiles textures mixed in a calm palette without colour clutter, linen, wool and bouclé in sand tones, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-rond",
+    "page": "/japandi-textiel",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een gevouwen linnen doek met natuurlijke kreuk",
+    "prompt": "Close-up of a folded linen cloth with natural creases, off-white tone, matte texture, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-link-vloerkleed",
+    "page": "/japandi-textiel",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Wollen Japandi vloerkleed in zandtint met grove textuur",
+    "prompt": "A wool Japandi rug in sand tone with a coarse texture, warm neutral, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-link-gordijnen",
+    "page": "/japandi-textiel",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Linnen gordijnen die het licht zacht filteren",
+    "prompt": "Linen curtains softly filtering daylight, off-white fabric, calm window, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-link-kussen",
+    "page": "/japandi-textiel",
+    "slot": "link",
+    "aspect_ratio": "4:3",
+    "alt": "Linnen en bouclé kussens in verwante zandtinten",
+    "prompt": "Linen and bouclé cushions in related sand tones on a sofa, mixed textures, calm composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-koopniet",
+    "page": "/japandi-textiel",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Glanzend polyester en satijn als voorbeeld van wat niet past",
+    "prompt": "Shiny polyester and satin fabrics, shown as a contrast to natural matte textiles, cold and flat sheen, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-textiel-faq",
+    "page": "/japandi-textiel",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige woonkamer met gelaagd natuurlijk textiel in zandtinten",
+    "prompt": "Calm living room with layered natural textiles in sand tones, linen and wool, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-hero",
+    "page": "/japandi-fruitschaal",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Travertijnen Japandi fruitschaal met een paar stuks fruit op een houten tafel",
+    "prompt": "A travertine Japandi fruit bowl holding a few pieces of fruit on a wooden table, off-white stone texture, calm styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-collage-1",
+    "page": "/japandi-fruitschaal",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een matte travertijnen schaal met organische rand",
+    "prompt": "Close-up detail of a matte travertine bowl with an organic rim, off-white stone texture, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-collage-2",
+    "page": "/japandi-fruitschaal",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Keramische fruitschaal in gebroken wit met een onregelmatige vorm",
+    "prompt": "A ceramic fruit bowl in off-white with an irregular handmade shape, matte glaze, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-collage-3",
+    "page": "/japandi-fruitschaal",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een houten fruitschaal op een eettafel",
+    "prompt": "Tall narrow composition of a wooden fruit bowl on a dining table, warm grain, calm setting, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-sectie-1",
+    "page": "/japandi-fruitschaal",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Lage brede fruitschaal die fruit luchtig laat liggen",
+    "prompt": "A low wide fruit bowl letting fruit rest loosely with air around it, travertine, calm composition, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-rond",
+    "page": "/japandi-fruitschaal",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Bovenaanzicht van een travertijnen schaal met enkele citroenen",
+    "prompt": "Top view of a travertine bowl holding a few lemons, off-white stone, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-koopniet",
+    "page": "/japandi-fruitschaal",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Kristallen en gouden fruitmand als voorbeeld van wat niet past",
+    "prompt": "A crystal and gold fruit basket, shown as a contrast to a calm natural fruit bowl, shiny and glamorous, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fruitschaal-faq",
+    "page": "/japandi-fruitschaal",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Travertijnen fruitschaal op een rustige Japandi eettafel",
+    "prompt": "A travertine fruit bowl on a calm Japandi dining table, off-white stone, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-hero",
+    "page": "/japandi-dienblad",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Houten Japandi dienblad met een keramische kan en mok in zandtinten",
+    "prompt": "A wooden Japandi serving tray styled with a ceramic jug and mug in sand tones, calm composition, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-collage-1",
+    "page": "/japandi-dienblad",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een houten dienblad met zichtbare nerf en lage rand",
+    "prompt": "Close-up detail of a wooden serving tray with visible grain and a low rim, matte finish, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-collage-2",
+    "page": "/japandi-dienblad",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Travertijnen dienblad met een kaars en een klein bakje",
+    "prompt": "A travertine serving tray with a candle and a small dish, off-white stone, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-collage-3",
+    "page": "/japandi-dienblad",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een rechthoekig walnoot dienblad",
+    "prompt": "Tall narrow composition of a rectangular walnut serving tray, warm brown grain, calm setting, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-sectie-1",
+    "page": "/japandi-dienblad",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Dienblad dat losse objecten op een tafel tot een geheel bindt",
+    "prompt": "A tray binding a few loose objects on a table into one group, wooden tray, ceramic objects, calm composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-rond",
+    "page": "/japandi-dienblad",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Bovenaanzicht van een houten dienblad met een enkele mok",
+    "prompt": "Top view of a wooden serving tray with a single mug, warm grain, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-koopniet",
+    "page": "/japandi-dienblad",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Hoogglans MDF en bedrukt dienblad als voorbeeld van wat niet past",
+    "prompt": "A high-gloss MDF tray and a printed patterned tray, shown as a contrast to natural wood, shiny and busy, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-dienblad-faq",
+    "page": "/japandi-dienblad",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Houten dienblad met keramiek op een rustige Japandi tafel",
+    "prompt": "A wooden serving tray with ceramics on a calm Japandi table, warm tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-hero",
+    "page": "/japandi-onderzetters",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Set houten Japandi onderzetters met een mok op een eiken tafel",
+    "prompt": "A set of wooden Japandi coasters with a mug on an oak table, warm grain, calm minimal styling, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-collage-1",
+    "page": "/japandi-onderzetters",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een houten onderzetter met zichtbare nerf",
+    "prompt": "Close-up detail of a wooden coaster with visible grain, matte finish, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-collage-2",
+    "page": "/japandi-onderzetters",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Stenen onderzetters met een matte travertijnlook",
+    "prompt": "Stone coasters with a matte travertine look in off-white, natural texture, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-collage-3",
+    "page": "/japandi-onderzetters",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een stapel leren onderzetters",
+    "prompt": "Tall narrow composition of a stack of leather coasters in a warm neutral tone, calm setting, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-sectie-1",
+    "page": "/japandi-onderzetters",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Onderzetters in een houten houder netjes bij elkaar",
+    "prompt": "Coasters neatly held together in a wooden holder on a table, warm tones, minimal composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-rond",
+    "page": "/japandi-onderzetters",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een enkele stenen onderzetter onder een keramische mok",
+    "prompt": "Close-up of a single stone coaster under a ceramic mug, off-white tones, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-koopniet",
+    "page": "/japandi-onderzetters",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Bedrukte kurk en epoxy met goud als voorbeeld van wat niet past",
+    "prompt": "Printed cork coasters and epoxy coasters with gold, shown as a contrast to natural materials, busy and shiny, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-onderzetters-faq",
+    "page": "/japandi-onderzetters",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Houten en stenen onderzetters op een rustige Japandi tafel",
+    "prompt": "Wooden and stone coasters on a calm Japandi table, warm neutral tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-hero",
+    "page": "/japandi-prullenbak",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Houten Japandi prullenbak met deksel naast een eiken bureau",
+    "prompt": "A wooden Japandi waste bin with a lid next to an oak desk, warm grain, calm minimal styling, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-collage-1",
+    "page": "/japandi-prullenbak",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een houten prullenbak met zichtbare nerf en deksel",
+    "prompt": "Close-up detail of a wooden waste bin with visible grain and a wooden lid, matte finish, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-collage-2",
+    "page": "/japandi-prullenbak",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Mat keramische of steenlook prullenbak in zandtint",
+    "prompt": "A matte ceramic or stone-look waste bin in sand tone, organic shape, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-collage-3",
+    "page": "/japandi-prullenbak",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een gevlochten prullenmand van zeegras",
+    "prompt": "Tall narrow composition of a woven seagrass waste basket, natural texture, calm setting, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-sectie-1",
+    "page": "/japandi-prullenbak",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Prullenbak die door materiaal en kleur opgaat in de kamer",
+    "prompt": "A waste bin blending into the room through its natural material and tone, wooden bin, calm corner, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-rond",
+    "page": "/japandi-prullenbak",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van het houten deksel van een prullenbak",
+    "prompt": "Close-up of the wooden lid of a waste bin, warm grain, matte finish, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-koopniet",
+    "page": "/japandi-prullenbak",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Glanzende rvs sensoremmer en kunststof pedaalemmer als afrader",
+    "prompt": "A shiny stainless steel sensor bin and a plastic pedal bin, shown as a contrast to natural materials, cold and shiny, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-prullenbak-faq",
+    "page": "/japandi-prullenbak",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Houten prullenbak in een rustige Japandi werkhoek",
+    "prompt": "A wooden waste bin in a calm Japandi work corner, warm tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-hero",
+    "page": "/japandi-wasmand",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Gevlochten Japandi wasmand van zeegras met deksel in een rustige slaapkamer",
+    "prompt": "A woven seagrass Japandi laundry basket with a lid in a calm bedroom, natural texture, warm neutral tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-collage-1",
+    "page": "/japandi-wasmand",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een gevlochten zeegras wasmand met linnen binnenzak",
+    "prompt": "Close-up detail of a woven seagrass laundry basket with a linen lining, natural texture, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-collage-2",
+    "page": "/japandi-wasmand",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Wasmand van riet met een houten deksel in zandtint",
+    "prompt": "A rattan laundry basket with a wooden lid in sand tone, natural weave, minimal styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-collage-3",
+    "page": "/japandi-wasmand",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een hoge gevlochten wasmand in een hoek",
+    "prompt": "Tall narrow composition of a tall woven laundry basket in a corner, natural texture, calm bedroom, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-sectie-1",
+    "page": "/japandi-wasmand",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Wasmand met deksel die de was uit het zicht houdt",
+    "prompt": "A laundry basket with a lid keeping laundry out of sight, woven seagrass, calm bedroom, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-rond",
+    "page": "/japandi-wasmand",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van het vlechtwerk van een zeegras wasmand",
+    "prompt": "Close-up of the weave of a seagrass laundry basket, natural fibre texture, warm tone, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-koopniet",
+    "page": "/japandi-wasmand",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Kunststof smalle wasmand en donker geverfd vlechtwerk als afrader",
+    "prompt": "A narrow plastic laundry hamper and a dark dyed woven basket, shown as a contrast to natural light weave, cheap looking, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-wasmand-faq",
+    "page": "/japandi-wasmand",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Gevlochten wasmand in een rustige Japandi slaapkamer",
+    "prompt": "A woven laundry basket in a calm Japandi bedroom, natural texture, warm tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-hero",
+    "page": "/japandi-fotolijst",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Eiken Japandi fotolijst met een brede passe-partout op een dressoir",
+    "prompt": "An oak Japandi photo frame with a wide passe-partout standing on a dresser, warm grain, calm styling, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-collage-1",
+    "page": "/japandi-fotolijst",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een slanke eiken fotolijst met zichtbare nerf",
+    "prompt": "Close-up detail of a slim oak photo frame with visible grain, matte finish, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-collage-2",
+    "page": "/japandi-fotolijst",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Walnoot fotolijst met een ruime witte passe-partout",
+    "prompt": "A walnut photo frame with a generous white passe-partout, warm brown tones, minimal print, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-collage-3",
+    "page": "/japandi-fotolijst",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van enkele fotolijsten tegen een wand geleund",
+    "prompt": "Tall narrow composition of a few photo frames leaning against a wall on a shelf, warm wood, calm styling, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-sectie-1",
+    "page": "/japandi-fotolijst",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Fotolijsten gegroepeerd met lucht ertussen op een wand",
+    "prompt": "Photo frames grouped with space between them on a wall, oak and walnut frames, calm composition, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-rond",
+    "page": "/japandi-fotolijst",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een hoek van een houten fotolijst met passe-partout",
+    "prompt": "Close-up of the corner of a wooden photo frame with a wide passe-partout, warm grain, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-koopniet",
+    "page": "/japandi-fotolijst",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Ronde print-in-lijst en goud of barok lijst als voorbeeld van wat niet past",
+    "prompt": "A round printed frame and an ornate gold baroque frame, shown as a contrast to a slim wooden frame, busy and glamorous, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-fotolijst-faq",
+    "page": "/japandi-fotolijst",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Eiken fotolijsten op een rustige Japandi dressoir",
+    "prompt": "Oak photo frames on a calm Japandi dresser, warm tones, wide passe-partout, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-hero",
+    "page": "/japandi-plant",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Olijfboom in een matte keramische pot in een rustige Japandi woonkamer",
+    "prompt": "An olive tree in a matte ceramic pot in a calm Japandi living room, sculptural open shape, sand tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-collage-1",
+    "page": "/japandi-plant",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Detail van een matte keramische pot in zandtint met grijsgroen blad",
+    "prompt": "Close-up detail of a matte ceramic pot in sand tone with grey-green foliage, organic shape, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-collage-2",
+    "page": "/japandi-plant",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Varen in een steenlook pot op een houten kruk",
+    "prompt": "A fern in a stone-look pot on a wooden stool, soft organic foliage, minimal styling, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-collage-3",
+    "page": "/japandi-plant",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Smalle compositie van een enkele tak in een keramische vaas",
+    "prompt": "Tall narrow composition of a single branch in a ceramic vase, calm and minimal, warm neutral tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-sectie-1",
+    "page": "/japandi-plant",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Een enkele sculpturale plant als rustig accent in een hoek",
+    "prompt": "A single sculptural plant as a calm accent in a corner, olive tree in a ceramic pot, soft daylight, warm tones, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-rond",
+    "page": "/japandi-plant",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een grafische blad-plant in een matte pot",
+    "prompt": "Close-up of a graphic leafed plant in a matte pot, grey-green foliage, sand-toned pot, soft light, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-sectie-2",
+    "page": "/japandi-plant",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Matte aardse pot in keramiek afgestemd op de materialen in de kamer",
+    "prompt": "A matte earthy ceramic pot matched to the room materials, organic irregular shape, sand and grey-green tones, calm composition, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-fouten",
+    "page": "/japandi-plant",
+    "slot": "fouten",
+    "aspect_ratio": "3:2",
+    "alt": "Vol plantenrek en felle plastic potten als voorbeeld van wat niet past",
+    "prompt": "An overfilled plant shelf and bright plastic pots, shown as a contrast to one or two calm plants, busy jungle look, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-plant-faq",
+    "page": "/japandi-plant",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Een of twee rustige planten in matte potten in een Japandi kamer",
+    "prompt": "One or two calm plants in matte pots in a Japandi room, sculptural shapes, sand tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  }
+]

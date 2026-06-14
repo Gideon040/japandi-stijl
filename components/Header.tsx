@@ -67,6 +67,12 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
             <Link href="/contact/" className="hover:text-papier transition-colors">
               Contact
             </Link>
+            <Link
+              href="/samenwerken/"
+              className="rounded-full bg-papier/15 px-3 py-1 text-papier hover:bg-papier/25 transition-colors"
+            >
+              Voor woonwinkels
+            </Link>
           </nav>
         </div>
       </div>
@@ -241,10 +247,17 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
             </Link>
             <Link
               href="/contact/"
-              className="block py-3 text-inkt"
+              className="block py-3 border-b border-lijn text-inkt"
               onClick={() => setMobielOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="/samenwerken/"
+              className="block py-3 text-walnoot font-display"
+              onClick={() => setMobielOpen(false)}
+            >
+              Voor woonwinkels
             </Link>
           </nav>
         </div>
