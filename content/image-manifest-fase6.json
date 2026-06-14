@@ -1286,5 +1286,13 @@
     "aspect_ratio": "16:9",
     "alt": "Stalen van Japandi materialen naast elkaar: licht eiken, walnoot, linnen en matte steenlook",
     "prompt": "Flat lay of Japandi material samples arranged side by side on a calm surface, light oak wood, dark walnut wood, natural linen fabric, matte off-white stone-look tile and a small ceramic piece, tactile textures, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-quiz-faq",
+    "page": "/japandi-quiz",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustig Japandi stilleven met houtmonster, keramiek en linnen als sfeerbeeld bij de stijltest",
+    "prompt": "Calm Japandi still life with a wood sample, a ceramic vase and folded linen on a sand-toned surface, soft shadows, tactile materials, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
   }
 ]
