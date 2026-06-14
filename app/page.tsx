@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ";
 import LinkKaart from "@/components/LinkKaart";
 import LinkLijst from "@/components/LinkLijst";
 import AuteurBlok from "@/components/AuteurBlok";
+import QuizCta from "@/components/QuizCta";
 import { getAllPages, type PageMeta } from "@/lib/content";
 import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import JsonLd from "@/components/JsonLd";
@@ -97,6 +98,7 @@ export default function Home() {
         titel="Japandi stijl: minimalisme met warmte"
         heroId="home-hero"
         kerncijfers={KERNCIJFERS}
+        cta={<QuizCta />}
       >
         <p>
           Japandi is een interieurstijl die het Japanse minimalisme en de wabi-sabi-waardering

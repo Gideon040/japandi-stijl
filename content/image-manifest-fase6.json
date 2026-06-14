@@ -1278,5 +1278,13 @@
     "aspect_ratio": "4:5",
     "alt": "Een of twee rustige planten in matte potten in een Japandi kamer",
     "prompt": "One or two calm plants in matte pots in a Japandi room, sculptural shapes, sand tones, soft daylight, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "japandi-quiz-hero",
+    "page": "/japandi-quiz",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Stalen van Japandi materialen naast elkaar: licht eiken, walnoot, linnen en matte steenlook",
+    "prompt": "Flat lay of Japandi material samples arranged side by side on a calm surface, light oak wood, dark walnut wood, natural linen fabric, matte off-white stone-look tile and a small ceramic piece, tactile textures, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
   }
 ]

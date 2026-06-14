@@ -1,0 +1,146 @@
+[
+  {
+    "id": "quiz-licht-woonkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi woonkamer in de stijl Licht en Scandi: licht eiken, linnen en veel daglicht",
+    "prompt": "Light Scandinavian Japandi living room interior, light oak wood furniture, natural linen and cotton in off-white and beige, rattan accents, low horizontal sofa, lots of daylight, airy and calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-licht-slaapkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi slaapkamer in de stijl Licht en Scandi: licht eiken, linnen en veel daglicht",
+    "prompt": "Light Scandinavian Japandi bedroom interior, low light oak platform bed, natural linen bedding in off-white and beige, rattan accents, sheer curtains, lots of daylight, airy and calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-licht-eetkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi eetkamer in de stijl Licht en Scandi: licht eiken, linnen en veel daglicht",
+    "prompt": "Light Scandinavian Japandi dining room interior, light oak dining table with wooden chairs, natural linen in off-white and beige, rattan accents, lots of daylight, airy and calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-licht-keuken",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi keuken in de stijl Licht en Scandi: licht eiken, linnen en veel daglicht",
+    "prompt": "Light Scandinavian Japandi kitchen interior, light oak handleless cabinet fronts, off-white and beige tones, clear countertop, rattan and linen accents, lots of daylight, airy and calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-licht-badkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi badkamer in de stijl Licht en Scandi: licht eiken, linnen en veel daglicht",
+    "prompt": "Light Scandinavian Japandi bathroom interior, light oak vanity, off-white and beige tones, natural linen towels, rattan basket, lots of daylight, airy and calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-licht-hal",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi hal in de stijl Licht en Scandi: licht eiken, linnen en veel daglicht",
+    "prompt": "Light Scandinavian Japandi hallway entrance interior, light oak bench and console, off-white and beige tones, rattan basket and linen, lots of daylight, airy and calm, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-walnoot-woonkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi woonkamer in de stijl Warm en Walnoot: walnoot, leer en een terracotta accent",
+    "prompt": "Warm Japandi living room interior, dark walnut and teak wood furniture, cognac leather sofa, sand and warm brown palette with a single terracotta accent, rounded shapes, soft dimmed light, enveloping, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-walnoot-slaapkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi slaapkamer in de stijl Warm en Walnoot: walnoot, leer en een terracotta accent",
+    "prompt": "Warm Japandi bedroom interior, low dark walnut platform bed, sand and warm brown bedding with a single terracotta accent, rounded shapes, soft dimmed light, enveloping, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-walnoot-eetkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi eetkamer in de stijl Warm en Walnoot: walnoot, leer en een terracotta accent",
+    "prompt": "Warm Japandi dining room interior, solid dark walnut dining table, leather and wood chairs, sand and warm brown palette with a single terracotta accent, rounded shapes, soft dimmed light, enveloping, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-walnoot-keuken",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi keuken in de stijl Warm en Walnoot: walnoot, leer en een terracotta accent",
+    "prompt": "Warm Japandi kitchen interior, dark walnut wood cabinet fronts, warm brown and sand tones with a single terracotta accent, brass handles, clear countertop, soft dimmed light, enveloping, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-walnoot-badkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi badkamer in de stijl Warm en Walnoot: walnoot, leer en een terracotta accent",
+    "prompt": "Warm Japandi bathroom interior, dark walnut vanity, warm brown and sand tones with a single terracotta accent, brass fixtures, soft dimmed light, enveloping, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-walnoot-hal",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi hal in de stijl Warm en Walnoot: walnoot, leer en een terracotta accent",
+    "prompt": "Warm Japandi hallway entrance interior, dark walnut bench and console, leather accent, sand and warm brown palette with a single terracotta accent, rounded shapes, soft dimmed light, enveloping, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-wabisabi-woonkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi woonkamer in de stijl Wabi-sabi en mineraal: matte steenlook, keramiek en jute",
+    "prompt": "Wabi-sabi Japandi living room interior, matte stone-look and travertine surfaces, unglazed ceramics, jute rug and paper cord furniture, sand and greige tones, rough natural textures, earthy and tactile, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-wabisabi-slaapkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi slaapkamer in de stijl Wabi-sabi en mineraal: matte steenlook, keramiek en jute",
+    "prompt": "Wabi-sabi Japandi bedroom interior, matte stone-look plaster wall, unglazed ceramics, linen bedding with coarse texture, jute and paper cord accents, sand and greige tones, rough natural textures, earthy and tactile, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-wabisabi-eetkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi eetkamer in de stijl Wabi-sabi en mineraal: matte steenlook, keramiek en jute",
+    "prompt": "Wabi-sabi Japandi dining room interior, travertine dining table, unglazed ceramic tableware, jute and paper cord chairs, sand and greige tones, rough natural textures, earthy and tactile, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-wabisabi-keuken",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi keuken in de stijl Wabi-sabi en mineraal: matte steenlook, keramiek en jute",
+    "prompt": "Wabi-sabi Japandi kitchen interior, matte stone-look countertop, unglazed ceramics, sand and greige tones, jute and natural textures, rough and tactile, earthy, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-wabisabi-badkamer",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi badkamer in de stijl Wabi-sabi en mineraal: matte steenlook, keramiek en jute",
+    "prompt": "Wabi-sabi Japandi bathroom interior, matte stone-look and travertine walls, unglazed ceramic basin, jute and linen, sand and greige tones, rough natural textures, earthy and tactile, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  },
+  {
+    "id": "quiz-wabisabi-hal",
+    "page": "/japandi-quiz",
+    "slot": "resultaat",
+    "aspect_ratio": "4:3",
+    "alt": "Voorbeeld van een Japandi hal in de stijl Wabi-sabi en mineraal: matte steenlook, keramiek en jute",
+    "prompt": "Wabi-sabi Japandi hallway entrance interior, matte stone-look plaster wall, unglazed ceramic vase, jute basket and paper cord bench, sand and greige tones, rough natural textures, earthy and tactile, editorial interior photography, warm neutral palette of sand, creme, walnut and oak, soft natural daylight, minimal styling, photorealistic, no prominent people, no text in image"
+  }
+]

@@ -7,6 +7,7 @@ type Props = {
   heroId?: string;
   kerncijfers?: Kerncijfer[];
   breadcrumb?: React.ReactNode;
+  cta?: React.ReactNode;
   children?: React.ReactNode;
 };
 
@@ -21,7 +22,7 @@ function splitTitel(titel: string): [string, string] {
   return ["", titel];
 }
 
-export default function PageHero({ titel, heroId, kerncijfers, breadcrumb, children }: Props) {
+export default function PageHero({ titel, heroId, kerncijfers, breadcrumb, cta, children }: Props) {
   const [aanloop, statement] = splitTitel(titel);
   return (
     <section className="bg-zand">
@@ -41,15 +42,19 @@ export default function PageHero({ titel, heroId, kerncijfers, breadcrumb, child
               </h1>
               {children && <div className="prose-japandi mt-6">{children}</div>}
               {kerncijfers && kerncijfers.length > 0 && (
-                <div className="flex flex-wrap gap-8 mt-9 text-[0.82rem] text-klei">
+                <div
+                  className="grid gap-4 mt-9 text-[0.78rem] leading-snug text-klei"
+                  style={{ gridTemplateColumns: `repeat(${kerncijfers.length}, minmax(0,1fr))` }}
+                >
                   {kerncijfers.map((k) => (
                     <div key={k.label}>
-                      <b className="block font-display text-xl text-inkt font-medium">{k.waarde}</b>
+                      <b className="block font-display text-lg sm:text-xl text-inkt font-medium">{k.waarde}</b>
                       {k.label}
                     </div>
                   ))}
                 </div>
               )}
+              {cta && <div className="mt-8">{cta}</div>}
             </div>
           </div>
         </div>

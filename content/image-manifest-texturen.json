@@ -1,0 +1,322 @@
+[
+  {
+    "id": "textuur-walnoot",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van massief walnoot met warme donkere nerf",
+    "prompt": "Solid walnut wood surface, warm dark brown grain, matte natural finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-eiken-licht",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van licht eikenhout met fijne nerf",
+    "prompt": "Light oak wood surface, pale honey tone, fine straight grain, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-eiken-donker",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van donker gerookt eiken",
+    "prompt": "Dark smoked oak wood surface, deep brown grain, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-essen",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van essenhout met lichte nerf",
+    "prompt": "Ash wood surface, light cream tone, subtle flowing grain, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-teak",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van teakhout met warme goudbruine nerf",
+    "prompt": "Teak wood surface, warm golden brown, natural oily grain, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-mango-acacia",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van mango- of acaciahout met levendige nerf",
+    "prompt": "Mango and acacia wood surface, varied warm brown tones, lively grain, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-bamboe",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van bamboe met verticale vezels",
+    "prompt": "Bamboo surface, pale warm tone, vertical fibrous nodes, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-houtfineer",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van houtfineer op plaat met gesloten nerf",
+    "prompt": "Wood veneer surface on panel, smooth oak or walnut grain, matte finish, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-houtlook-imitatie",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van houtprint op melamine, vlakke imitatienerf",
+    "prompt": "Printed wood-look melamine surface, flat repeating fake grain, slight sheen, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-travertijn",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van travertijn met poreuze natuursteennerf",
+    "prompt": "Travertine stone surface, off-white with soft horizontal pores and veins, matte, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-steenlook-wabisabi",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van matte wabi-sabi steenlook in gebroken wit",
+    "prompt": "Wabi-sabi stone-look surface, matte off-white mineral plaster, organic irregular texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-keramiek-mat",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van mat ongeglazuurd keramiek in zandtint",
+    "prompt": "Matte unglazed ceramic surface, sandy beige, fine grainy texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-marmer-koel",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van koel marmer met grijze adering",
+    "prompt": "Cool marble surface, soft grey veining on off-white, smooth matte, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-linnen",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van natuurlijk linnen weefsel",
+    "prompt": "Natural linen fabric, woven flax texture, warm oatmeal tone, soft weave, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-wol",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van gebreide wol met zichtbare steken",
+    "prompt": "Knitted wool surface, chunky soft loops, warm cream tone, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-katoen",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van katoenen stof met fijne wieldraad",
+    "prompt": "Plain cotton fabric, fine even weave, soft sand tone, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-boucle",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van bouclestof met lusjesstructuur",
+    "prompt": "Boucle fabric surface, looped curly yarn texture, creamy off-white, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-jute",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van grove jute met grof weefsel",
+    "prompt": "Jute fabric surface, coarse natural fibre weave, warm tan tone, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-rotan",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van gevlochten rotan",
+    "prompt": "Woven rattan surface, natural pale cane, regular diagonal weave, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-papierkoord",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van handgevlochten papierkoord",
+    "prompt": "Handwoven paper cord surface, twisted natural fibre, warm beige weave, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-velvet",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van velours met zachte glans",
+    "prompt": "Velvet fabric surface, soft pile with subtle sheen, muted warm tone, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-leer",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van natuurlijk leer met fijne korrel",
+    "prompt": "Natural leather surface, fine grain, warm cognac brown, matte, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-rijstpapier",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van rijstpapier met vezelstructuur",
+    "prompt": "Rice paper surface, translucent warm white with visible plant fibres, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-structuurbehang",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van vliesbehang met linnenlookstructuur",
+    "prompt": "Non-woven wallpaper surface, subtle linen-look embossed texture, sand tone, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-voile",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van transparante voile gordijnstof",
+    "prompt": "Sheer voile curtain fabric, fine translucent weave, soft cream tone, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-metaal-zwart",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van mat zwart staal",
+    "prompt": "Matte black powder-coated steel surface, fine even texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-aluminium",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van geborsteld aluminium",
+    "prompt": "Brushed aluminium surface, fine linear satin texture, cool grey, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-messing",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van geborsteld messing met warme glans",
+    "prompt": "Brushed brass surface, warm golden satin sheen, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-gebroken-wit",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van warm gebroken wit met fijne kalkstructuur",
+    "prompt": "Off-white warm wall surface, fine matte lime-plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-zand",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van zandkleurige kalkafwerking",
+    "prompt": "Sand-coloured wall surface, soft matte mineral plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-greige",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van greige met subtiele structuur",
+    "prompt": "Greige wall surface, warm grey-beige matte plaster, subtle texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-beige-creme",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van beige en creme met zachte structuur",
+    "prompt": "Beige and cream wall surface, soft matte plaster, gentle texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-warm-grijs",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van warm grijs met fijne structuur",
+    "prompt": "Warm grey wall surface, fine matte plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-blauwgrijs",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van koel blauwgrijs met matte afwerking",
+    "prompt": "Cool blue-grey wall surface, soft matte plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-mat-zwart",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van diep mat zwart",
+    "prompt": "Deep matte black painted surface, fine even texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-terracotta",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van terracotta in warme aardetint",
+    "prompt": "Terracotta wall surface, warm earthy clay tone, matte plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-olijfgroen",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van gedempt olijfgroen",
+    "prompt": "Muted olive green wall surface, soft matte plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-warm-bruin",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Vlak van warm bruin met zachte structuur",
+    "prompt": "Warm brown wall surface, soft matte plaster texture, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-hoogglans-wit",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van hoogglans wit kunststof met spiegeling",
+    "prompt": "Glossy white plastic surface, reflective high-shine lacquer, smooth, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  },
+  {
+    "id": "textuur-faux-fur",
+    "page": "textuur-bibliotheek",
+    "slot": "textuur",
+    "aspect_ratio": "1:1",
+    "alt": "Close-up van faux fur met lange vezels",
+    "prompt": "Faux fur surface, long synthetic pile, pale shiny fibres, macro close-up material texture, flat top-down view filling the frame, even soft natural daylight, warm neutral palette, photorealistic, high detail, no objects, no people, no text in image"
+  }
+]

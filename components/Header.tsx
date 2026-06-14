@@ -61,6 +61,9 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
             <Link href="/#definitie" className="hover:text-papier transition-colors">
               Wat is Japandi
             </Link>
+            <Link href="/japandi-quiz/" className="hover:text-papier transition-colors">
+              Stijltest
+            </Link>
             <Link href="/over-ons/" className="hover:text-papier transition-colors">
               Over ons
             </Link>
@@ -118,7 +121,7 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
 
                   {open && (
                     <div className="absolute left-0 top-full pt-2 w-[32rem]">
-                      <div className="bg-papier border border-lijn rounded-sm shadow-lg overflow-hidden flex h-64">
+                      <div className="bg-papier border border-lijn rounded-sm shadow-lg overflow-hidden flex max-h-[32rem]">
                         {groep.beeld && <DropdownBeeld id={groep.beeld} />}
                         <div className="flex-1 min-w-0 flex flex-col">
                           {groep.href && (
@@ -186,6 +189,13 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
               onClick={() => setMobielOpen(false)}
             >
               Wat is Japandi
+            </Link>
+            <Link
+              href="/japandi-quiz/"
+              className="block py-3 border-b border-lijn text-inkt"
+              onClick={() => setMobielOpen(false)}
+            >
+              Stijltest
             </Link>
             {nav.map((groep) => {
               const open = mobielGroep === groep.titel;

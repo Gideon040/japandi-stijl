@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -6,6 +7,8 @@ import { mdxComponents } from "@/components/mdx-components";
 import remarkHeadingId from "@/lib/remark-heading-id";
 import remarkLayout from "@/lib/remark-layout";
 import AuteurBlok from "@/components/AuteurBlok";
+import ClusterCarousel from "@/components/ClusterCarousel";
+import { getClusterCarousels, type ClusterRij } from "@/lib/clusters";
 import PageHero from "@/components/PageHero";
 import Breadcrumb, { type Crumb } from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
@@ -15,6 +18,24 @@ import { paginaSchema, productLijstSchema, extractProducts, ogBeeld, SITE_NAAM }
 // Intro (direct antwoord) plus hero-beeld worden uit de MDX-body getild
 // en in de PageHero gerenderd; de rest van de body krijgt het sectieritme.
 const HERO_PATTERN = /^([\s\S]*?)<ImagePlaceholder\s+id="([^"]+)"\s+priority\s*\/>\s*/;
+
+// Splitst de MDX-body in stukken per H2-kop, zodat de cluster-rijen tussen
+// hele secties geplaatst kunnen worden (elke kop begint een nieuw deel).
+function splitsOpH2(body: string): string[] {
+  const regels = body.split("\n");
+  const delen: string[] = [];
+  let huidig: string[] = [];
+  for (const regel of regels) {
+    if (/^##\s/.test(regel) && huidig.length) {
+      delen.push(huidig.join("\n"));
+      huidig = [regel];
+    } else {
+      huidig.push(regel);
+    }
+  }
+  if (huidig.length) delen.push(huidig.join("\n"));
+  return delen;
+}
 
 export function generateStaticParams() {
   return getAllPages().map((p) => ({ slug: p.slug }));
@@ -73,6 +94,31 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     })),
   };
 
+  // Cluster-rijen verspreid over de body: eerste rij na de eerste sectie, de
+  // overige gespreid, nooit na de laatste sectie (daar staat de FAQ). Elke
+  // chunk wordt apart gerenderd zodat de carousels ertussen passen; de
+  // zand-band van de carousel scheidt de blokken visueel.
+  const rijen = getClusterCarousels(slug);
+  const delen = splitsOpH2(body);
+  const maxNa = delen.length - 2;
+  const grenzen: number[] = [];
+  for (let r = 0; r < rijen.length && maxNa >= 0; r++) {
+    let idx = r === 0 ? 0 : Math.round((delen.length * (r + 1)) / (rijen.length + 1));
+    idx = Math.min(Math.max(idx, 0), maxNa);
+    const vorige = grenzen.length ? grenzen[grenzen.length - 1] : -1;
+    if (idx <= vorige) idx = vorige + 1;
+    if (idx > maxNa) break;
+    grenzen.push(idx);
+  }
+  const blokken: { mdx: string; rij?: ClusterRij }[] = [];
+  let cursor = 0;
+  grenzen.forEach((g, i) => {
+    blokken.push({ mdx: delen.slice(cursor, g + 1).join("\n"), rij: rijen[i] });
+    cursor = g + 1;
+  });
+  blokken.push({ mdx: delen.slice(cursor).join("\n") });
+  const restRijen = rijen.slice(grenzen.length);
+
   const graph: object[] = [paginaSchema(meta, slug), breadcrumb];
   if (meta.template === "koopgids") {
     const producten = extractProducts(page.content);
@@ -98,11 +144,21 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div className="prose-japandi pb-16">
         {/* blockJS=false: v6 blokkeert JS-expressies in MDX standaard; onze props
             (items, ids, score, kerncijfers) zijn vertrouwde repo-content. */}
-        <MDXRemote
-          source={body}
-          components={mdxComponents}
-          options={{ blockJS: false, mdxOptions: { remarkPlugins: [remarkHeadingId, remarkLayout] } }}
-        />
+        {blokken.map((blok, i) => (
+          <Fragment key={i}>
+            {blok.mdx.trim() && (
+              <MDXRemote
+                source={blok.mdx}
+                components={mdxComponents}
+                options={{ blockJS: false, mdxOptions: { remarkPlugins: [remarkHeadingId, remarkLayout] } }}
+              />
+            )}
+            {blok.rij && <ClusterCarousel titel={blok.rij.titel} kaarten={blok.rij.kaarten} />}
+          </Fragment>
+        ))}
+        {restRijen.map((rij) => (
+          <ClusterCarousel key={rij.titel} titel={rij.titel} kaarten={rij.kaarten} />
+        ))}
       </div>
       <AuteurBlok />
       <JsonLd data={{ "@context": "https://schema.org", "@graph": graph }} />
