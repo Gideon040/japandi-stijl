@@ -1,0 +1,74 @@
+[
+  {
+    "id": "japandi-schoenenkast-hero",
+    "page": "/japandi-schoenenkast",
+    "slot": "hero",
+    "aspect_ratio": "16:9",
+    "alt": "Japandi hal met een smalle naturel houten schoenenkast tegen een gebroken witte wand",
+    "prompt": "Japandi hallway with a slim natural wood shoe cabinet against an off-white wall, light oak floor, soft diffused daylight from the side, a single ceramic vase and a round mirror above, minimal styling, editorial interior photography, warm neutral palette of sand and creme, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-collage-1",
+    "page": "/japandi-schoenenkast",
+    "slot": "collage",
+    "aspect_ratio": "3:4",
+    "alt": "Smalle schoenenkast met kantelkleppen in licht eiken in een rustige hal",
+    "prompt": "Slim shoe cabinet with tilt-flap doors in light oak in a calm hallway, warm off-white wall, soft directional daylight, minimal styling, editorial interior photography, warm neutral palette, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-collage-2",
+    "page": "/japandi-schoenenkast",
+    "slot": "collage",
+    "aspect_ratio": "4:5",
+    "alt": "Detail van een naturel rotan front op een houten schoenenkast",
+    "prompt": "Close detail of a natural woven rattan front on a wooden shoe cabinet, visible weave texture, warm creme background, soft shadow play, minimal styling, editorial interior photography, warm neutral palette, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-collage-3",
+    "page": "/japandi-schoenenkast",
+    "slot": "collage",
+    "aspect_ratio": "3:5",
+    "alt": "Lage brede schoenenkast met een vaas en een mand op het blad",
+    "prompt": "Low wide wooden shoe cabinet with a ceramic vase with dried grasses and a woven basket on top, warm sand backdrop, soft daylight, minimal styling, editorial interior photography, warm neutral palette, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-sectie-1",
+    "page": "/japandi-schoenenkast",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Smalle en diepe schoenenkast naast elkaar als vergelijking in een lichte hal",
+    "prompt": "A narrow shallow shoe cabinet and a deeper one shown together in a light hallway, comparison of depth, light oak floor, warm neutral palette of sand and creme, soft diffused daylight, minimal styling, editorial interior photography, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-rond",
+    "page": "/japandi-schoenenkast",
+    "slot": "rond",
+    "aspect_ratio": "1:1",
+    "alt": "Detail van een houten klep met een natuurlijke nerf op een schoenenkast",
+    "prompt": "Close-up detail of a wooden tilt-flap with visible natural grain on a shoe cabinet, soft window light, warm neutral palette, minimal styling, editorial interior photography, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-sectie-2",
+    "page": "/japandi-schoenenkast",
+    "slot": "sectie",
+    "aspect_ratio": "3:2",
+    "alt": "Schoenenkast in warme houttint die aansluit op een kapstok in dezelfde hal",
+    "prompt": "Shoe cabinet in a warm wood tone matching a wall coat rack in the same hallway, off-white wall, light floor, soft daylight, calm cohesive styling, warm neutral palette of sand and walnut, minimal styling, editorial interior photography, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-koopniet",
+    "page": "/japandi-schoenenkast",
+    "slot": "koopniet",
+    "aspect_ratio": "4:5",
+    "alt": "Open metalen schoenenrek met een glanzende houtprint dat niet bij Japandi past",
+    "prompt": "An open black metal shoe rack with a glossy wood-print finish shown as an example that does not fit the natural style, dim interior, muted warm tones, editorial interior photography, photorealistic, no people, no text"
+  },
+  {
+    "id": "japandi-schoenenkast-faq",
+    "page": "/japandi-schoenenkast",
+    "slot": "faq",
+    "aspect_ratio": "4:5",
+    "alt": "Rustige Japandi entree met een naturel schoenenkast en daglicht",
+    "prompt": "Calm Japandi entrance with a natural wood shoe cabinet, a round mirror and soft daylight, generous negative space, warm sand and creme palette, minimal styling, editorial interior photography, photorealistic, no people, no text"
+  }
+]

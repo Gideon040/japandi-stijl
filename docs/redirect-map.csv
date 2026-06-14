@@ -62,7 +62,7 @@ oude_url,nieuwe_url,actie
 /collections/japandi-boekenkasten,/japandi-boekenkast/,redirect
 /collections/japandi-wandkasten,/japandi-kast/#wandkast,redirect
 /collections/japandi-kledingkasten,/japandi-kast/#kledingkast,redirect
-/collections/japandi-schoenenkasten,/japandi-kast/#schoenenkast,redirect
+/collections/japandi-schoenenkasten,/japandi-schoenenkast/,redirect
 /collections/japandi-buffetkasten,/japandi-buffetkast/,redirect
 /collections/japandi-hanglamp-eettafel,/japandi-hanglamp/#eettafel,redirect
 /collections/japandi-vloerkleed-rond,/japandi-vloerkleed/#rond,redirect

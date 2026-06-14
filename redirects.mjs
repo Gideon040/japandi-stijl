@@ -63,7 +63,7 @@ export const redirects = [
   { source: '/collections/japandi-boekenkasten', destination: '/japandi-boekenkast/', permanent: true },
   { source: '/collections/japandi-wandkasten', destination: '/japandi-kast/#wandkast', permanent: true },
   { source: '/collections/japandi-kledingkasten', destination: '/japandi-kast/#kledingkast', permanent: true },
-  { source: '/collections/japandi-schoenenkasten', destination: '/japandi-kast/#schoenenkast', permanent: true },
+  { source: '/collections/japandi-schoenenkasten', destination: '/japandi-schoenenkast/', permanent: true },
   { source: '/collections/japandi-buffetkasten', destination: '/japandi-buffetkast/', permanent: true },
   { source: '/collections/japandi-hanglamp-eettafel', destination: '/japandi-hanglamp/#eettafel', permanent: true },
   { source: '/collections/japandi-vloerkleed-rond', destination: '/japandi-vloerkleed/#rond', permanent: true },

@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import Header from "@/components/Header";
+// import NieuwsbriefPopup from "@/components/NieuwsbriefPopup"; // tijdelijk verborgen
 import { getNavigatie } from "@/lib/navigatie";
 import JsonLd from "@/components/JsonLd";
 import { identiteitGraph, SITE_NAAM, SITE_LOCALE, SITE_BESCHRIJVING, ogBeeld } from "@/lib/seo";
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
           </div>
         </footer>
+        {/* <NieuwsbriefPopup /> tijdelijk verborgen */}
       </body>
     </html>
   );

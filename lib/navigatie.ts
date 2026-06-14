@@ -58,6 +58,7 @@ const GROEPEN: { titel: string; href?: string; hubLabel?: string; beeld?: string
       { slug: "japandi-bureau", label: "Bureau" },
       { slug: "japandi-poef", label: "Poef" },
       { slug: "japandi-kapstok", label: "Kapstok" },
+      { slug: "japandi-schoenenkast", label: "Schoenenkast" },
     ],
   },
   {

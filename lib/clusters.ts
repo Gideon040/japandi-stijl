@@ -90,6 +90,7 @@ const TOEWIJZING: Record<string, Toewijzing> = {
   // Hal en entree
   "japandi-hal": { primair: "hal" },
   "japandi-kapstok": { primair: "hal" },
+  "japandi-schoenenkast": { primair: "hal", ook: ["woonkamer"] },
   "japandi-deurmat": { primair: "hal" },
   "japandi-deur": { primair: "hal" },
 

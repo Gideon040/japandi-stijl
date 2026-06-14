@@ -219,6 +219,7 @@ export default function Home() {
             items={[
               {
                 staal: "linear-gradient(135deg,#D7B98C,#BE9C68)",
+                textuur: "eiken-licht",
                 naam: "Eiken en essen",
                 subtitel: "de lichte basis",
                 prijs: "midden tot hoog",
@@ -226,6 +227,7 @@ export default function Home() {
               },
               {
                 staal: "linear-gradient(135deg,#9E7A4F,#5C4633)",
+                textuur: "walnoot",
                 naam: "Walnoot",
                 subtitel: "warmte en diepte",
                 prijs: "hoog",
@@ -233,6 +235,7 @@ export default function Home() {
               },
               {
                 staal: "linear-gradient(135deg,#E9DBB8,#D2BE8E)",
+                textuur: "rotan",
                 naam: "Bamboe en rotan",
                 subtitel: "lichte vlechtmaterialen",
                 prijs: "laag tot midden",
@@ -240,6 +243,7 @@ export default function Home() {
               },
               {
                 staal: "#E5DCCC",
+                textuur: "linnen",
                 naam: "Linnen en wol",
                 subtitel: "textiel",
                 prijs: "midden",
@@ -247,6 +251,7 @@ export default function Home() {
               },
               {
                 staal: "#CFC3B0",
+                textuur: "keramiek-mat",
                 naam: "Keramiek en matte steenlook",
                 subtitel: "wabi-sabi",
                 prijs: "laag tot midden",
@@ -254,6 +259,7 @@ export default function Home() {
               },
               {
                 staal: "linear-gradient(135deg,#D8D8DA,#B8B8BC)",
+                textuur: "hoogglans-wit",
                 naam: "Hoogglans, chroom, kunststof",
                 subtitel: "vermijden",
                 opmerking: "koud en hard, en imitatiehout of -steen mist de diepte van het echte",
@@ -281,36 +287,42 @@ export default function Home() {
             items={[
               {
                 staal: "#F4EFE6",
+                textuur: "gebroken-wit",
                 naam: "Gebroken wit",
                 subtitel: "muren en plafond",
                 opmerking: "warmer dan zuiver wit, dat snel klinisch oogt",
               },
               {
                 staal: "#E4D7C0",
+                textuur: "zand",
                 naam: "Zand, creme en greige",
                 subtitel: "textiel en vloer",
                 opmerking: "een tint onder de muur, zodat de ruimte zich aardt",
               },
               {
                 staal: "linear-gradient(135deg,#9E7A4F,#6F4E2E)",
+                textuur: "walnoot",
                 naam: "Walnoot en eiken",
                 subtitel: "het hout",
                 opmerking: "walnoot voor warmte, eiken voor licht, samen de verbindende tint",
               },
               {
                 staal: "#B9AFA0",
+                textuur: "warm-grijs",
                 naam: "Warm grijs",
                 subtitel: "rustige tussentint",
                 opmerking: "altijd met een beige ondertoon, nooit blauwgrijs",
               },
               {
                 staal: "#A64D39",
+                textuur: "terracotta",
                 naam: "Terracotta of olijfgroen",
                 subtitel: "het enige accent",
                 opmerking: "in kleine dosis, een kussen of een plant",
               },
               {
                 staal: "#7C8A9A",
+                textuur: "blauwgrijs",
                 naam: "Koel blauwgrijs en fel",
                 subtitel: "vermijden",
                 opmerking: "breekt de warmte en haalt de rust uit het palet",
