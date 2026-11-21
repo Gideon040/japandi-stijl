@@ -11,7 +11,7 @@ export const SITE_URL = "https://japandi-stijl.nl";
 export const SITE_NAAM = "Japandi-stijl.nl";
 export const SITE_LOCALE = "nl_NL";
 export const SITE_BESCHRIJVING =
-  "Onafhankelijke gids over de Japandi interieurstijl: uitleg, inspiratie en eerlijke koopgidsen.";
+  "Gids en winkel voor de Japandi interieurstijl: uitleg, inspiratie, eerlijke koopgidsen en een eigen selectie producten.";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 const SITE_ID = `${SITE_URL}/#website`;

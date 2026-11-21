@@ -50,8 +50,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   japandi-stijl<span className="text-klei">.nl</span>
                 </Link>
                 <p className="mt-3 text-klei leading-relaxed">
-                  Onafhankelijke gids over de Japandi interieurstijl. We verkopen zelf niets,
-                  we helpen je aan het juiste interieuradvies.
+                  Gids en winkel voor de Japandi interieurstijl. Alles wat we verkopen is
+                  uitgekozen op maat, vorm, materiaal en prijs.
                 </p>
               </div>
               <nav className="flex flex-col gap-2.5 text-inkt">
@@ -63,8 +63,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </nav>
             </div>
             <p className="mt-10 pt-6 border-t border-lijn text-klei">
-              © {new Date().getFullYear()} japandi-stijl.nl · Onafhankelijk platform. We verkopen
-              zelf niets en wijzen je door naar producten die wij binnen Japandi vinden passen.
+              © {new Date().getFullYear()} japandi-stijl.nl · Gids en winkel voor Japandi. We
+              houden geen voorraad en bestellen je product bij de leverancier zodra jij bestelt.
             </p>
           </div>
         </footer>
