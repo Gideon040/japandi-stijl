@@ -380,7 +380,7 @@ export default async function ProductPagina({ params }: Params) {
 
       <section className="bg-zand-diep">
         <div className="max-w-wide mx-auto px-6 py-14 sm:py-20">
-          <Kop aanloop="Goed om te weten">Levering en retour</Kop>
+          <Kop aanloop="Zeker van je zaak">Levering en retour</Kop>
           <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 list-none p-0 m-0">
             {STAPPEN.map((stap, i) => (
               <li key={stap.titel} className="list-none m-0 p-6 bg-papier rounded-sm flex flex-col">
@@ -398,7 +398,7 @@ export default async function ProductPagina({ params }: Params) {
                     href="/contact/"
                     className="mt-auto pt-4 text-sm text-walnoot underline decoration-lijn underline-offset-4 hover:decoration-walnoot"
                   >
-                    Retour melden via contact
+                    Neem contact op
                   </Link>
                 )}
               </li>

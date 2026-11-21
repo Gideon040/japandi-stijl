@@ -31,20 +31,26 @@ export const ZEKERHEDEN: Zekerheid[] = [
   },
 ];
 
-export const LEVERING_LABEL = "Op bestelling";
+export const LEVERING_LABEL = "Bezorging aan huis";
 
 // De vier stappen onder "Levering en retour" op de productpagina. Bij stap 3
-// vult de pagina zelf de levertijd van het product in.
+// vult de pagina zelf de levertijd van het product in. Houd de levertijd altijd
+// eerlijk: die bepaalt wat de klant verwacht.
 export const STAPPEN: { titel: string; tekst: string }[] = [
-  { titel: "Jij bestelt", tekst: "Je rekent af via een beveiligde kassa en krijgt een bevestiging per e-mail." },
   {
-    titel: "Wij bestellen voor jou",
-    tekst:
-      "We bestellen het product bij de leverancier. Daardoor duurt het iets langer dan bij een grote webshop, maar ligt er geen voorraad te verstoffen.",
+    titel: "Veilig besteld",
+    tekst: "Je rekent af via een beveiligde kassa en krijgt direct een bevestiging per e-mail.",
   },
-  { titel: "Onderweg naar jou", tekst: "Je krijgt bericht zodra je pakket onderweg is." },
+  {
+    titel: "Met zorg verpakt",
+    tekst: "We maken je bestelling klaar en verpakken alles stevig, zodat het heel aankomt.",
+  },
+  {
+    titel: "Bezorgd aan huis",
+    tekst: "Je krijgt bericht zodra je pakket onderweg is, zodat je weet wanneer het komt.",
+  },
   {
     titel: "14 dagen bedenktijd",
-    tekst: "Past het toch niet? Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt.",
+    tekst: "Thuis toch anders dan gedacht? Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt.",
   },
 ];
