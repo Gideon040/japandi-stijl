@@ -30,10 +30,9 @@ export default function AuteurBlok() {
         <p className="font-display text-2xl sm:text-3xl mb-4">{NAAM}</p>
         <p className="text-[15px] leading-relaxed text-inkt/90">
           Ik richt al jaren mijn eigen huis in volgens de Japandi-stijl. Japandi-stijl.nl is mijn
-          gids en winkel: ik zoek naar meubels en accessoires die echt bij de stijl passen en
-          vergelijk ze op maat, vorm, materiaal en prijs. Een deel verkoop ik zelf, voor de rest
-          wijs ik je door naar de webshops die ze voeren. Past iets niet bij Japandi, dan raad ik
-          het gewoon af.
+          gids en winkel: ik zoek naar meubels en accessoires die echt bij de stijl passen,
+          vergelijk ze op maat, vorm, materiaal en prijs en verkoop alleen wat die toets doorstaat.
+          Past iets niet bij Japandi, dan raad ik het gewoon af.
         </p>
       </div>
     </aside>

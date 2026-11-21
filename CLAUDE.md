@@ -2,7 +2,7 @@
 
 ## Wat dit project is
 
-Japandi-stijl.nl is een informatieve contentsite over de Japandi interieurstijl met een eigen winkel erin. De site was eerst een Shopify-webshop, daarna alleen gids met affiliate links, en verkoopt sinds november 2026 weer een eigen, gecureerde selectie via Shopify als backend (zie `ShopProduct`). Doel: topical authority in de Japandi-niche (NL), maximale zichtbaarheid in Google en AI Overviews/ChatGPT, inkomsten uit eigen verkoop en Bol.com affiliate links. Positionering in alle copy: gids en winkel, alles uitgekozen op maat, vorm, materiaal en prijs; geen voorraad, we bestellen bij de leverancier zodra de klant bestelt. Schrijf nergens meer dat we niets verkopen of onafhankelijk zijn.
+Japandi-stijl.nl is een informatieve contentsite over de Japandi interieurstijl met een eigen winkel erin. De site was eerst een Shopify-webshop, daarna alleen gids met affiliate links, en verkoopt sinds november 2026 weer een eigen, gecureerde selectie via Shopify als backend (zie `ShopProduct`). Doel: topical authority in de Japandi-niche (NL), maximale zichtbaarheid in Google en AI Overviews/ChatGPT, inkomsten uit eigen verkoop. In de copy noemen we geen andere webshops, affiliate of vergoedingen meer. Positionering in alle copy: gids en winkel, alles uitgekozen op maat, vorm, materiaal en prijs; geen voorraad, we bestellen bij de leverancier zodra de klant bestelt. Schrijf nergens meer dat we niets verkopen of onafhankelijk zijn.
 
 - Stack: Next.js (App Router) + MDX content in de repo, static generation, deploy via Vercel
 - Geen CMS, geen database. Content = MDX-bestanden in `/content/`
