@@ -79,11 +79,18 @@ export default async function ProductPagina({ params }: Params) {
   crumbs.push({ naam: product.title });
 
   const prijs = laagstePrijs(product);
-  const beelden = product.images.length
+  const alleBeelden = product.images.length
     ? product.images
     : product.featuredImage
       ? [product.featuredImage]
       : [];
+  // Een foto waarvan de alt-tekst in Shopify met "Sfeerbeeld" begint, is een
+  // sfeerimpressie (met AI gemaakt). Die hoort niet tussen de productfoto's en
+  // niet in het schema, maar krijgt een eigen plek met een duidelijk bijschrift.
+  const isSfeer = (b: { altText: string | null }) => /^sfeerbeeld/i.test(b.altText ?? "");
+  const beelden = alleBeelden.filter((b) => !isSfeer(b));
+  const sfeerbeeld = alleBeelden.find(isSfeer) ?? null;
+  const sfeerAlt = sfeerbeeld?.altText?.replace(/^sfeerbeeld\s*:?\s*/i, "").trim() || product.title;
   const heeftPunten = product.pluspunten.length > 0 || product.minpunten.length > 0;
   const specs: [string, string][] = [];
   if (product.vendor) specs.push(["Merk", product.vendor]);
@@ -185,6 +192,24 @@ export default async function ProductPagina({ params }: Params) {
               )}
             </div>
           </div>
+        </section>
+      )}
+
+      {sfeerbeeld && (
+        <section className="max-w-wide mx-auto px-6 pb-16">
+          <figure className="m-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={sfeerbeeld.url}
+              alt={sfeerAlt}
+              loading="lazy"
+              className="w-full aspect-[3/2] sm:aspect-[16/9] object-cover rounded-sm"
+            />
+            <figcaption className="mt-3 text-sm text-klei">
+              Sfeerimpressie, gemaakt met AI. Het echte product kan in kleur, formaat en afwerking afwijken:
+              ga uit van de productfoto&apos;s bovenaan.
+            </figcaption>
+          </figure>
         </section>
       )}
 
