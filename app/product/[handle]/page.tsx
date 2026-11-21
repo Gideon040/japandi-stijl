@@ -221,12 +221,19 @@ export default async function ProductPagina({ params }: Params) {
       )}
 
       {heeftPunten && (
-        <section className="bg-zand">
-          <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
+        <section
+          className={`relative bg-cover bg-center ${product.gids ? "bg-walnoot text-papier" : "bg-zand"}`}
+          style={product.gids ? { backgroundImage: `url(/images/${product.gids}-hero.webp)` } : undefined}
+        >
+          {/* Sfeerbeeld van de bijbehorende koopgids als achtergrond, met een
+              donkere laag erover zodat kop en kaarten leesbaar blijven. Bestaat
+              het beeld niet, dan blijft het effen walnoot. */}
+          {product.gids && <div className="absolute inset-0 bg-inkt/60" aria-hidden />}
+          <div className="relative max-w-wide mx-auto px-6 py-14 sm:py-20">
             <Kop aanloop="Eerlijk gezegd">De plus- en minpunten</Kop>
             <div className="grid gap-5 sm:grid-cols-2">
               {product.pluspunten.length > 0 && (
-                <div className="bg-papier rounded-sm p-6 sm:p-8">
+                <div className="bg-papier text-inkt rounded-sm p-6 sm:p-8 shadow-sm">
                   <h3 className="font-display text-xl m-0 mb-4">Wat ons bevalt</h3>
                   <ul className="space-y-3 list-none p-0 m-0">
                     {product.pluspunten.map((punt) => (
@@ -244,7 +251,7 @@ export default async function ProductPagina({ params }: Params) {
                 </div>
               )}
               {product.minpunten.length > 0 && (
-                <div className="bg-papier rounded-sm p-6 sm:p-8">
+                <div className="bg-papier text-inkt rounded-sm p-6 sm:p-8 shadow-sm">
                   <h3 className="font-display text-xl m-0 mb-4">Waar je op moet letten</h3>
                   <ul className="space-y-3 list-none p-0 m-0">
                     {product.minpunten.map((punt) => (
