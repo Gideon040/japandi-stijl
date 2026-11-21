@@ -165,7 +165,8 @@ export default async function ProductPagina({ params }: Params) {
 
       {product.waarom && (
         <section className="max-w-wide mx-auto px-6 pb-16">
-          <div className="grid md:grid-cols-[1.6fr_1fr] rounded-sm overflow-hidden">
+          <div className="rounded-sm overflow-hidden">
+          <div className="grid md:grid-cols-[1.6fr_1fr]">
             <div className="bg-walnoot text-papier px-7 py-10 sm:px-12 sm:py-14">
               <p className="text-[0.76rem] uppercase tracking-[0.12em] text-papier/70 m-0 mb-4">Onze keuze</p>
               <h2 className="font-display text-3xl sm:text-4xl leading-tight m-0 mb-6">
@@ -192,24 +193,16 @@ export default async function ProductPagina({ params }: Params) {
               )}
             </div>
           </div>
-        </section>
-      )}
-
-      {sfeerbeeld && (
-        <section className="max-w-wide mx-auto px-6 pb-16">
-          <figure className="m-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+          {sfeerbeeld && (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={sfeerbeeld.url}
               alt={sfeerAlt}
               loading="lazy"
-              className="w-full aspect-[3/2] sm:aspect-[16/9] object-cover rounded-sm"
+              className="block w-full aspect-[3/2] sm:aspect-[16/9] object-cover"
             />
-            <figcaption className="mt-3 text-sm text-klei">
-              Sfeerimpressie, gemaakt met AI. Het echte product kan in kleur, formaat en afwerking afwijken:
-              ga uit van de productfoto&apos;s bovenaan.
-            </figcaption>
-          </figure>
+          )}
+          </div>
         </section>
       )}
 
