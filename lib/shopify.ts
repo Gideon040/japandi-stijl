@@ -46,6 +46,12 @@ export type ShopProduct = {
   levertijd: string;
   afmetingen: string | null;
   materiaal: string | null;
+  // Redactionele velden uit Shopify-metafields (namespace custom).
+  waarom: string | null; // waarom dit product binnen Japandi past
+  pluspunten: string[];
+  minpunten: string[];
+  stijltip: string | null;
+  gids: string | null; // slug van de bijbehorende koopgids, bijv. "japandi-klok"
   seoTitel: string | null;
   seoBeschrijving: string | null;
 };
@@ -123,20 +129,67 @@ const PRODUCT_VELDEN = `
   levertijd: metafield(namespace: "custom", key: "levertijd") { value }
   afmetingen: metafield(namespace: "custom", key: "afmetingen") { value }
   materiaal: metafield(namespace: "custom", key: "materiaal") { value }
+  waarom: metafield(namespace: "custom", key: "waarom_gekozen") { value }
+  pluspunten: metafield(namespace: "custom", key: "pluspunten") { value }
+  minpunten: metafield(namespace: "custom", key: "minpunten") { value }
+  stijltip: metafield(namespace: "custom", key: "stijltip") { value }
+  gids: metafield(namespace: "custom", key: "gids") { value }
   seo { title description }
 `;
 
 type RuwProduct = Omit<
   ShopProduct,
-  "images" | "variants" | "levertijd" | "afmetingen" | "materiaal" | "seoTitel" | "seoBeschrijving"
+  | "images"
+  | "variants"
+  | "levertijd"
+  | "afmetingen"
+  | "materiaal"
+  | "waarom"
+  | "pluspunten"
+  | "minpunten"
+  | "stijltip"
+  | "gids"
+  | "seoTitel"
+  | "seoBeschrijving"
 > & {
   images: { nodes: Beeld[] };
   variants: { nodes: ShopVariant[] };
   levertijd: { value: string } | null;
   afmetingen: { value: string } | null;
   materiaal: { value: string } | null;
+  waarom: { value: string } | null;
+  pluspunten: { value: string } | null;
+  minpunten: { value: string } | null;
+  stijltip: { value: string } | null;
+  gids: { value: string } | null;
   seo: { title: string | null; description: string | null } | null;
 };
+
+// Lijst-metafields komen als JSON-array binnen ('["a","b"]'). Een gewoon
+// tekstveld met een punt per regel werkt ook, zodat beide veldtypes kunnen.
+function alsLijst(m: { value: string } | null): string[] {
+  const ruw = m?.value?.trim();
+  if (!ruw) return [];
+  if (ruw.startsWith("[")) {
+    try {
+      const lijst = JSON.parse(ruw) as unknown;
+      if (Array.isArray(lijst)) return lijst.map((x) => String(x).trim()).filter(Boolean);
+    } catch {
+      // geen geldige JSON: val terug op regels
+    }
+  }
+  return ruw
+    .split("\n")
+    .map((r) => r.replace(/^[-+*]\s*/, "").trim())
+    .filter(Boolean);
+}
+
+// Alleen een nette paginaslug doorlaten ("japandi-klok"), ook als iemand de
+// hele URL of schuine strepen in het veld zet.
+function alsSlug(waarde: string | undefined): string | null {
+  const slug = waarde?.trim().split("/").filter(Boolean).pop() ?? "";
+  return /^[a-z0-9-]+$/.test(slug) ? slug : null;
+}
 
 function vormProduct(p: RuwProduct): ShopProduct {
   return {
@@ -154,6 +207,11 @@ function vormProduct(p: RuwProduct): ShopProduct {
     levertijd: p.levertijd?.value?.trim() || STANDAARD_LEVERTIJD,
     afmetingen: p.afmetingen?.value?.trim() || null,
     materiaal: p.materiaal?.value?.trim() || null,
+    waarom: p.waarom?.value?.trim() || null,
+    pluspunten: alsLijst(p.pluspunten),
+    minpunten: alsLijst(p.minpunten),
+    stijltip: p.stijltip?.value?.trim() || null,
+    gids: alsSlug(p.gids?.value),
     seoTitel: p.seo?.title || null,
     seoBeschrijving: p.seo?.description || null,
   };
