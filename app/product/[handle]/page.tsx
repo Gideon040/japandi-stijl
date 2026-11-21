@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Breadcrumb, { type Crumb } from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
 import ProductKoop from "@/components/shop/ProductKoop";
+import InWinkelwagenKnop from "@/components/shop/InWinkelwagenKnop";
 import ProductGalerij from "@/components/shop/ProductGalerij";
 import Zekerheden from "@/components/shop/Zekerheden";
 import UspLijst from "@/components/shop/UspLijst";
@@ -127,6 +128,7 @@ export default async function ProductPagina({ params }: Params) {
 
   const verwant = product.gids ? await getVerwanteProducten(product.gids, product.handle) : [];
   const prijs = laagstePrijs(product);
+  const eersteVariant = product.variants[0] ?? null;
   const alleBeelden = product.images.length
     ? product.images
     : product.featuredImage
@@ -193,7 +195,7 @@ export default async function ProductPagina({ params }: Params) {
         <div className="grid gap-8 md:grid-cols-[1.15fr_1fr] md:gap-14 items-start">
           <ProductGalerij beelden={beelden} naam={product.title} />
 
-          <div className="md:sticky md:top-32">
+          <div id="koop" className="md:sticky md:top-32 scroll-mt-32">
             {product.vendor && (
               <span className="text-[0.76rem] uppercase tracking-[0.1em] text-klei">{product.vendor}</span>
             )}
@@ -371,6 +373,26 @@ export default async function ProductPagina({ params }: Params) {
                       </div>
                     ))}
                   </dl>
+                </div>
+              )}
+              {eersteVariant && (
+                <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  {product.variants.length > 1 ? (
+                    <Link href="#koop" className="knop-pill bg-walnoot hover:bg-walnoot/90">
+                      Kies je uitvoering
+                    </Link>
+                  ) : (
+                    <InWinkelwagenKnop
+                      variantId={eersteVariant.id}
+                      beschikbaar={eersteVariant.availableForSale}
+                      meting={{
+                        naam: product.title,
+                        merk: product.vendor,
+                        prijs: Number(eersteVariant.price.amount),
+                      }}
+                    />
+                  )}
+                  <span className="text-sm text-groen">{product.levertijd}</span>
                 </div>
               )}
             </div>
