@@ -10,7 +10,7 @@ import Link from "next/link";
 import { getProduct, getAlleProductHandles, getVerwanteProducten, laagstePrijs } from "@/lib/shopify";
 import { formatPrijs } from "@/lib/prijs";
 import { getPage } from "@/lib/content";
-import { LEVERING_UITLEG, RETOUR_UITLEG } from "@/lib/winkel";
+import { STAPPEN } from "@/lib/winkel";
 import { SITE_NAAM, SITE_URL } from "@/lib/seo";
 
 // Productpagina voor producten uit de eigen winkel (Shopify). Statisch
@@ -53,6 +53,52 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       ...(beeld ? { images: [{ url: beeld }] } : {}),
     },
   };
+}
+
+// Lijnicoon per stap onder "Levering en retour": bestellen, inkopen, bezorgen, retour.
+function StapIcoon({ nummer }: { nummer: number }) {
+  const gemeen = {
+    width: 20,
+    height: 20,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.4,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": true,
+  } as const;
+  if (nummer === 0)
+    return (
+      <svg {...gemeen}>
+        <path d="M5 8h14l-1.2 11H6.2L5 8z" />
+        <path d="M9 8V6a3 3 0 016 0v2" />
+      </svg>
+    );
+  if (nummer === 1)
+    return (
+      <svg {...gemeen}>
+        <path d="M3 8l9-4 9 4-9 4-9-4z" />
+        <path d="M3 8v8l9 4 9-4V8" />
+        <path d="M12 12v8" />
+      </svg>
+    );
+  if (nummer === 2)
+    return (
+      <svg {...gemeen}>
+        <path d="M2 7h11v9H2z" />
+        <path d="M13 10h4l4 3v3h-8" />
+        <circle cx="7" cy="17.5" r="1.8" />
+        <circle cx="17" cy="17.5" r="1.8" />
+      </svg>
+    );
+  return (
+    <svg {...gemeen}>
+      <path d="M4 12a8 8 0 108-8H7" />
+      <path d="M10 1L7 4l3 3" />
+      <path d="M12 8v4l3 2" />
+    </svg>
+  );
 }
 
 // Sectiekop in het koppatroon van de site: cursieve aanloop, statement eronder.
@@ -136,7 +182,9 @@ export default async function ProductPagina({ params }: Params) {
   };
 
   const korteTekst = product.korteOmschrijving ?? (product.description ? kort(product.description, 170) : null);
-  const sfeer = beelden.slice(1, 5);
+  // Eerste detailfoto naast de omschrijving; de fotoreeks toont de rest.
+  const detailBeeld = beelden[1] ?? null;
+  const sfeer = beelden.slice(2, 6);
 
   return (
     <article>
@@ -277,62 +325,98 @@ export default async function ProductPagina({ params }: Params) {
 
       {(product.descriptionHtml || specs.length > 0) && (
         <section id="specificaties" className="scroll-mt-28">
-          <div className="max-w-wide mx-auto px-6 py-12 sm:py-16 grid gap-10 md:grid-cols-2 md:gap-14">
-            {product.descriptionHtml && (
-              <div>
-                <Kop aanloop="In detail">Over dit product</Kop>
-                {/* Beschrijving komt uit de eigen Shopify-admin, dus vertrouwde content. */}
-                <div
-                  className="leading-relaxed space-y-4 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-1"
-                  dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-                />
+          <div className="max-w-wide mx-auto px-6 py-14 sm:py-20 grid gap-10 md:grid-cols-[1fr_1.1fr] md:gap-16 items-center">
+            {detailBeeld && (
+              <div className="relative">
+                <div className="aspect-[4/5] bg-zand rounded-sm overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={detailBeeld.url}
+                    alt={detailBeeld.altText ?? product.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {prijs && (
+                  <div className="absolute -bottom-5 right-4 sm:-right-5 bg-walnoot text-papier rounded-sm px-5 py-4 shadow-md">
+                    <span className="block text-[0.7rem] uppercase tracking-[0.12em] text-papier/70">{product.variants.length > 1 ? "Vanaf" : "Prijs"}</span>
+                    <span className="block font-display text-2xl leading-none mt-1">
+                      {formatPrijs(prijs.amount, prijs.currencyCode)}
+                    </span>
+                  </div>
+                )}
               </div>
             )}
-            {specs.length > 0 && (
-              <div>
-                <Kop aanloop="Op een rij">Specificaties</Kop>
-                <dl className="m-0 border-t border-lijn">
-                  {specs.map(([label, waarde]) => (
-                    <div key={label} className="flex gap-6 py-3 border-b border-lijn">
-                      <dt className="w-32 shrink-0 text-klei">{label}</dt>
-                      <dd className="m-0">{waarde}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            )}
+            <div>
+              {product.descriptionHtml && (
+                <>
+                  <Kop aanloop="In detail">Over dit product</Kop>
+                  {/* Beschrijving komt uit de eigen Shopify-admin, dus vertrouwde content. */}
+                  <div
+                    className="text-[17px] leading-relaxed space-y-4 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-1"
+                    dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+                  />
+                </>
+              )}
+              {specs.length > 0 && (
+                <div className="mt-8 bg-zand rounded-sm px-6 py-5 sm:px-8 sm:py-6">
+                  <h3 className="font-display italic font-normal text-xl text-walnoot m-0 mb-3">Specificaties</h3>
+                  <dl className="m-0">
+                    {specs.map(([label, waarde], i) => (
+                      <div key={label} className={`flex gap-6 py-3 ${i > 0 ? "border-t border-lijn" : ""}`}>
+                        <dt className="w-28 shrink-0 text-[0.76rem] uppercase tracking-[0.1em] text-klei pt-0.5">
+                          {label}
+                        </dt>
+                        <dd className="m-0">{waarde}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              )}
+            </div>
           </div>
         </section>
       )}
 
       <section className="bg-zand-diep">
-        <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
+        <div className="max-w-wide mx-auto px-6 py-14 sm:py-20">
           <Kop aanloop="Goed om te weten">Levering en retour</Kop>
-          <div className="grid gap-8 sm:grid-cols-2 max-w-4xl leading-relaxed">
-            <div>
-              <h3 className="font-display text-xl mb-2">Levering</h3>
-              <p className="m-0 text-groen text-sm mb-2">{product.levertijd}</p>
-              <p className="m-0">{LEVERING_UITLEG}</p>
-            </div>
-            <div>
-              <h3 className="font-display text-xl mb-2">Retour</h3>
-              <p className="m-0">
-                {RETOUR_UITLEG}{" "}
-                <Link href="/contact/" className="underline decoration-lijn underline-offset-4 hover:decoration-walnoot">
-                  Naar de contactpagina
-                </Link>
-              </p>
-            </div>
-          </div>
+          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 list-none p-0 m-0">
+            {STAPPEN.map((stap, i) => (
+              <li key={stap.titel} className="list-none m-0 p-6 bg-papier rounded-sm flex flex-col">
+                <span className="flex items-center justify-between">
+                  <span className="w-10 h-10 rounded-full border border-terracotta/40 text-terracotta flex items-center justify-center">
+                    <StapIcoon nummer={i} />
+                  </span>
+                  <span className="font-display text-terracotta text-sm tracking-wider">0{i + 1}</span>
+                </span>
+                <h3 className="font-display text-xl mt-6 mb-2">{stap.titel}</h3>
+                {i === 2 && <p className="m-0 mb-1 text-sm text-groen">{product.levertijd}</p>}
+                <p className="m-0 text-[0.95rem] leading-relaxed text-inkt/80">{stap.tekst}</p>
+                {i === 3 && (
+                  <Link
+                    href="/contact/"
+                    className="mt-auto pt-4 text-sm text-walnoot underline decoration-lijn underline-offset-4 hover:decoration-walnoot"
+                  >
+                    Retour melden via contact
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ol>
           {gids && gidsNaam && (
-            <p className="mt-10 mb-0">
-              <Link href={`/${product.gids}/`} className="knop-pill bg-walnoot hover:bg-walnoot/90">
+            <div className="mt-8 bg-walnoot text-papier rounded-sm px-6 py-6 sm:px-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="m-0 font-display text-xl sm:text-2xl leading-snug">
+                Nog niet zeker? In de koopgids vergelijken we alle opties.
+              </p>
+              <Link href={`/${product.gids}/`} className="knop-pill bg-papier !text-walnoot hover:bg-zand shrink-0">
                 Lees de koopgids: {gidsNaam}
               </Link>
-            </p>
+            </div>
           )}
         </div>
       </section>
+
       {verwant.length > 0 && (
         <section>
           <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">

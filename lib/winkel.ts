@@ -33,8 +33,18 @@ export const ZEKERHEDEN: Zekerheid[] = [
 
 export const LEVERING_LABEL = "Op bestelling";
 
-export const LEVERING_UITLEG =
-  "We bestellen dit product na jouw bestelling bij de leverancier. Daardoor duurt de levering iets langer dan bij een grote webshop, maar ligt er geen voorraad te verstoffen. Je krijgt bericht zodra je pakket onderweg is.";
-
-export const RETOUR_UITLEG =
-  "Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt. Meld je retour via de contactpagina, dan hoor je hoe je het terugstuurt.";
+// De vier stappen onder "Levering en retour" op de productpagina. Bij stap 3
+// vult de pagina zelf de levertijd van het product in.
+export const STAPPEN: { titel: string; tekst: string }[] = [
+  { titel: "Jij bestelt", tekst: "Je rekent af via een beveiligde kassa en krijgt een bevestiging per e-mail." },
+  {
+    titel: "Wij bestellen voor jou",
+    tekst:
+      "We bestellen het product bij de leverancier. Daardoor duurt het iets langer dan bij een grote webshop, maar ligt er geen voorraad te verstoffen.",
+  },
+  { titel: "Onderweg naar jou", tekst: "Je krijgt bericht zodra je pakket onderweg is." },
+  {
+    titel: "14 dagen bedenktijd",
+    tekst: "Past het toch niet? Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt.",
+  },
+];
