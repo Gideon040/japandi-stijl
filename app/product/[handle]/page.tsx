@@ -13,10 +13,10 @@ import { LEVERING_UITLEG, RETOUR_UITLEG } from "@/lib/winkel";
 import { SITE_NAAM, SITE_URL } from "@/lib/seo";
 
 // Productpagina voor producten uit de eigen winkel (Shopify). Statisch
-// gegenereerd en elke 5 minuten ververst, zodat prijs en voorraad kloppen
+// gegenereerd en elke minuut ververst, zodat prijs en voorraad kloppen
 // zonder nieuwe deploy. Nieuwe producten krijgen bij het eerste bezoek hun pagina.
 
-export const revalidate = 300;
+export const revalidate = 60;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {

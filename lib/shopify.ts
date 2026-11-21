@@ -93,7 +93,7 @@ async function shopifyFetch<T>(
       body: JSON.stringify({ query, variables }),
       ...(opties.cache
         ? { cache: opties.cache }
-        : { next: { revalidate: opties.revalidate ?? 300, tags: opties.tags } }),
+        : { next: { revalidate: opties.revalidate ?? 60, tags: opties.tags } }),
     });
     if (!res.ok) {
       console.warn(`[shopify] HTTP ${res.status} op ${ENDPOINT}`);
