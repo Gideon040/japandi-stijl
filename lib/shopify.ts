@@ -266,6 +266,71 @@ export async function getAlleProductHandles(): Promise<{ handle: string; updated
   return uit;
 }
 
+export type ProductKort = {
+  handle: string;
+  title: string;
+  vendor: string;
+  beeld: Beeld | null;
+  prijs: Geld;
+  gids: string | null;
+};
+
+// Compacte lijst van alle producten, voor "meer uit deze categorie". Het
+// assortiment is klein, dus we halen alles op en filteren hier op de gids.
+async function getAlleProductenKort(): Promise<ProductKort[]> {
+  const uit: ProductKort[] = [];
+  let cursor: string | null = null;
+  for (let pagina = 0; pagina < 4; pagina++) {
+    const data: {
+      products: {
+        nodes: {
+          handle: string;
+          title: string;
+          vendor: string;
+          featuredImage: Beeld | null;
+          priceRange: { minVariantPrice: Geld };
+          gids: { value: string } | null;
+        }[];
+        pageInfo: { hasNextPage: boolean; endCursor: string | null };
+      };
+    } | null = await shopifyFetch(
+      `query Kort($cursor: String) @inContext(country: NL, language: NL) {
+        products(first: 250, after: $cursor) {
+          nodes {
+            handle title vendor
+            featuredImage { ${BEELD} }
+            priceRange { minVariantPrice { amount currencyCode } }
+            gids: metafield(namespace: "custom", key: "gids") { value }
+          }
+          pageInfo { hasNextPage endCursor }
+        }
+      }`,
+      { cursor },
+      { tags: ["shopify-producten"] }
+    );
+    if (!data) break;
+    uit.push(
+      ...data.products.nodes.map((n) => ({
+        handle: n.handle,
+        title: n.title,
+        vendor: n.vendor,
+        beeld: n.featuredImage,
+        prijs: n.priceRange.minVariantPrice,
+        gids: alsSlug(n.gids?.value),
+      }))
+    );
+    if (!data.products.pageInfo.hasNextPage) break;
+    cursor = data.products.pageInfo.endCursor;
+  }
+  return uit;
+}
+
+// Andere producten die bij dezelfde koopgids horen, zonder het product zelf.
+export async function getVerwanteProducten(gids: string, zonderHandle: string, max = 4): Promise<ProductKort[]> {
+  const alle = await getAlleProductenKort();
+  return alle.filter((p) => p.gids === gids && p.handle !== zonderHandle).slice(0, max);
+}
+
 export function laagstePrijs(p: ShopProduct): Geld | null {
   if (!p.variants.length) return null;
   return p.variants.reduce((laagst, v) =>

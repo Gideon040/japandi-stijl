@@ -7,7 +7,8 @@ import ProductGalerij from "@/components/shop/ProductGalerij";
 import Zekerheden from "@/components/shop/Zekerheden";
 import UspLijst from "@/components/shop/UspLijst";
 import Link from "next/link";
-import { getProduct, getAlleProductHandles, laagstePrijs } from "@/lib/shopify";
+import { getProduct, getAlleProductHandles, getVerwanteProducten, laagstePrijs } from "@/lib/shopify";
+import { formatPrijs } from "@/lib/prijs";
 import { getPage } from "@/lib/content";
 import { LEVERING_UITLEG, RETOUR_UITLEG } from "@/lib/winkel";
 import { SITE_NAAM, SITE_URL } from "@/lib/seo";
@@ -78,6 +79,7 @@ export default async function ProductPagina({ params }: Params) {
   if (gids && gidsNaam) crumbs.push({ naam: gidsNaam, href: `/${product.gids}/` });
   crumbs.push({ naam: product.title });
 
+  const verwant = product.gids ? await getVerwanteProducten(product.gids, product.handle) : [];
   const prijs = laagstePrijs(product);
   const alleBeelden = product.images.length
     ? product.images
@@ -331,6 +333,46 @@ export default async function ProductPagina({ params }: Params) {
           )}
         </div>
       </section>
+      {verwant.length > 0 && (
+        <section>
+          <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
+            <Kop aanloop="Verder kijken">Meer uit deze categorie</Kop>
+            <ul className="grid gap-5 grid-cols-2 lg:grid-cols-4 list-none p-0 m-0">
+              {verwant.map((v) => (
+                <li key={v.handle} className="list-none m-0 p-0">
+                  <Link
+                    href={`/product/${v.handle}/`}
+                    className="group flex flex-col h-full bg-papier rounded-sm shadow-sm no-underline transition-shadow duration-200 hover:shadow-md"
+                  >
+                    <div className="aspect-square bg-zand rounded-t-sm p-5">
+                      {v.beeld && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={v.beeld.url}
+                          alt={v.beeld.altText ?? v.title}
+                          loading="lazy"
+                          className="w-full h-full object-contain mix-blend-multiply"
+                        />
+                      )}
+                    </div>
+                    <div className="p-4 sm:p-5 flex flex-col flex-1">
+                      {v.vendor && (
+                        <span className="text-[0.7rem] uppercase tracking-[0.1em] text-klei">{v.vendor}</span>
+                      )}
+                      <span className="font-display text-lg leading-snug mt-0.5 group-hover:text-walnoot transition-colors">
+                        {v.title}
+                      </span>
+                      <span className="mt-auto pt-3 text-walnoot font-semibold">
+                        {formatPrijs(v.prijs.amount, v.prijs.currencyCode)}
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
       <JsonLd data={schema} />
     </article>
   );
