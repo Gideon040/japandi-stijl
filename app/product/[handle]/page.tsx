@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import ProductKoop from "@/components/shop/ProductKoop";
 import ProductGalerij from "@/components/shop/ProductGalerij";
 import Zekerheden from "@/components/shop/Zekerheden";
+import UspLijst from "@/components/shop/UspLijst";
 import Link from "next/link";
 import { getProduct, getAlleProductHandles, laagstePrijs } from "@/lib/shopify";
 import { getPage } from "@/lib/content";
@@ -96,7 +97,7 @@ export default async function ProductPagina({ params }: Params) {
         "@type": "Product",
         "@id": `${url}#product`,
         name: product.title,
-        description: kort(product.description || product.waarom || product.title, 500),
+        description: kort(product.description || product.korteOmschrijving || product.title, 500),
         url,
         ...(beelden.length ? { image: beelden.map((b) => b.url) } : {}),
         ...(product.vendor ? { brand: { "@type": "Brand", name: product.vendor } } : {}),
@@ -125,18 +126,23 @@ export default async function ProductPagina({ params }: Params) {
     ],
   };
 
+  const korteTekst = product.korteOmschrijving ?? (product.description ? kort(product.description, 170) : null);
+  const sfeer = beelden.slice(1, 5);
+
   return (
     <article>
-      <div className="max-w-wide mx-auto px-6 pt-10 pb-16">
+      <div className="max-w-wide mx-auto px-6 pt-8 pb-16">
         <Breadcrumb items={crumbs} />
-        <div className="grid gap-10 md:grid-cols-2 md:gap-14 items-start">
+        <div className="grid gap-8 md:grid-cols-[1.15fr_1fr] md:gap-14 items-start">
           <ProductGalerij beelden={beelden} naam={product.title} />
 
           <div className="md:sticky md:top-32">
             {product.vendor && (
               <span className="text-[0.76rem] uppercase tracking-[0.1em] text-klei">{product.vendor}</span>
             )}
-            <h1 className="font-display text-3xl sm:text-4xl leading-tight mt-1 mb-5">{product.title}</h1>
+            <h1 className="font-display text-3xl sm:text-[2.6rem] leading-[1.1] mt-1 mb-0">{product.title}</h1>
+            {korteTekst && <p className="mt-4 mb-0 text-[17px] leading-relaxed text-inkt/85">{korteTekst}</p>}
+            <UspLijst punten={product.usps} />
             {prijs && (
               <ProductKoop
                 naam={product.title}
@@ -145,66 +151,97 @@ export default async function ProductPagina({ params }: Params) {
                 varianten={product.variants}
               />
             )}
-            <Zekerheden />
+            <Zekerheden toonSpecs={specs.length > 0} />
           </div>
         </div>
       </div>
 
       {product.waarom && (
-        <section className="bg-zand">
-          <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
-            <Kop aanloop="Onze keuze">Waarom dit bij Japandi past</Kop>
-            <div className="max-w-content text-[17px] leading-relaxed space-y-4">
-              {product.waarom.split(/\n{2,}/).map((alinea) => (
-                <p key={alinea} className="m-0">
-                  {alinea}
-                </p>
-              ))}
+        <section className="max-w-wide mx-auto px-6 pb-16">
+          <div className="grid md:grid-cols-[1.6fr_1fr] rounded-sm overflow-hidden">
+            <div className="bg-walnoot text-papier px-7 py-10 sm:px-12 sm:py-14">
+              <p className="text-[0.76rem] uppercase tracking-[0.12em] text-papier/70 m-0 mb-4">Onze keuze</p>
+              <h2 className="font-display text-3xl sm:text-4xl leading-tight m-0 mb-6">
+                Waarom dit bij Japandi past
+              </h2>
+              <div className="text-[17px] leading-relaxed space-y-4 text-papier/90 max-w-content">
+                {product.waarom.split(/\n{2,}/).map((alinea) => (
+                  <p key={alinea} className="m-0">
+                    {alinea}
+                  </p>
+                ))}
+              </div>
             </div>
-            {product.stijltip && (
-              <p className="max-w-content bg-papier rounded-sm px-5 py-4 mt-6 mb-0 leading-relaxed">
-                <b className="font-display italic font-normal text-walnoot">Combineer met:</b>{" "}
-                {product.stijltip}
-              </p>
-            )}
+            <div className="bg-zand-diep px-7 py-10 sm:px-10 sm:py-14 flex flex-col justify-center">
+              {product.stijltip ? (
+                <>
+                  <h3 className="font-display italic font-normal text-2xl text-walnoot m-0 mb-3">Combineer met</h3>
+                  <p className="m-0 leading-relaxed">{product.stijltip}</p>
+                </>
+              ) : (
+                <p className="m-0 font-display italic text-2xl text-walnoot leading-snug">
+                  Rustige vormen, natuurlijke tinten en niets wat er niet hoeft te zijn.
+                </p>
+              )}
+            </div>
           </div>
         </section>
       )}
 
+      {sfeer.length > 0 && (
+        <section className="max-w-wide mx-auto px-6 pb-16">
+          <Kop aanloop="In beeld">Van dichtbij bekeken</Kop>
+          <ul className={`grid gap-4 grid-cols-2 ${sfeer.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"} list-none p-0 m-0`}>
+            {sfeer.map((b) => (
+              <li key={b.url} className="list-none m-0 p-0 aspect-[4/5] bg-zand rounded-sm overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={b.url} alt={b.altText ?? product.title} loading="lazy" className="w-full h-full object-cover" />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {heeftPunten && (
-        <section>
+        <section className="bg-zand">
           <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
             <Kop aanloop="Eerlijk gezegd">De plus- en minpunten</Kop>
-            <div className="grid gap-8 sm:grid-cols-2 max-w-4xl">
+            <div className="grid gap-5 sm:grid-cols-2">
               {product.pluspunten.length > 0 && (
-                <ul className="space-y-3 list-none p-0 m-0">
-                  {product.pluspunten.map((punt) => (
-                    <li key={punt} className="flex items-start gap-3 list-none m-0 p-0">
-                      <span
-                        className="w-5 h-5 rounded-full bg-groen/15 text-groen flex items-center justify-center text-xs leading-none shrink-0 mt-0.5"
-                        aria-hidden
-                      >
-                        +
-                      </span>
-                      <span>{punt}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="bg-papier rounded-sm p-6 sm:p-8">
+                  <h3 className="font-display text-xl m-0 mb-4">Wat ons bevalt</h3>
+                  <ul className="space-y-3 list-none p-0 m-0">
+                    {product.pluspunten.map((punt) => (
+                      <li key={punt} className="flex items-start gap-3 list-none m-0 p-0">
+                        <span
+                          className="w-5 h-5 rounded-full bg-groen/15 text-groen flex items-center justify-center text-xs leading-none shrink-0 mt-0.5"
+                          aria-hidden
+                        >
+                          +
+                        </span>
+                        <span>{punt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
               {product.minpunten.length > 0 && (
-                <ul className="space-y-3 list-none p-0 m-0">
-                  {product.minpunten.map((punt) => (
-                    <li key={punt} className="flex items-start gap-3 list-none m-0 p-0">
-                      <span
-                        className="w-5 h-5 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center text-xs leading-none shrink-0 mt-0.5"
-                        aria-hidden
-                      >
-                        &#8722;
-                      </span>
-                      <span>{punt}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="bg-papier rounded-sm p-6 sm:p-8">
+                  <h3 className="font-display text-xl m-0 mb-4">Waar je op moet letten</h3>
+                  <ul className="space-y-3 list-none p-0 m-0">
+                    {product.minpunten.map((punt) => (
+                      <li key={punt} className="flex items-start gap-3 list-none m-0 p-0">
+                        <span
+                          className="w-5 h-5 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center text-xs leading-none shrink-0 mt-0.5"
+                          aria-hidden
+                        >
+                          &#8722;
+                        </span>
+                        <span>{punt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
             </div>
           </div>
@@ -212,7 +249,7 @@ export default async function ProductPagina({ params }: Params) {
       )}
 
       {(product.descriptionHtml || specs.length > 0) && (
-        <section className="bg-zand-diep">
+        <section id="specificaties" className="scroll-mt-28">
           <div className="max-w-wide mx-auto px-6 py-12 sm:py-16 grid gap-10 md:grid-cols-2 md:gap-14">
             {product.descriptionHtml && (
               <div>
@@ -241,7 +278,7 @@ export default async function ProductPagina({ params }: Params) {
         </section>
       )}
 
-      <section>
+      <section className="bg-zand-diep">
         <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
           <Kop aanloop="Goed om te weten">Levering en retour</Kop>
           <div className="grid gap-8 sm:grid-cols-2 max-w-4xl leading-relaxed">

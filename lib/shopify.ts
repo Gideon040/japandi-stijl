@@ -47,6 +47,8 @@ export type ShopProduct = {
   afmetingen: string | null;
   materiaal: string | null;
   // Redactionele velden uit Shopify-metafields (namespace custom).
+  korteOmschrijving: string | null; // een of twee zinnen onder de titel
+  usps: string[]; // kernpunten onder de titel, "Titel: toelichting" per regel
   waarom: string | null; // waarom dit product binnen Japandi past
   pluspunten: string[];
   minpunten: string[];
@@ -129,6 +131,8 @@ const PRODUCT_VELDEN = `
   levertijd: metafield(namespace: "custom", key: "levertijd") { value }
   afmetingen: metafield(namespace: "custom", key: "afmetingen") { value }
   materiaal: metafield(namespace: "custom", key: "materiaal") { value }
+  korteOmschrijving: metafield(namespace: "custom", key: "korte_omschrijving") { value }
+  usps: metafield(namespace: "custom", key: "usps") { value }
   waarom: metafield(namespace: "custom", key: "waarom_gekozen") { value }
   pluspunten: metafield(namespace: "custom", key: "pluspunten") { value }
   minpunten: metafield(namespace: "custom", key: "minpunten") { value }
@@ -144,6 +148,8 @@ type RuwProduct = Omit<
   | "levertijd"
   | "afmetingen"
   | "materiaal"
+  | "korteOmschrijving"
+  | "usps"
   | "waarom"
   | "pluspunten"
   | "minpunten"
@@ -157,6 +163,8 @@ type RuwProduct = Omit<
   levertijd: { value: string } | null;
   afmetingen: { value: string } | null;
   materiaal: { value: string } | null;
+  korteOmschrijving: { value: string } | null;
+  usps: { value: string } | null;
   waarom: { value: string } | null;
   pluspunten: { value: string } | null;
   minpunten: { value: string } | null;
@@ -207,6 +215,8 @@ function vormProduct(p: RuwProduct): ShopProduct {
     levertijd: p.levertijd?.value?.trim() || STANDAARD_LEVERTIJD,
     afmetingen: p.afmetingen?.value?.trim() || null,
     materiaal: p.materiaal?.value?.trim() || null,
+    korteOmschrijving: p.korteOmschrijving?.value?.trim() || null,
+    usps: alsLijst(p.usps),
     waarom: p.waarom?.value?.trim() || null,
     pluspunten: alsLijst(p.pluspunten),
     minpunten: alsLijst(p.minpunten),
