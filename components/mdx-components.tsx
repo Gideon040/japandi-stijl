@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import ShopProduct from "./ShopProduct";
 import VergelijkingsTabel from "./VergelijkingsTabel";
 import FAQ from "./FAQ";
 import ImagePlaceholder from "./ImagePlaceholder";
@@ -14,6 +15,7 @@ import SfeerBand from "./SfeerBand";
 
 export const mdxComponents = {
   ProductCard,
+  ShopProduct,
   VergelijkingsTabel,
   FAQ,
   ImagePlaceholder,

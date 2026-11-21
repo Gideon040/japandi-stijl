@@ -87,7 +87,7 @@ export function homepageSchema(titel: string, beschrijving: string) {
   };
 }
 
-type ExtractedProduct = {
+export type ExtractedProduct = {
   naam: string;
   merk?: string;
   prijs?: string;
@@ -122,6 +122,16 @@ export function extractProducts(content: string): ExtractedProduct[] {
     });
   }
   return out;
+}
+
+// Handles van de ShopProduct-kaarten (eigen winkel) in de MDX-body. De
+// paginaroute haalt de productdata op en voegt ze toe aan het ItemList-schema.
+export function extractShopHandles(content: string): string[] {
+  const blocks = content.match(/<ShopProduct\b[\s\S]*?\/>/g) ?? [];
+  const handles = blocks
+    .map((b) => b.match(/handle="([^"]+)"/)?.[1])
+    .filter((h): h is string => Boolean(h));
+  return [...new Set(handles)];
 }
 
 function articleType(template: PageMeta["template"]): string {

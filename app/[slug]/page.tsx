@@ -14,7 +14,17 @@ import QuizCta from "@/components/QuizCta";
 import Breadcrumb, { type Crumb } from "@/components/Breadcrumb";
 import JsonLd from "@/components/JsonLd";
 import type { PageMeta } from "@/lib/content";
-import { paginaSchema, productLijstSchema, extractProducts, ogBeeld, SITE_NAAM } from "@/lib/seo";
+import {
+  paginaSchema,
+  productLijstSchema,
+  extractProducts,
+  extractShopHandles,
+  ogBeeld,
+  SITE_NAAM,
+  SITE_URL,
+  type ExtractedProduct,
+} from "@/lib/seo";
+import { getProduct, laagstePrijs } from "@/lib/shopify";
 
 // Intro (direct antwoord) plus hero-beeld worden uit de MDX-body getild
 // en in de PageHero gerenderd; de rest van de body krijgt het sectieritme.
@@ -122,7 +132,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   const graph: object[] = [paginaSchema(meta, slug), breadcrumb];
   if (meta.template === "koopgids") {
-    const producten = extractProducts(page.content);
+    // Eigen producten (ShopProduct) eerst, daarna de kaarten van andere winkels.
+    const eigen = (await Promise.all(extractShopHandles(page.content).map(getProduct)))
+      .filter((p) => p !== null)
+      .map(
+        (p): ExtractedProduct => ({
+          naam: p.title,
+          merk: p.vendor || undefined,
+          prijs: laagstePrijs(p)?.amount,
+          url: `${SITE_URL}/product/${p.handle}/`,
+          beeld: p.featuredImage?.url,
+        })
+      );
+    const producten = [...eigen, ...extractProducts(page.content)];
     if (producten.length > 0) graph.push(productLijstSchema(slug, producten));
   }
 

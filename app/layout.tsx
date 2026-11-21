@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 // import NieuwsbriefPopup from "@/components/NieuwsbriefPopup"; // tijdelijk verborgen
 import { getNavigatie } from "@/lib/navigatie";
 import JsonLd from "@/components/JsonLd";
+import { CartProvider } from "@/components/shop/CartProvider";
+import CartPaneel from "@/components/shop/CartPaneel";
 import { identiteitGraph, SITE_NAAM, SITE_LOCALE, SITE_BESCHRIJVING, ogBeeld } from "@/lib/seo";
 
 const display = Fraunces({
@@ -35,8 +37,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="nl" className={`${display.variable} ${body.variable}`}>
       <body>
         <JsonLd data={{ "@context": "https://schema.org", "@graph": identiteitGraph() }} />
-        <Header nav={nav} />
-        <main className="overflow-x-clip">{children}</main>
+        <CartProvider>
+          <Header nav={nav} />
+          <main className="overflow-x-clip">{children}</main>
+          <CartPaneel />
+        </CartProvider>
         <footer className="border-t border-lijn mt-20 bg-zand">
           <div className="max-w-wide mx-auto px-6 py-12 text-sm">
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">

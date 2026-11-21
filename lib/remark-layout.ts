@@ -35,6 +35,9 @@ function el(name: string, className: string, children: Node[]): Node {
   };
 }
 
+// ProductCard (externe winkel) en ShopProduct (eigen winkel) delen het grid.
+const KAARTEN = ["ProductCard", "ShopProduct"];
+
 function groupProductCards(nodes: Node[]): Node[] {
   const out: Node[] = [];
   let cards: Node[] = [];
@@ -45,7 +48,7 @@ function groupProductCards(nodes: Node[]): Node[] {
     }
   };
   for (const node of nodes) {
-    if (jsxName(node) === "ProductCard") {
+    if (KAARTEN.includes(jsxName(node) ?? "")) {
       cards.push(node);
     } else {
       flush();
@@ -88,7 +91,7 @@ export default function remarkLayout() {
     for (const chunk of chunks) {
       if (chunk.kind !== "prose") continue;
       const namen = chunk.nodes.map((n) => jsxName(n) ?? "");
-      if (namen.includes("ProductCard")) chunk.kind = "product";
+      if (namen.some((n) => KAARTEN.includes(n))) chunk.kind = "product";
       else if (namen.includes("KoopNietBlok")) chunk.kind = "koopniet";
     }
 

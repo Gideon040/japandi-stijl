@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { NavGroep } from "@/lib/navigatie";
+import CartKnop from "./shop/CartKnop";
 
 // Sfeerbeeld in de dropdown. Verbergt zichzelf netjes als het webp-bestand
 // nog niet bestaat, zodat er nooit een gebroken-beeld-icoon verschijnt.
@@ -154,12 +155,17 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
                 </div>
               );
             })}
+            <div className="flex items-center ml-1">
+              <CartKnop />
+            </div>
           </nav>
 
-          {/* Mobiel: hamburger */}
+          {/* Mobiel: winkelwagen en hamburger */}
+          <div className="md:hidden flex items-center gap-1">
+          <CartKnop />
           <button
             type="button"
-            className="md:hidden p-2 -mr-2 text-inkt"
+            className="p-2 -mr-2 text-inkt"
             aria-label={mobielOpen ? "Menu sluiten" : "Menu openen"}
             aria-expanded={mobielOpen}
             onClick={() => setMobielOpen((v) => !v)}
@@ -176,6 +182,7 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
               )}
             </svg>
           </button>
+          </div>
         </div>
       </div>
 
