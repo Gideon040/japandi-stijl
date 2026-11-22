@@ -40,6 +40,7 @@ const TEMPLATE_LABEL: Record<PageMeta["template"], string> = {
   gids: "gids",
   koopgids: "koopgids",
   longtail: "gids",
+  pagina: "pagina",
 };
 
 const RUIMTES = [
@@ -90,7 +91,7 @@ function Kop({ aanloop, children }: { aanloop: string; children: React.ReactNode
 export default function Home() {
   const koopgidsen = getGepubliceerdeGidsen("koopgids");
   const nieuwste = getAllPages()
-    .filter((p) => p.datum)
+    .filter((p) => p.datum && p.template !== "pagina")
     .sort((a, b) => (b.datum ?? "").localeCompare(a.datum ?? ""))
     .slice(0, 3);
 

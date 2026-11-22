@@ -8,7 +8,7 @@ export type PageMeta = {
   slug: string;
   titel: string;
   beschrijving: string;
-  template: "pillar" | "gids" | "koopgids" | "longtail";
+  template: "pillar" | "gids" | "koopgids" | "longtail" | "pagina";
   gepubliceerd?: boolean;
   datum?: string;
   kerncijfers?: { waarde: string; label: string }[];

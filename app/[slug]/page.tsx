@@ -109,7 +109,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   // overige gespreid, nooit na de laatste sectie (daar staat de FAQ). Elke
   // chunk wordt apart gerenderd zodat de carousels ertussen passen; de
   // zand-band van de carousel scheidt de blokken visueel.
-  const rijen = getClusterCarousels(slug);
+  // Servicepagina's (voorwaarden, privacy, contact) zijn geen gids: geen
+  // stijltest, geen gidscarrousels en geen auteursblok.
+  const isPagina = page.data.template === "pagina";
+  const rijen = isPagina ? [] : getClusterCarousels(slug);
   const delen = splitsOpH2(body);
   const maxNa = delen.length - 2;
   const grenzen: number[] = [];
@@ -155,7 +158,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         heroId={heroId}
         kerncijfers={page.data.kerncijfers}
         breadcrumb={<Breadcrumb items={crumbs} />}
-        cta={<QuizCta />}
+        cta={isPagina ? undefined : <QuizCta />}
       >
         {intro && (
           <MDXRemote
@@ -184,7 +187,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <ClusterCarousel key={rij.titel} titel={rij.titel} kaarten={rij.kaarten} />
         ))}
       </div>
-      <AuteurBlok />
+      {!isPagina && <AuteurBlok />}
       <JsonLd data={{ "@context": "https://schema.org", "@graph": graph }} />
     </article>
   );

@@ -135,7 +135,7 @@ export function extractShopHandles(content: string): string[] {
 }
 
 function articleType(template: PageMeta["template"]): string {
-  return template === "koopgids" ? "CollectionPage" : "Article";
+  return template === "koopgids" ? "CollectionPage" : template === "pagina" ? "WebPage" : "Article";
 }
 
 // Hoofdschema van een contentpagina: Article voor gidsen/pillar, CollectionPage
