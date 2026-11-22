@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
 import { formatPrijs } from "@/lib/prijs";
+import { getAllPages } from "@/lib/content";
 
 // Homepage-blok "Uit onze winkel": een handvol uitgelichte producten en een
 // rij met alle categorieën waarin we zelf verkopen, met het aantal producten.
@@ -65,8 +66,19 @@ export default async function WinkelSectie() {
     if (!gekozen.includes(p) && p.gids && !gekozen.some((g) => g.gids === p.gids)) gekozen.push(p);
   }
 
+  // Koppel elk product aan een bestaande gidspagina. Een gids-waarde als
+  // "japandi-tv-meubel-walnoot" valt terug op "japandi-tv-meubel".
+  const bestaand = new Set(getAllPages().map((p) => p.slug));
+  const naarPagina = (g: string | null) => {
+    let s = g ?? "";
+    while (s && !bestaand.has(s)) s = s.includes("-") ? s.slice(0, s.lastIndexOf("-")) : "";
+    return s && s !== "japandi" ? s : null;
+  };
   const perGids = new Map<string, number>();
-  for (const p of alle) if (p.gids) perGids.set(p.gids, (perGids.get(p.gids) ?? 0) + 1);
+  for (const p of alle) {
+    const g = naarPagina(p.gids);
+    if (g) perGids.set(g, (perGids.get(g) ?? 0) + 1);
+  }
   const categorieen = [...perGids.entries()].sort((a, b) => label(a[0]).localeCompare(label(b[0]), "nl"));
 
   return (
