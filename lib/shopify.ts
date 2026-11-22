@@ -118,7 +118,7 @@ const BEELD = `url altText width height`;
 const PRODUCT_VELDEN = `
   id handle title vendor description descriptionHtml availableForSale updatedAt
   featuredImage { ${BEELD} }
-  images(first: 10) { nodes { ${BEELD} } }
+  images(first: 30) { nodes { ${BEELD} } }
   variants(first: 50) {
     nodes {
       id title availableForSale
