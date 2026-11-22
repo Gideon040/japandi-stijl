@@ -39,3 +39,10 @@ export async function stuurMail(opties: { aan: string; onderwerp: string; html: 
 export function escapeHtml(s: string) {
   return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 }
+
+// Korte foutcode voor diagnose (bevat nooit het wachtwoord).
+export function mailFoutCode(e: unknown): string {
+  const f = e as { code?: string; responseCode?: number; message?: string };
+  if (f?.message === "SMTP_PASS ontbreekt") return "GEEN_WACHTWOORD";
+  return [f?.code, f?.responseCode].filter(Boolean).join(" ") || "ONBEKEND";
+}

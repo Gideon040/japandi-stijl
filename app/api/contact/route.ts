@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { BEDRIJF } from "@/lib/bedrijf";
-import { stuurMail, escapeHtml } from "@/lib/mail";
+import { mailFoutCode, stuurMail, escapeHtml } from "@/lib/mail";
 
 // Contactformulier: mailt het bericht naar de winkelmailbox, met de afzender
 // als reply-to, zodat je direct kunt antwoorden. Het veld "website" is een
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     await stuurMail({ aan: BEDRIJF.email, onderwerp: `Contactformulier: ${naam}${bestelnummer ? ` (${bestelnummer})` : ""}`, html, antwoordAan: email });
   } catch (e) {
     console.error("[contact] mailen mislukt", e);
-    return NextResponse.json({ ok: false, reden: "geen-mail" }, { status: 502 });
+    return NextResponse.json({ ok: false, reden: "geen-mail", code: mailFoutCode(e) }, { status: 502 });
   }
   return NextResponse.json({ ok: true });
 }

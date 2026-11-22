@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { BEDRIJF } from "@/lib/bedrijf";
-import { stuurMail, escapeHtml as escape } from "@/lib/mail";
+import { mailFoutCode, stuurMail, escapeHtml as escape } from "@/lib/mail";
 
 // Herroepingsfunctie (art. 6:230oa BW). Ontvangt de melding, mailt de winkel
 // en stuurt de consument direct een ontvangstbevestiging, via de eigen
@@ -56,7 +56,7 @@ export async function POST(req: Request) {
     await stuurMail({ aan: BEDRIJF.email, onderwerp: `Herroeping bestelling ${bestelnummer} (${naam})`, html: winkel, antwoordAan: email });
   } catch (e) {
     console.error("[herroepen] mailen mislukt", e);
-    return NextResponse.json({ ok: false, reden: "geen-mail", tijdstip }, { status: 502 });
+    return NextResponse.json({ ok: false, reden: "geen-mail", tijdstip, code: mailFoutCode(e) }, { status: 502 });
   }
   return NextResponse.json({ ok: true, tijdstip });
 }
