@@ -1,0 +1,106 @@
+import Link from "next/link";
+import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
+import { formatPrijs } from "@/lib/prijs";
+
+// Homepage-blok "Uit onze winkel": een handvol uitgelichte producten en een
+// rij met alle categorieën waarin we zelf verkopen, met het aantal producten.
+// Rendert niets als Shopify niet bereikbaar is.
+
+// Mix van categorieën, materialen en prijsklassen. Een handle die niet (meer)
+// bestaat wordt overgeslagen en aangevuld met andere producten.
+const UITGELICHT = [
+  "angel-cerda-ronde-spiegel-walnoot-leren-band",
+  "bazar-bizar-wabi-sabi-salontafel-rond",
+  "mooisa-travertijn-fruitschaal-rond-24",
+  "raw-materials-corda-hanglamp-touw",
+  "mooisa-agano-vaas-travertijn",
+  "angel-cerda-walnoten-dressoir-3077",
+  "house-nordic-wanaka-staande-kapstok-bamboe",
+  "ragaba-luka-bureau-essen",
+];
+
+function label(slug: string) {
+  const s = slug.replace(/^japandi-/, "").replace(/-/g, " ");
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function Tegel({ p }: { p: ProductKort }) {
+  return (
+    <li className="list-none m-0 p-0">
+      <Link
+        href={`/product/${p.handle}/`}
+        className="group flex flex-col h-full bg-papier rounded-sm shadow-sm no-underline transition-shadow duration-200 hover:shadow-md"
+      >
+        <div className="aspect-square bg-zand rounded-t-sm p-5">
+          {p.beeld && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-contain mix-blend-multiply" />
+          )}
+        </div>
+        <div className="p-4 sm:p-5 flex flex-col flex-1">
+          {p.vendor && <span className="text-[0.7rem] uppercase tracking-[0.1em] text-klei">{p.vendor}</span>}
+          <span className="font-display text-lg leading-snug mt-0.5 group-hover:text-walnoot transition-colors">{p.title}</span>
+          <span className="mt-auto pt-3 text-walnoot font-semibold">
+            {formatPrijs(p.prijs.amount, p.prijs.currencyCode)}
+          </span>
+        </div>
+      </Link>
+    </li>
+  );
+}
+
+export default async function WinkelSectie() {
+  let alle: ProductKort[] = [];
+  try {
+    alle = await getAlleProductenKort();
+  } catch {
+    return null;
+  }
+  if (!alle.length) return null;
+
+  const opHandle = new Map(alle.map((p) => [p.handle, p]));
+  const gekozen: ProductKort[] = UITGELICHT.map((h) => opHandle.get(h)).filter((p): p is ProductKort => !!p);
+  for (const p of alle) {
+    if (gekozen.length >= 8) break;
+    if (!gekozen.includes(p) && p.gids && !gekozen.some((g) => g.gids === p.gids)) gekozen.push(p);
+  }
+
+  const perGids = new Map<string, number>();
+  for (const p of alle) if (p.gids) perGids.set(p.gids, (perGids.get(p.gids) ?? 0) + 1);
+  const categorieen = [...perGids.entries()].sort((a, b) => label(a[0]).localeCompare(label(b[0]), "nl"));
+
+  return (
+    <section id="winkel" className="bg-zand-diep scroll-mt-20">
+      <div className="max-w-wide mx-auto px-6 py-16 sm:py-20">
+        <h2 className="kop font-display text-3xl sm:text-4xl">
+          <em>Uit onze winkel</em>
+          Japandi meubels en accessoires die we zelf verkopen
+        </h2>
+        <p className="mt-5 max-w-content text-[17px] leading-relaxed">
+          Naast de gidsen verkopen we een kleine selectie van {alle.length} producten, elk uitgekozen op vorm, materiaal,
+          maat en prijs. Bij ieder product staat eerlijk wat ons bevalt en wat niet. We houden geen voorraad: je product
+          komt rechtstreeks van de leverancier.
+        </p>
+        <ul className="mt-10 grid gap-5 grid-cols-2 lg:grid-cols-4 p-0 m-0">
+          {gekozen.slice(0, 8).map((p) => (
+            <Tegel key={p.handle} p={p} />
+          ))}
+        </ul>
+        <h3 className="font-display text-2xl mt-14">Alle categorieën in de winkel</h3>
+        <ul className="mt-5 flex flex-wrap gap-2.5 p-0 m-0">
+          {categorieen.map(([gids, aantal]) => (
+            <li key={gids} className="list-none m-0 p-0">
+              <Link
+                href={`/${gids}/`}
+                className="inline-flex items-center gap-2 rounded-full bg-papier px-4 py-2 text-sm no-underline shadow-sm hover:text-walnoot transition-colors"
+              >
+                {label(gids)}
+                <span className="text-klei">{aantal}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}

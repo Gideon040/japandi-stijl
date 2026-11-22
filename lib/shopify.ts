@@ -277,7 +277,7 @@ export type ProductKort = {
 
 // Compacte lijst van alle producten, voor "meer uit deze categorie". Het
 // assortiment is klein, dus we halen alles op en filteren hier op de gids.
-async function getAlleProductenKort(): Promise<ProductKort[]> {
+export async function getAlleProductenKort(): Promise<ProductKort[]> {
   const uit: ProductKort[] = [];
   let cursor: string | null = null;
   for (let pagina = 0; pagina < 4; pagina++) {

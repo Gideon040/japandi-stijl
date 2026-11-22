@@ -13,10 +13,13 @@ import { getAllPages, type PageMeta } from "@/lib/content";
 import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import JsonLd from "@/components/JsonLd";
 import { homepageSchema, ogBeeld } from "@/lib/seo";
+import WinkelSectie from "@/components/shop/WinkelSectie";
 
 const HOME_TITEL = "Japandi stijl: wat het is, kenmerken, kleuren en hoe je het toepast";
 const HOME_BESCHRIJVING =
   "Wat is Japandi stijl? De oorsprong, kenmerken, kleuren en materialen op een rij, met concrete regels, het verschil met Scandinavisch en wabi-sabi, en voor wie de stijl wel en niet werkt.";
+
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: { absolute: HOME_TITEL },
@@ -98,7 +101,12 @@ export default function Home() {
         titel="Japandi stijl: minimalisme met warmte"
         heroId="home-hero"
         kerncijfers={KERNCIJFERS}
-        cta={<QuizCta />}
+        cta={
+          <div className="flex flex-wrap items-center gap-3">
+            <a href="#winkel" className="knop-pill bg-walnoot">Bekijk de winkel</a>
+            <QuizCta />
+          </div>
+        }
       >
         <p>
           Japandi is een interieurstijl die het Japanse minimalisme en de wabi-sabi-waardering
@@ -108,6 +116,8 @@ export default function Home() {
           ademruimte.
         </p>
       </PageHero>
+
+      <WinkelSectie />
 
       <section id="definitie" className="scroll-mt-20">
         <div className="max-w-wide mx-auto px-6 pt-16 sm:pt-20">
