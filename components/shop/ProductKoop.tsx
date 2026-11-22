@@ -22,6 +22,15 @@ export default function ProductKoop({ naam, merk, levertijd, varianten }: Props)
   const [variantId, setVariantId] = useState(eerste?.id);
   const variant = useMemo(() => varianten.find((v) => v.id === variantId) ?? eerste, [varianten, variantId, eerste]);
   const meerdere = varianten.length > 1;
+  // Veel of lange uitvoeringen passen niet als knoppen naast elkaar: dan een keuzelijst.
+  const alsLijst = varianten.length > 3 || varianten.some((v) => v.title.length > 12);
+
+  // Laat de fotogalerij de foto van de gekozen uitvoering tonen.
+  function kies(id: string) {
+    setVariantId(id);
+    const beeld = varianten.find((v) => v.id === id)?.image?.url;
+    if (beeld) window.dispatchEvent(new CustomEvent("variant-beeld", { detail: beeld }));
+  }
 
   useEffect(() => {
     if (!eerste) return;
@@ -38,8 +47,43 @@ export default function ProductKoop({ naam, merk, levertijd, varianten }: Props)
 
   return (
     <div className="mt-7">
-      {meerdere && (
-        <fieldset className="border-0 p-0 m-0 mb-6">
+      {meerdere && alsLijst && (
+        <div className="mb-6">
+          <label
+            htmlFor="uitvoering"
+            className="block text-[0.76rem] uppercase tracking-[0.1em] text-klei mb-3"
+          >
+            Kies je uitvoering
+          </label>
+          <div className="relative">
+            <select
+              id="uitvoering"
+              value={variant.id}
+              onChange={(e) => kies(e.target.value)}
+              className="w-full appearance-none rounded-sm border border-lijn bg-papier py-3 pl-4 pr-10 text-base text-inkt focus:border-walnoot focus:outline-none"
+            >
+              {varianten.map((v) => (
+                <option key={v.id} value={v.id} disabled={!v.availableForSale}>
+                  {v.title}, {formatPrijs(v.price.amount, v.price.currencyCode)}
+                  {!v.availableForSale ? " (niet leverbaar)" : ""}
+                </option>
+              ))}
+            </select>
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 10 10"
+              aria-hidden
+              className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-klei"
+            >
+              <path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.4" />
+            </svg>
+          </div>
+        </div>
+      )}
+
+      {meerdere && !alsLijst && (
+        <fieldset className="border-0 p-0 m-0 mb-6 min-w-0">
           <legend className="text-[0.76rem] uppercase tracking-[0.1em] text-klei mb-3 p-0">Kies je uitvoering</legend>
           <div className="flex flex-wrap gap-2">
             {varianten.map((v) => {
@@ -50,7 +94,7 @@ export default function ProductKoop({ naam, merk, levertijd, varianten }: Props)
                   type="button"
                   aria-pressed={actief}
                   disabled={!v.availableForSale}
-                  onClick={() => setVariantId(v.id)}
+                  onClick={() => kies(v.id)}
                   className={`rounded-full border px-4 py-2 text-sm transition-colors ${
                     actief
                       ? "border-walnoot bg-walnoot text-papier"
