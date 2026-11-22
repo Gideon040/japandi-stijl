@@ -1,30 +1,17 @@
 import { NextResponse } from "next/server";
 import { BEDRIJF } from "@/lib/bedrijf";
+import { stuurMail, escapeHtml as escape } from "@/lib/mail";
 
 // Herroepingsfunctie (art. 6:230oa BW). Ontvangt de melding, mailt de winkel
-// en stuurt de consument direct een ontvangstbevestiging. Mailen gaat via
-// Resend als RESEND_API_KEY is gezet (afzender: HERROEP_AFZENDER, bijv.
-// "japandi-stijl.nl <bestellingen@japandi-stijl.nl>"). Zonder sleutel geeft de
-// route "geen-mail" terug en toont het formulier een kant-en-klare e-mail als
+// en stuurt de consument direct een ontvangstbevestiging, via de eigen
+// mailbox bij Strato (zie lib/mail.ts). Lukt mailen niet, dan geeft de route
+// "geen-mail" terug en toont het formulier een kant-en-klare e-mail als
 // terugvaloptie, zodat de melding nooit verloren gaat.
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function schoon(v: unknown, max = 500): string {
   return typeof v === "string" ? v.trim().slice(0, max) : "";
-}
-
-function escape(s: string) {
-  return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
-}
-
-async function stuur(sleutel: string, afzender: string, aan: string, onderwerp: string, html: string, antwoordAan?: string) {
-  const r = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${sleutel}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: afzender, to: [aan], subject: onderwerp, html, ...(antwoordAan ? { reply_to: antwoordAan } : {}) }),
-  });
-  if (!r.ok) throw new Error(`Resend ${r.status}`);
 }
 
 export async function POST(req: Request) {
@@ -44,13 +31,6 @@ export async function POST(req: Request) {
   }
 
   const tijdstip = new Date().toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam", dateStyle: "long", timeStyle: "short" });
-  const sleutel = process.env.RESEND_API_KEY;
-  const afzender = process.env.HERROEP_AFZENDER ?? `japandi-stijl.nl <${BEDRIJF.email}>`;
-  if (!sleutel) {
-    console.warn("[herroepen] RESEND_API_KEY ontbreekt, melding niet gemaild", { bestelnummer, tijdstip });
-    return NextResponse.json({ ok: false, reden: "geen-mail", tijdstip }, { status: 503 });
-  }
-
   const rijen = [
     ["Naam", naam],
     ["E-mail", email],
@@ -72,8 +52,8 @@ export async function POST(req: Request) {
   const winkel = `<p>Nieuwe herroeping via de website.</p><table>${rijen}</table><p>Stuur de klant binnen 2 werkdagen het retouradres.</p>`;
 
   try {
-    await stuur(sleutel, afzender, email, `Ontvangstbevestiging herroeping bestelling ${bestelnummer}`, klant, BEDRIJF.email);
-    await stuur(sleutel, afzender, BEDRIJF.email, `Herroeping bestelling ${bestelnummer} (${naam})`, winkel, email);
+    await stuurMail({ aan: email, onderwerp: `Ontvangstbevestiging herroeping bestelling ${bestelnummer}`, html: klant, antwoordAan: BEDRIJF.email });
+    await stuurMail({ aan: BEDRIJF.email, onderwerp: `Herroeping bestelling ${bestelnummer} (${naam})`, html: winkel, antwoordAan: email });
   } catch (e) {
     console.error("[herroepen] mailen mislukt", e);
     return NextResponse.json({ ok: false, reden: "geen-mail", tijdstip }, { status: 502 });

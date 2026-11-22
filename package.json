@@ -11,11 +11,13 @@
     "gray-matter": "^4.0.3",
     "next": "^15.3.0",
     "next-mdx-remote": "^6.0.0",
+    "nodemailer": "^10.6.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@types/nodemailer": "^8.0.2",
     "@types/react": "^19.0.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",

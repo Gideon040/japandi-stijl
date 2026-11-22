@@ -12,6 +12,7 @@ import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import KoopNietBlok from "./KoopNietBlok";
 import AuteurBlok from "./AuteurBlok";
 import SfeerBand from "./SfeerBand";
+import ContactFormulier from "./shop/ContactFormulier";
 
 export const mdxComponents = {
   ProductCard,
@@ -33,4 +34,5 @@ export const mdxComponents = {
   KoopNietBlok,
   AuteurBlok,
   SfeerBand,
+  ContactFormulier,
 };
