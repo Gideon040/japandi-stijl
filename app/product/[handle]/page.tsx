@@ -193,9 +193,12 @@ export default async function ProductPagina({ params }: Params) {
       <div className="max-w-wide mx-auto px-6 pt-8 pb-16">
         <Breadcrumb items={crumbs} />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] md:gap-14 items-start">
-          <ProductGalerij beelden={beelden} naam={product.title} />
+          {/* Op desktop blijft de fotogalerij staan terwijl je door het koopblok scrolt. */}
+          <div className="min-w-0 md:sticky md:top-28">
+            <ProductGalerij beelden={beelden} naam={product.title} />
+          </div>
 
-          <div id="koop" className="min-w-0 md:sticky md:top-32 scroll-mt-32">
+          <div id="koop" className="min-w-0 scroll-mt-32">
             {product.vendor && (
               <span className="text-[0.76rem] uppercase tracking-[0.1em] text-klei">{product.vendor}</span>
             )}
