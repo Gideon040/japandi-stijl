@@ -13,7 +13,7 @@ import { getAllPages, type PageMeta } from "@/lib/content";
 import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import JsonLd from "@/components/JsonLd";
 import { homepageSchema, ogBeeld } from "@/lib/seo";
-import WinkelSectie from "@/components/shop/WinkelSectie";
+import CollectieBanner from "@/components/shop/CollectieBanner";
 
 const HOME_TITEL = "Japandi stijl: wat het is, kenmerken, kleuren en hoe je het toepast";
 const HOME_BESCHRIJVING =
@@ -118,7 +118,18 @@ export default function Home() {
         </p>
       </PageHero>
 
-      <WinkelSectie />
+      <CollectieBanner
+        id="winkel"
+        achtergrond="zand-diep"
+        aanloop="Uit onze winkel"
+        titel="Warm walnoot"
+        tekst="Walnoot met beige en zand is waar Japandi nu om draait. Spiegels, kasten en tafels in walnoot, door ons uitgekozen op vorm, maat en prijs."
+        beeld="https://d8j0ntlcm91z4.cloudfront.net/user_30K67cR6GCwZDpzvhJBFob0ZcL2/hf_20261122_101457_fafeac74-9aaf-49da-b67c-20a08861b7aa.png"
+        beeldAlt="Walnoten dressoir onder een ronde spiegel in een Japandi eetkamer"
+        href="/japandi-dressoir/"
+        knop="Bekijk walnoot"
+        handles={["angel-cerda-walnoten-dressoir-3077", "angel-cerda-ronde-spiegel-walnoot-leren-band", "angel-cerda-walnoten-salontafel-tijdschriftenvak", "angel-cerda-rond-nachtkastje-notenhout"]}
+      />
 
       <section id="definitie" className="scroll-mt-20">
         <div className="max-w-wide mx-auto px-6 pt-16 sm:pt-20">
@@ -216,6 +227,19 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <CollectieBanner
+        achtergrond="zand"
+        beeldLinks={false}
+        aanloop="Wabi-sabi"
+        titel="Travertijn en steen"
+        tekst="Matte, minerale steen met gaatjes en tekening. Vazen, schalen en dienbladen van echt travertijn, en een lamp in steenlook."
+        beeld="https://d8j0ntlcm91z4.cloudfront.net/user_30K67cR6GCwZDpzvhJBFob0ZcL2/hf_20261122_103422_6eec4676-0b9c-4912-9972-5e0826321311.png"
+        beeldAlt="Travertijnen fruitschaal met peren op een walnoten aanrecht"
+        href="/japandi-fruitschaal/"
+        knop="Bekijk travertijn"
+        handles={["mooisa-agano-vaas-travertijn", "mooisa-travertijn-fruitschaal-rond-24", "mooisa-travertijn-dienblad-rond-met-rand", "house-nordic-astley-tafellamp-steenlook"]}
+      />
 
       <section className="bg-zand-diep">
         <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
@@ -494,6 +518,18 @@ export default function Home() {
         </div>
       </section>
 
+      <CollectieBanner
+        achtergrond="zand-diep"
+        aanloop="De slaapkamer"
+        titel="Rust in de slaapkamer"
+        tekst="Lage bedden, ladekasten met geribbelde fronten en nachtkastjes van massief essen. Alles uit de Tanner lijn past bij elkaar."
+        beeld="/images/japandi-slaapkamer-hero.webp"
+        beeldAlt="Japandi slaapkamer met laag houten bed en linnen beddengoed"
+        href="/japandi-slaapkamer/"
+        knop="Naar de slaapkamer"
+        handles={["modus-tanner-platformbed-essen-vlas", "modus-tanner-nachtkastje-essen", "modus-tanner-ladekast-essen-vijf-laden", "house-nordic-wanaka-staande-kapstok-bamboe"]}
+      />
+
       <section id="koopgidsen" className="scroll-mt-16">
         <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
           <Kop aanloop="Per meubel">Alle koopgidsen</Kop>
@@ -578,6 +614,19 @@ export default function Home() {
           </SplitSectie>
         </div>
       </section>
+
+      <CollectieBanner
+        achtergrond="papier"
+        beeldLinks={false}
+        aanloop="Verlichting"
+        titel="Zacht licht van touw en rotan"
+        tekst="Hanglampen van gevlochten touw en rotan, een rotan vloerlamp en een slanke keramieklamp voor naast het bed."
+        beeld="/images/japandi-hanglamp-hero.webp"
+        beeldAlt="Japandi hanglamp van natuurlijk materiaal boven een houten tafel"
+        href="/japandi-lamp/"
+        knop="Bekijk verlichting"
+        handles={["raw-materials-corda-hanglamp-touw", "raw-materials-stella-rotan-hanglamp", "raw-materials-tao-rotan-vloerlamp", "mondex-leti-tafellamp-beige-keramiek"]}
+      />
 
       <section className="bg-zand-diep">
         <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
