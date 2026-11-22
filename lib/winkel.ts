@@ -17,7 +17,7 @@ export const ZEKERHEDEN: Zekerheid[] = [
     icoon: "bedenktijd",
     titel: "14 dagen bedenktijd",
     tekst:
-      "Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt. Past het toch niet, meld je retour dan via de contactpagina.",
+      "Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt. Past het toch niet, dan herroep je de koop via de knop Overeenkomst herroepen onderaan de site.",
   },
   {
     icoon: "slot",

@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { CartProvider } from "@/components/shop/CartProvider";
 import CartPaneel from "@/components/shop/CartPaneel";
 import { identiteitGraph, SITE_NAAM, SITE_LOCALE, SITE_BESCHRIJVING, ogBeeld } from "@/lib/seo";
+import { BEDRIJF, BEDRIJF_REGEL } from "@/lib/bedrijf";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -61,10 +62,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/over-ons/" className="hover:text-walnoot transition-colors">Over ons</Link>
                 <Link href="/contact/" className="hover:text-walnoot transition-colors">Contact</Link>
               </nav>
+              <nav className="flex flex-col gap-2.5 text-inkt">
+                <Link href="/verzending-en-levering/" className="hover:text-walnoot transition-colors">Verzending en levering</Link>
+                <Link href="/herroepingsrecht/" className="hover:text-walnoot transition-colors">Retourneren</Link>
+                <Link href="/algemene-voorwaarden/" className="hover:text-walnoot transition-colors">Algemene voorwaarden</Link>
+                <Link href="/privacyverklaring/" className="hover:text-walnoot transition-colors">Privacy en cookies</Link>
+                <Link href="/herroepen/" className="font-medium text-walnoot hover:underline">Overeenkomst herroepen</Link>
+              </nav>
             </div>
             <p className="mt-10 pt-6 border-t border-lijn text-klei">
               © {new Date().getFullYear()} japandi-stijl.nl · Gids en winkel voor Japandi. We
               houden geen voorraad en bestellen je product bij de leverancier zodra jij bestelt.
+            </p>
+            <p className="mt-2 text-klei">
+              japandi-stijl.nl is een handelsnaam van {BEDRIJF_REGEL}.{" "}
+              <a href={`mailto:${BEDRIJF.email}`} className="underline hover:text-walnoot">{BEDRIJF.email}</a>
+              {BEDRIJF.telefoon ? ` · ${BEDRIJF.telefoon}` : ""}
             </p>
           </div>
         </footer>
