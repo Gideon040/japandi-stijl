@@ -14,6 +14,9 @@ import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import JsonLd from "@/components/JsonLd";
 import { homepageSchema, ogBeeld } from "@/lib/seo";
 import CollectieBanner from "@/components/shop/CollectieBanner";
+import UspBalk from "@/components/shop/UspBalk";
+import ProductRij from "@/components/shop/ProductRij";
+import BreedBanner from "@/components/shop/BreedBanner";
 
 const HOME_TITEL = "Japandi stijl: wat het is, kenmerken, kleuren en hoe je het toepast";
 const HOME_BESCHRIJVING =
@@ -117,6 +120,8 @@ export default function Home() {
           ademruimte.
         </p>
       </PageHero>
+
+      <UspBalk />
 
       <CollectieBanner
         id="winkel"
@@ -367,6 +372,14 @@ export default function Home() {
         </div>
       </section>
 
+      <ProductRij
+        achtergrond="zand-diep"
+        aanloop="Klein beginnen"
+        titel="Japandi onder € 150"
+        tekst="Je hoeft niet meteen een kast te vervangen. Een schaal van travertijn, een lamp of een vaas brengt de stijl al in huis."
+        maxPrijs={150}
+      />
+
       <section id="per-ruimte" className="bg-zand scroll-mt-20">
         <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">
           <Kop aanloop="Per ruimte">Japandi toepassen in jouw huis</Kop>
@@ -540,6 +553,18 @@ export default function Home() {
           <LinkLijst items={koopgidsen} />
         </div>
       </section>
+
+      <BreedBanner
+        aanloop="De hal"
+        titel="Rust vanaf de voordeur"
+        tekst="De hal is de eerste ruimte die je ziet. Een kapstok van hout of bamboe en een lage schoenenkast houden jassen en schoenen uit het zicht."
+        beeld="/images/japandi-hal-hero.webp"
+        beeldAlt="Japandi hal met houten kapstok en lage schoenenkast"
+        knoppen={[
+          { href: "/japandi-kapstok/", label: "Kapstokken" },
+          { href: "/japandi-schoenenkast/", label: "Schoenenkasten" },
+        ]}
+      />
 
       <section className="bg-zand">
         <div className="max-w-wide mx-auto px-6 py-12 sm:py-16">

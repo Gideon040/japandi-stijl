@@ -4,7 +4,7 @@ import { ZEKERHEDEN, type Zekerheid } from "@/lib/winkel";
 // Uitklaprijen onder de koopknop: zekerheden met een korte toelichting en een
 // snelkoppeling naar de specificaties. Teksten staan in lib/winkel.ts.
 
-function Icoon({ soort }: { soort: Zekerheid["icoon"] | "specs" }) {
+export function Icoon({ soort }: { soort: Zekerheid["icoon"] | "specs" }) {
   const gemeen = {
     width: 20,
     height: 20,
