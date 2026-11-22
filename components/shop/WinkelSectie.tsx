@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
 import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
 import { formatPrijs } from "@/lib/prijs";
@@ -20,9 +22,26 @@ const UITGELICHT = [
   "ragaba-luka-bureau-essen",
 ];
 
+const LABELS: Record<string, string> = {
+  "japandi-tv-kast": "TV-kast",
+  "japandi-tv-meubel": "TV-meubel",
+  "japandi-eettafel-rond": "Ronde eettafel",
+};
+
 function label(slug: string) {
+  if (LABELS[slug]) return LABELS[slug];
   const s = slug.replace(/^japandi-/, "").replace(/-/g, " ");
   return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+// Sfeerbeeld van de gids als categoriebeeld: eerst de hero, anders een
+// collage- of sectiebeeld van dezelfde pagina.
+function categorieBeeld(slug: string): string | null {
+  for (const slot of ["hero", "collage-1", "collage-2", "sectie-1", "faq"]) {
+    const id = `${slug}-${slot}`;
+    if (fs.existsSync(path.join(process.cwd(), "public", "images", `${id}.webp`))) return `/images/${id}.webp`;
+  }
+  return null;
 }
 
 function Tegel({ p }: { p: ProductKort }) {
@@ -71,13 +90,19 @@ export default async function WinkelSectie() {
   const bestaand = new Set(getAllPages().map((p) => p.slug));
   const naarPagina = (g: string | null) => {
     let s = g ?? "";
+    // Kleurvarianten (tv-meubel-beige, -walnoot) horen bij de hoofdcategorie.
+    const kaal = s.replace(/-(beige|walnoot|eiken|zwart|wit)$/, "");
+    if (kaal !== s && bestaand.has(kaal)) s = kaal;
     while (s && !bestaand.has(s)) s = s.includes("-") ? s.slice(0, s.lastIndexOf("-")) : "";
     return s && s !== "japandi" ? s : null;
   };
   const perGids = new Map<string, number>();
+  const productBeeld = new Map<string, string>();
   for (const p of alle) {
     const g = naarPagina(p.gids);
-    if (g) perGids.set(g, (perGids.get(g) ?? 0) + 1);
+    if (!g) continue;
+    perGids.set(g, (perGids.get(g) ?? 0) + 1);
+    if (p.beeld && !productBeeld.has(g)) productBeeld.set(g, p.beeld.url);
   }
   const categorieen = [...perGids.entries()].sort((a, b) => label(a[0]).localeCompare(label(b[0]), "nl"));
 
@@ -99,18 +124,37 @@ export default async function WinkelSectie() {
           ))}
         </ul>
         <h3 className="font-display text-2xl mt-14">Alle categorieën in de winkel</h3>
-        <ul className="mt-5 flex flex-wrap gap-2.5 p-0 m-0">
-          {categorieen.map(([gids, aantal]) => (
-            <li key={gids} className="list-none m-0 p-0">
-              <Link
-                href={`/${gids}/`}
-                className="inline-flex items-center gap-2 rounded-full bg-papier px-4 py-2 text-sm no-underline shadow-sm hover:text-walnoot transition-colors"
-              >
-                {label(gids)}
-                <span className="text-klei">{aantal}</span>
-              </Link>
-            </li>
-          ))}
+        <ul className="mt-6 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 p-0 m-0">
+          {categorieen.map(([gids, aantal]) => {
+            const sfeer = categorieBeeld(gids);
+            const beeld = sfeer ?? productBeeld.get(gids) ?? null;
+            return (
+              <li key={gids} className="list-none m-0 p-0">
+                <Link
+                  href={`/${gids}/`}
+                  className="group block bg-papier shadow-sm rounded-sm overflow-hidden no-underline transition-all duration-200 hover:-translate-y-[3px] hover:shadow-md"
+                >
+                  <div className="aspect-[4/3] bg-zand overflow-hidden">
+                    {beeld && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={beeld}
+                        alt={`Japandi ${label(gids).toLowerCase()} in een interieur`}
+                        loading="lazy"
+                        className={`w-full h-full ${sfeer ? "object-cover" : "object-contain p-4 mix-blend-multiply"} transition-transform duration-300 group-hover:scale-[1.03]`}
+                      />
+                    )}
+                  </div>
+                  <span className="flex items-baseline justify-between gap-2 px-4 py-3">
+                    <span className="font-display text-lg leading-snug">{label(gids)}</span>
+                    <span className="text-sm text-klei whitespace-nowrap">
+                      {aantal} {aantal === 1 ? "product" : "producten"}
+                    </span>
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
