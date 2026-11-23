@@ -8,6 +8,7 @@ import { getNavigatie } from "@/lib/navigatie";
 import JsonLd from "@/components/JsonLd";
 import { CartProvider } from "@/components/shop/CartProvider";
 import CartPaneel from "@/components/shop/CartPaneel";
+import CookieMelding, { CookieInstellingenKnop } from "@/components/CookieMelding";
 import { identiteitGraph, SITE_NAAM, SITE_LOCALE, SITE_BESCHRIJVING, ogBeeld } from "@/lib/seo";
 import { BEDRIJF, BEDRIJF_REGEL } from "@/lib/bedrijf";
 
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/herroepingsrecht/" className="hover:text-walnoot transition-colors">Retourneren</Link>
                 <Link href="/algemene-voorwaarden/" className="hover:text-walnoot transition-colors">Algemene voorwaarden</Link>
                 <Link href="/privacyverklaring/" className="hover:text-walnoot transition-colors">Privacy en cookies</Link>
+                <CookieInstellingenKnop />
                 <Link href="/herroepen/" className="font-medium text-walnoot hover:underline">Overeenkomst herroepen</Link>
               </nav>
             </div>
@@ -81,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
           </div>
         </footer>
+        <CookieMelding />
         {/* <NieuwsbriefPopup /> tijdelijk verborgen */}
       </body>
     </html>
