@@ -48,8 +48,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-wide mx-auto px-6 py-12 text-sm">
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
               <div className="max-w-sm">
-                <Link href="/" className="font-display text-xl">
-                  japandi-stijl<span className="text-klei">.nl</span>
+                <Link href="/" aria-label="japandi-stijl.nl, naar de homepage">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo.png" alt="japandi-stijl.nl" width={305} height={160} className="h-16 w-auto" />
                 </Link>
                 <p className="mt-3 text-klei leading-relaxed">
                   Gids en winkel voor de Japandi interieurstijl. Alles wat we verkopen is

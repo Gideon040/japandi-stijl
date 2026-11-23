@@ -84,8 +84,9 @@ export default function Header({ nav }: { nav: NavGroep[] }) {
       {/* Hoofdbalk */}
       <div className="bg-papier/95 backdrop-blur border-b border-lijn">
         <div ref={navRef} className="max-w-wide mx-auto px-6 h-16 flex items-center justify-between gap-4">
-          <Link href="/" className="font-display text-xl sm:text-2xl shrink-0" onClick={() => setMobielOpen(false)}>
-            japandi-stijl<span className="text-klei">.nl</span>
+          <Link href="/" className="shrink-0" onClick={() => setMobielOpen(false)} aria-label="japandi-stijl.nl, naar de homepage">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="japandi-stijl.nl" width={305} height={160} className="h-12 sm:h-[3.25rem] w-auto" />
           </Link>
 
           {/* Desktop-nav met dropdowns */}
