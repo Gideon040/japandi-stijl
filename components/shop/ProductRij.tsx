@@ -20,12 +20,12 @@ const BG = { papier: "bg-papier", zand: "bg-zand", "zand-diep": "bg-zand-diep" }
 
 function Kaart({ p }: { p: ProductKort }) {
   return (
-    <li className="m-0 p-0 snap-start shrink-0 w-[62%] sm:w-[38%] lg:w-[calc((100%-4*1.25rem)/5)]">
+    <li className="m-0 p-0 snap-start shrink-0 w-[62%] sm:w-[38%] lg:w-[calc((100%-3*1.25rem)/4)]">
       <Link
         href={`/product/${p.handle}/`}
         className="group flex flex-col h-full bg-papier rounded-sm shadow-sm no-underline transition-all duration-200 hover:-translate-y-[2px] hover:shadow-md"
       >
-        <div className="aspect-[4/3] bg-zand rounded-t-sm overflow-hidden">
+        <div className="aspect-square bg-zand rounded-t-sm overflow-hidden">
           {p.beeld && (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-cover mix-blend-multiply" />
