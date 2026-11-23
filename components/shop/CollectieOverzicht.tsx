@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
 import { formatPrijs } from "@/lib/prijs";
+import CollectieLijst from "./CollectieLijst";
 
 // Overzicht van alle collecties uit de eigen winkel voor de homepage.
 // Per collectie: een sfeerbeeld, aantal producten en laagste prijs, in de
@@ -89,13 +90,24 @@ const COLLECTIES: Collectie[] = [
     ],
   },
   {
+    titel: "Aan de muur",
+    beeld: "japandi-schilderij-hero",
+    href: "/japandi-wanddecoratie/",
+    subs: [
+      { slug: "japandi-schilderij", label: "Schilderijen" },
+      { slug: "japandi-poster", label: "Posters" },
+      { slug: "japandi-fotolijst", label: "Fotolijsten" },
+      { slug: "japandi-wanddecoratie", label: "Wanddecoratie" },
+      { slug: "japandi-spiegel", label: "Spiegels" },
+      { slug: "japandi-klok", label: "Klokken" },
+    ],
+  },
+  {
     titel: "Decoratie",
     beeld: "japandi-vaas-hero",
     href: "/japandi-decoratie/",
     subs: [
-      { slug: "japandi-schilderij", label: "Schilderijen" },
-      { slug: "japandi-spiegel", label: "Spiegels" },
-      { slug: "japandi-klok", label: "Klokken" },
+      { slug: "japandi-decoratie", label: "Decoratie" },
       { slug: "japandi-vaas", label: "Vazen" },
       { slug: "japandi-bloempot", label: "Bloempotten" },
     ],
@@ -108,7 +120,14 @@ const COLLECTIES: Collectie[] = [
       { slug: "japandi-servies", label: "Servies" },
       { slug: "japandi-fruitschaal", label: "Fruitschalen" },
       { slug: "japandi-dienblad", label: "Dienbladen" },
+      { slug: "japandi-onderzetters", label: "Onderzetters" },
     ],
+  },
+  {
+    titel: "Kleine accessoires",
+    beeld: "japandi-prullenbak-hero",
+    href: "/japandi-accessoires/",
+    subs: [{ slug: "japandi-prullenbak", label: "Prullenbakken" }],
   },
 ];
 
@@ -117,8 +136,7 @@ type Props = { aanloop: string; titel: string; tekst: string; id?: string };
 function Kaart({ c, producten }: { c: Collectie; producten: ProductKort[] }) {
   const laagste = producten.reduce((min, p) => (Number(p.prijs.amount) < Number(min.prijs.amount) ? p : min));
   return (
-    <li className="list-none m-0 p-0">
-      <Link
+    <Link
         href={c.href}
         className="group block h-full bg-papier shadow-sm rounded-sm overflow-hidden no-underline transition-all duration-200 hover:-translate-y-[3px] hover:shadow-md"
       >
@@ -144,7 +162,6 @@ function Kaart({ c, producten }: { c: Collectie; producten: ProductKort[] }) {
           </span>
         </span>
       </Link>
-    </li>
   );
 }
 
@@ -171,11 +188,12 @@ export default async function CollectieOverzicht(props: Props) {
           </h2>
           <p className="mt-4 mb-0">{props.tekst}</p>
         </div>
-        <ul className="mt-10 mb-0 p-0 grid gap-6 grid-cols-2 lg:grid-cols-4">
-          {rijen.map((r) => (
+        <CollectieLijst
+          zichtbaar={4}
+          kaarten={rijen.map((r) => (
             <Kaart key={r.c.titel} c={r.c} producten={r.producten} />
           ))}
-        </ul>
+        />
       </div>
     </section>
   );
