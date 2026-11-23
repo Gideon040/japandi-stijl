@@ -30,13 +30,13 @@ export default async function ShopProduct(p: Props) {
   return (
     <div className="bg-papier rounded-sm shadow-sm flex flex-col h-full transition-shadow duration-200 hover:shadow-md">
       {beeld && (
-        <Link href={href} className="block aspect-square overflow-hidden rounded-t-sm p-6" tabIndex={-1} aria-hidden>
+        <Link href={href} className="block aspect-square overflow-hidden rounded-t-sm bg-zand" tabIndex={-1} aria-hidden>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={beeld.url}
             alt={beeld.altText ?? product.title}
             loading="lazy"
-            className="w-full h-full object-contain mix-blend-multiply"
+            className="w-full h-full object-cover"
           />
         </Link>
       )}

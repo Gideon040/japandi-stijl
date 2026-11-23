@@ -24,10 +24,10 @@ function Kaart({ p }: { p: ProductKort }) {
         href={`/product/${p.handle}/`}
         className="group flex flex-col h-full bg-papier rounded-sm shadow-sm no-underline transition-all duration-200 hover:-translate-y-[2px] hover:shadow-md"
       >
-        <div className="aspect-[4/5] bg-zand rounded-t-sm p-4">
+        <div className="aspect-square bg-zand rounded-t-sm overflow-hidden">
           {p.beeld && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-contain mix-blend-multiply" />
+            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-cover" />
           )}
         </div>
         <div className="p-3 sm:p-4 flex flex-col flex-1">

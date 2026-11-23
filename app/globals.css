@@ -76,17 +76,10 @@ body {
   }
 
   .productgrid {
-    @apply grid gap-6 sm:grid-cols-2 items-start my-10;
-  }
-  /* Designreferentie: de tweede kaart in elk paar verspringt iets. */
-  .productgrid > :nth-child(even) {
-    @apply lg:translate-y-6;
+    @apply grid gap-6 sm:grid-cols-2 items-stretch my-10;
   }
   .linkkaart-grid {
     @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3 my-10;
-  }
-  .linkkaart-grid > :nth-child(2) {
-    @apply lg:translate-y-6;
   }
 
   /* Pill-knop met uitschuivende pijl (ProductCard, hero-CTA's). */
