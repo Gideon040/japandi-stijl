@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
 import { formatPrijs } from "@/lib/prijs";
+import RailKnoppen from "./RailKnoppen";
 
 // Horizontaal scrollende productrij voor de homepage, gefilterd op een
 // maximumprijs. Groeit vanzelf mee met het assortiment. Rendert niets als er
@@ -27,7 +28,7 @@ function Kaart({ p }: { p: ProductKort }) {
         <div className="aspect-[4/3] bg-zand rounded-t-sm overflow-hidden">
           {p.beeld && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-cover" />
+            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-cover mix-blend-multiply" />
           )}
         </div>
         <div className="p-3 sm:p-4 flex flex-col flex-1">
@@ -52,6 +53,7 @@ export default async function ProductRij(props: Props) {
     .sort((a, b) => Number(a.prijs.amount) - Number(b.prijs.amount))
     .slice(0, props.max ?? 12);
   if (producten.length < 3) return null;
+  const railId = `rail-${props.maxPrijs}`;
 
   return (
     <section className={BG[props.achtergrond ?? "papier"]}>
@@ -61,10 +63,13 @@ export default async function ProductRij(props: Props) {
             <em>{props.aanloop}</em>
             {props.titel}
           </h2>
-          <span className="text-sm text-klei">Swipe voor meer &#8594;</span>
+          <RailKnoppen doel={railId} />
         </div>
         {props.tekst && <p className="prose-japandi mt-4 max-w-content">{props.tekst}</p>}
-        <ul className="mt-8 -mx-6 px-6 scroll-pl-6 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 list-none [scrollbar-width:thin]">
+        <ul
+          id={railId}
+          className="mt-8 -mx-6 px-6 scroll-pl-6 lg:mx-0 lg:px-0 lg:scroll-pl-0 flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 list-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {producten.map((p) => (
             <Kaart key={p.handle} p={p} />
           ))}

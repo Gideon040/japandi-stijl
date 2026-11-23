@@ -460,7 +460,7 @@ export default async function ProductPagina({ params }: Params) {
                           src={v.beeld.url}
                           alt={v.beeld.altText ?? v.title}
                           loading="lazy"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover mix-blend-multiply"
                         />
                       )}
                     </div>

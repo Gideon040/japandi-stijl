@@ -32,7 +32,7 @@ function Tegel({ p }: { p: ProductKort }) {
         <div className="aspect-[4/3] bg-zand rounded-t-sm overflow-hidden">
           {p.beeld && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-cover" />
+            <img src={p.beeld.url} alt={p.beeld.altText ?? p.title} loading="lazy" className="w-full h-full object-cover mix-blend-multiply" />
           )}
         </div>
         <div className="p-3 sm:p-4 flex flex-col flex-1">

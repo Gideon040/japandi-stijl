@@ -36,7 +36,7 @@ export default async function ShopProduct(p: Props) {
             src={beeld.url}
             alt={beeld.altText ?? product.title}
             loading="lazy"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover mix-blend-multiply"
           />
         </Link>
       )}
