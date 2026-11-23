@@ -78,6 +78,9 @@ body {
   .productgrid {
     @apply grid gap-6 sm:grid-cols-2 items-stretch my-10;
   }
+  .productgrid:last-child {
+    @apply mb-0;
+  }
   .linkkaart-grid {
     @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3 my-10;
   }

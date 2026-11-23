@@ -64,7 +64,7 @@ export default async function ProductRij(props: Props) {
           <span className="text-sm text-klei">Swipe voor meer &#8594;</span>
         </div>
         {props.tekst && <p className="prose-japandi mt-4 max-w-content">{props.tekst}</p>}
-        <ul className="mt-8 -mx-6 px-6 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 list-none [scrollbar-width:thin]">
+        <ul className="mt-8 -mx-6 px-6 scroll-pl-6 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 list-none [scrollbar-width:thin]">
           {producten.map((p) => (
             <Kaart key={p.handle} p={p} />
           ))}

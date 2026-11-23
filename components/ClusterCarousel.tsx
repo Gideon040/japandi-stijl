@@ -70,7 +70,7 @@ export default function ClusterCarousel({ titel, kaarten }: { titel: string; kaa
 
         <div
           ref={spoor}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mx-6 px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scroll-pl-6 pb-2 -mx-6 px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {kaarten.map((kaart) => (
             <Link
