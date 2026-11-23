@@ -128,7 +128,7 @@ export default function Home() {
         id="winkel"
         aanloop="Uit onze winkel"
         titel="Deze collecties verkopen we zelf"
-        tekst="Alles hieronder hebben we zelf uitgekozen op vorm, materiaal, maat en prijs, en verkopen we via deze site. Hout, rotan, linnen en steen, in de warme tinten van Japandi."
+        tekst="Alles hieronder hebben we zelf uitgekozen op vorm, materiaal, maat en prijs, en verkopen we via deze site."
       />
 
       <section id="definitie" className="scroll-mt-20">

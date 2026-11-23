@@ -3,17 +3,19 @@ import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
 import { formatPrijs } from "@/lib/prijs";
 
 // Overzicht van alle collecties uit de eigen winkel voor de homepage.
-// Per collectie: vier productfoto's, aantal producten, laagste prijs en
-// links naar de koopgidsen waar de producten staan. Producten worden
+// Per collectie: een sfeerbeeld, aantal producten en laagste prijs, in de
+// vormgeving van LinkKaart. Producten worden
 // ingedeeld op hun gids-metafield, dus nieuwe producten verschijnen vanzelf.
 // Een collectie zonder producten wordt overgeslagen.
 
 type Sub = { slug: string; label: string };
-type Collectie = { titel: string; subs: Sub[] };
+type Collectie = { titel: string; beeld: string; href: string; subs: Sub[] };
 
 const COLLECTIES: Collectie[] = [
   {
     titel: "Zitten",
+    beeld: "japandi-fauteuil-hero",
+    href: "/japandi-fauteuil/",
     subs: [
       { slug: "japandi-bank", label: "Banken" },
       { slug: "japandi-fauteuil", label: "Fauteuils" },
@@ -25,6 +27,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Tafels",
+    beeld: "japandi-eettafel-ovaal-hero",
+    href: "/japandi-eettafel/",
     subs: [
       { slug: "japandi-eettafel", label: "Eettafels" },
       { slug: "japandi-eettafel-ovaal", label: "Ovale eettafels" },
@@ -36,6 +40,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Kasten en opbergen",
+    beeld: "japandi-dressoir-hero",
+    href: "/japandi-kast/",
     subs: [
       { slug: "japandi-kast", label: "Kasten" },
       { slug: "japandi-dressoir", label: "Dressoirs" },
@@ -51,6 +57,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Slapen",
+    beeld: "japandi-bed-hero",
+    href: "/japandi-bed/",
     subs: [
       { slug: "japandi-bed", label: "Bedden" },
       { slug: "japandi-nachtkastje", label: "Nachtkastjes" },
@@ -59,6 +67,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Verlichting",
+    beeld: "japandi-hanglamp-hero",
+    href: "/japandi-lamp/",
     subs: [
       { slug: "japandi-hanglamp", label: "Hanglampen" },
       { slug: "japandi-plafondlamp", label: "Plafondlampen" },
@@ -69,6 +79,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Textiel",
+    beeld: "japandi-vloerkleed-hero",
+    href: "/japandi-vloerkleed/",
     subs: [
       { slug: "japandi-vloerkleed", label: "Vloerkleden" },
       { slug: "japandi-kussen", label: "Kussens" },
@@ -78,6 +90,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Decoratie",
+    beeld: "japandi-vaas-hero",
+    href: "/japandi-decoratie/",
     subs: [
       { slug: "japandi-schilderij", label: "Schilderijen" },
       { slug: "japandi-spiegel", label: "Spiegels" },
@@ -88,6 +102,8 @@ const COLLECTIES: Collectie[] = [
   },
   {
     titel: "Keuken en tafel",
+    beeld: "japandi-servies-hero",
+    href: "/japandi-servies/",
     subs: [
       { slug: "japandi-servies", label: "Servies" },
       { slug: "japandi-fruitschaal", label: "Fruitschalen" },
@@ -99,55 +115,35 @@ const COLLECTIES: Collectie[] = [
 type Props = { aanloop: string; titel: string; tekst: string; id?: string };
 
 function Kaart({ c, producten }: { c: Collectie; producten: ProductKort[] }) {
-  const aanwezig = c.subs.filter((s) => producten.some((p) => p.gids === s.slug));
   const laagste = producten.reduce((min, p) => (Number(p.prijs.amount) < Number(min.prijs.amount) ? p : min));
-  // Spreid de vier foto's over de subcategorieën voor een gevarieerd beeld.
-  const fotos: ProductKort[] = [];
-  for (let ronde = 0; fotos.length < 4 && ronde < 4; ronde++) {
-    for (const s of aanwezig) {
-      const p = producten.filter((x) => x.gids === s.slug && x.beeld)[ronde];
-      if (p && fotos.length < 4) fotos.push(p);
-    }
-  }
-  const hoofd = aanwezig[0];
-
   return (
-    <li className="list-none m-0 p-0 flex">
-      <div className="flex flex-col w-full bg-papier rounded-sm shadow-sm overflow-hidden">
-        <Link href={`/${hoofd.slug}/`} className="grid grid-cols-2 gap-px bg-lijn" tabIndex={-1} aria-hidden>
-          {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="aspect-square bg-zand overflow-hidden">
-              {fotos[i]?.beeld && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={fotos[i].beeld!.url} alt="" loading="lazy" className="w-full h-full object-cover" />
-              )}
-            </div>
-          ))}
-        </Link>
-        <div className="p-5 flex flex-col flex-1">
-          <h3 className="font-display text-xl leading-snug m-0">
-            <Link href={`/${hoofd.slug}/`} className="no-underline hover:text-walnoot transition-colors">
-              {c.titel}
-            </Link>
-          </h3>
-          <span className="text-sm text-klei mt-1">
-            {producten.length} {producten.length === 1 ? "product" : "producten"}, vanaf{" "}
-            {formatPrijs(laagste.prijs.amount, laagste.prijs.currencyCode)}
+    <li className="list-none m-0 p-0">
+      <Link
+        href={c.href}
+        className="group block h-full bg-papier shadow-sm rounded-sm overflow-hidden no-underline transition-all duration-200 hover:-translate-y-[3px] hover:shadow-md"
+      >
+        <span className="block aspect-[4/3] overflow-hidden bg-zand">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/images/${c.beeld}.webp`}
+            alt=""
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+        </span>
+        <span className="flex items-start justify-between gap-3 p-4 sm:p-5">
+          <span>
+            <span className="font-display text-lg sm:text-xl block leading-snug">{c.titel}</span>
+            <span className="text-sm text-klei block mt-1">
+              {producten.length} {producten.length === 1 ? "product" : "producten"}, vanaf{" "}
+              {formatPrijs(laagste.prijs.amount, laagste.prijs.currencyCode)}
+            </span>
           </span>
-          <ul className="mt-4 mb-0 p-0 flex flex-wrap gap-2">
-            {aanwezig.map((s) => (
-              <li key={s.slug} className="list-none m-0 p-0">
-                <Link
-                  href={`/${s.slug}/`}
-                  className="inline-block rounded-full bg-zand px-3 py-1 text-[0.8rem] text-inkt no-underline hover:bg-zand-diep transition-colors"
-                >
-                  {s.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+          <span className="text-klei transition-transform duration-200 group-hover:translate-x-1 mt-1" aria-hidden>
+            &#8594;
+          </span>
+        </span>
+      </Link>
     </li>
   );
 }
@@ -164,7 +160,6 @@ export default async function CollectieOverzicht(props: Props) {
     producten: alle.filter((p) => c.subs.some((s) => s.slug === p.gids)),
   })).filter((r) => r.producten.length > 0);
   if (!rijen.length) return null;
-  const totaal = rijen.reduce((n, r) => n + r.producten.length, 0);
 
   return (
     <section id={props.id} className="bg-zand-diep scroll-mt-20">
@@ -174,11 +169,9 @@ export default async function CollectieOverzicht(props: Props) {
             <em>{props.aanloop}</em>
             {props.titel}
           </h2>
-          <p className="mt-4 mb-0">
-            {props.tekst} Op dit moment {totaal} producten in {rijen.length} collecties.
-          </p>
+          <p className="mt-4 mb-0">{props.tekst}</p>
         </div>
-        <ul className="mt-10 mb-0 p-0 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 mb-0 p-0 grid gap-6 grid-cols-2 lg:grid-cols-4">
           {rijen.map((r) => (
             <Kaart key={r.c.titel} c={r.c} producten={r.producten} />
           ))}
