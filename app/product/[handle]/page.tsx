@@ -453,7 +453,7 @@ export default async function ProductPagina({ params }: Params) {
                     href={`/product/${v.handle}/`}
                     className="group flex flex-col h-full bg-papier rounded-sm shadow-sm no-underline transition-shadow duration-200 hover:shadow-md"
                   >
-                    <div className="aspect-square bg-zand rounded-t-sm overflow-hidden">
+                    <div className="aspect-[4/3] bg-zand rounded-t-sm overflow-hidden">
                       {v.beeld && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
