@@ -43,6 +43,11 @@ export function winkelLink(winkel: string, productUrl: string): string {
   return builder ? builder(productUrl) : productUrl;
 }
 
+// Partnerwinkels: geen affiliate, wel een gewone (volgbare) link.
+// Wallways is de vaste partner voor behang en wandbekleding.
+const PARTNERS = new Set(["wallways"]);
+
 export function winkelRel(winkel: string): string {
-  return builderVoor(winkel) ? "sponsored noopener" : "nofollow noopener";
+  if (builderVoor(winkel)) return "sponsored noopener";
+  return PARTNERS.has(normaliseer(winkel)) ? "noopener" : "nofollow noopener";
 }
