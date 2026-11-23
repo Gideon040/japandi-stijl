@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Icoon } from "@/components/shop/Zekerheden";
 
 // Smalle balk met winkelbeloftes direct onder de hero. Alleen beloftes die we
-// waarmaken (zie lib/winkel.ts); geen keurmerken, scores of gratis verzending.
+// waarmaken (zie lib/winkel.ts); geen keurmerken of scores. Verzendtarief volgt Shopify.
 
 const PUNTEN = [
   { icoon: "selectie" as const, titel: "Uitgekozen op stijl", tekst: "materiaal, vorm en maat eerst" },
   { icoon: "vraag" as const, titel: "Eerlijke plus- en minpunten", tekst: "bij elk product" },
   { icoon: "bedenktijd" as const, titel: "14 dagen bedenktijd", tekst: "vanaf ontvangst", href: "/herroepingsrecht/" },
-  { icoon: "slot" as const, titel: "Veilig afrekenen", tekst: "verzendkosten vooraf zichtbaar" },
+  { icoon: "slot" as const, titel: "Gratis verzending", tekst: "in Nederland vanaf € 100", href: "/verzending-en-levering/" },
 ];
 
 export default function UspBalk() {

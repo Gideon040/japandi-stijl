@@ -141,7 +141,7 @@ export default function CartPaneel() {
                 {formatPrijs(cart.subtotaal.amount, cart.subtotaal.currencyCode)}
               </span>
             </div>
-            <p className="mt-1 mb-4 text-xs text-klei">Inclusief btw. Verzendkosten zie je bij het afrekenen.</p>
+            <p className="mt-1 mb-4 text-xs text-klei">Inclusief btw. Verzending € 5,95, gratis vanaf € 100.</p>
             <a
               href={cart.checkoutUrl}
               onClick={naarKassa}

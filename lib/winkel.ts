@@ -1,8 +1,8 @@
 // Vaste winkelteksten op een plek: de uitklaprijen onder de koopknop en de
 // uitleg over levering en retour op de productpagina. Alleen beloftes die we
 // waarmaken: geen keurmerken, reviewscores of gratis-verzendclaims die niet
-// bestaan. Verzendkosten en retourkosten staan hier bewust nog niet in; vul ze
-// aan zodra ze in Shopify zijn ingesteld.
+// bestaan. Verzendkosten volgen Shopify (markt Nederland): 5,95, gratis vanaf
+// 100 euro. Pas deze tekst aan als het tarief in Shopify verandert.
 
 export type Zekerheid = { titel: string; tekst: string; icoon: "selectie" | "bedenktijd" | "slot" | "vraag" };
 
@@ -22,7 +22,7 @@ export const ZEKERHEDEN: Zekerheid[] = [
   {
     icoon: "slot",
     titel: "Veilig afrekenen",
-    tekst: "Betalen gaat via een beveiligde kassa. Je ziet de verzendkosten voordat je betaalt.",
+    tekst: "Betalen gaat via een beveiligde kassa. Verzending in Nederland kost € 5,95 en is gratis vanaf € 100.",
   },
   {
     icoon: "vraag",
@@ -42,8 +42,8 @@ export const STAPPEN: { titel: string; tekst: string }[] = [
     tekst: "Je rekent af via een beveiligde kassa en krijgt direct een bevestiging per e-mail.",
   },
   {
-    titel: "Met zorg verpakt",
-    tekst: "We maken je bestelling klaar en verpakken alles stevig, zodat het heel aankomt.",
+    titel: "Rechtstreeks verzonden",
+    tekst: "De leverancier verpakt je bestelling en stuurt hem rechtstreeks naar je toe.",
   },
   {
     titel: "Bezorgd aan huis",
