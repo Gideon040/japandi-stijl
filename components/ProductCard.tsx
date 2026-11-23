@@ -23,7 +23,7 @@ export default function ProductCard(p: Props) {
   return (
     <div className="bg-papier rounded-sm shadow-sm flex flex-col h-full transition-shadow duration-200 hover:shadow-md">
       {p.beeld && (
-        <div className="aspect-square overflow-hidden rounded-t-sm bg-zand">
+        <div className="aspect-[4/3] overflow-hidden rounded-t-sm bg-zand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={p.beeld}
