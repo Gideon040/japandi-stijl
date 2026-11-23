@@ -1,0 +1,189 @@
+import Link from "next/link";
+import { getAlleProductenKort, type ProductKort } from "@/lib/shopify";
+import { formatPrijs } from "@/lib/prijs";
+
+// Overzicht van alle collecties uit de eigen winkel voor de homepage.
+// Per collectie: vier productfoto's, aantal producten, laagste prijs en
+// links naar de koopgidsen waar de producten staan. Producten worden
+// ingedeeld op hun gids-metafield, dus nieuwe producten verschijnen vanzelf.
+// Een collectie zonder producten wordt overgeslagen.
+
+type Sub = { slug: string; label: string };
+type Collectie = { titel: string; subs: Sub[] };
+
+const COLLECTIES: Collectie[] = [
+  {
+    titel: "Zitten",
+    subs: [
+      { slug: "japandi-bank", label: "Banken" },
+      { slug: "japandi-fauteuil", label: "Fauteuils" },
+      { slug: "japandi-eetkamerstoel", label: "Eetkamerstoelen" },
+      { slug: "japandi-eetkamerbank", label: "Eetkamerbanken" },
+      { slug: "japandi-barkruk", label: "Barkrukken" },
+      { slug: "japandi-poef", label: "Poefen" },
+    ],
+  },
+  {
+    titel: "Tafels",
+    subs: [
+      { slug: "japandi-eettafel", label: "Eettafels" },
+      { slug: "japandi-eettafel-ovaal", label: "Ovale eettafels" },
+      { slug: "japandi-eettafel-rond", label: "Ronde eettafels" },
+      { slug: "japandi-salontafel", label: "Salontafels" },
+      { slug: "japandi-bijzettafel", label: "Bijzettafels" },
+      { slug: "japandi-bureau", label: "Bureaus" },
+    ],
+  },
+  {
+    titel: "Kasten en opbergen",
+    subs: [
+      { slug: "japandi-kast", label: "Kasten" },
+      { slug: "japandi-dressoir", label: "Dressoirs" },
+      { slug: "japandi-ladekast", label: "Ladekasten" },
+      { slug: "japandi-boekenkast", label: "Boekenkasten" },
+      { slug: "japandi-tv-kast", label: "Tv-kasten" },
+      { slug: "japandi-tv-meubel-walnoot", label: "Tv-meubels walnoot" },
+      { slug: "japandi-tv-meubel-beige", label: "Tv-meubels beige" },
+      { slug: "japandi-schoenenkast", label: "Schoenenkasten" },
+      { slug: "japandi-kapstok", label: "Kapstokken" },
+      { slug: "japandi-wasmand", label: "Wasmanden" },
+    ],
+  },
+  {
+    titel: "Slapen",
+    subs: [
+      { slug: "japandi-bed", label: "Bedden" },
+      { slug: "japandi-nachtkastje", label: "Nachtkastjes" },
+      { slug: "japandi-dekbedovertrek", label: "Dekbedovertrekken" },
+    ],
+  },
+  {
+    titel: "Verlichting",
+    subs: [
+      { slug: "japandi-hanglamp", label: "Hanglampen" },
+      { slug: "japandi-plafondlamp", label: "Plafondlampen" },
+      { slug: "japandi-wandlamp", label: "Wandlampen" },
+      { slug: "japandi-tafellamp", label: "Tafellampen" },
+      { slug: "japandi-vloerlamp", label: "Vloerlampen" },
+    ],
+  },
+  {
+    titel: "Textiel",
+    subs: [
+      { slug: "japandi-vloerkleed", label: "Vloerkleden" },
+      { slug: "japandi-kussen", label: "Kussens" },
+      { slug: "japandi-gordijnen", label: "Gordijnen" },
+      { slug: "japandi-deurmat", label: "Deurmatten" },
+    ],
+  },
+  {
+    titel: "Decoratie",
+    subs: [
+      { slug: "japandi-schilderij", label: "Schilderijen" },
+      { slug: "japandi-spiegel", label: "Spiegels" },
+      { slug: "japandi-klok", label: "Klokken" },
+      { slug: "japandi-vaas", label: "Vazen" },
+      { slug: "japandi-bloempot", label: "Bloempotten" },
+    ],
+  },
+  {
+    titel: "Keuken en tafel",
+    subs: [
+      { slug: "japandi-servies", label: "Servies" },
+      { slug: "japandi-fruitschaal", label: "Fruitschalen" },
+      { slug: "japandi-dienblad", label: "Dienbladen" },
+    ],
+  },
+];
+
+type Props = { aanloop: string; titel: string; tekst: string; id?: string };
+
+function Kaart({ c, producten }: { c: Collectie; producten: ProductKort[] }) {
+  const aanwezig = c.subs.filter((s) => producten.some((p) => p.gids === s.slug));
+  const laagste = producten.reduce((min, p) => (Number(p.prijs.amount) < Number(min.prijs.amount) ? p : min));
+  // Spreid de vier foto's over de subcategorieën voor een gevarieerd beeld.
+  const fotos: ProductKort[] = [];
+  for (let ronde = 0; fotos.length < 4 && ronde < 4; ronde++) {
+    for (const s of aanwezig) {
+      const p = producten.filter((x) => x.gids === s.slug && x.beeld)[ronde];
+      if (p && fotos.length < 4) fotos.push(p);
+    }
+  }
+  const hoofd = aanwezig[0];
+
+  return (
+    <li className="list-none m-0 p-0 flex">
+      <div className="flex flex-col w-full bg-papier rounded-sm shadow-sm overflow-hidden">
+        <Link href={`/${hoofd.slug}/`} className="grid grid-cols-2 gap-px bg-lijn" tabIndex={-1} aria-hidden>
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="aspect-square bg-zand overflow-hidden">
+              {fotos[i]?.beeld && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={fotos[i].beeld!.url} alt="" loading="lazy" className="w-full h-full object-cover" />
+              )}
+            </div>
+          ))}
+        </Link>
+        <div className="p-5 flex flex-col flex-1">
+          <h3 className="font-display text-xl leading-snug m-0">
+            <Link href={`/${hoofd.slug}/`} className="no-underline hover:text-walnoot transition-colors">
+              {c.titel}
+            </Link>
+          </h3>
+          <span className="text-sm text-klei mt-1">
+            {producten.length} {producten.length === 1 ? "product" : "producten"}, vanaf{" "}
+            {formatPrijs(laagste.prijs.amount, laagste.prijs.currencyCode)}
+          </span>
+          <ul className="mt-4 mb-0 p-0 flex flex-wrap gap-2">
+            {aanwezig.map((s) => (
+              <li key={s.slug} className="list-none m-0 p-0">
+                <Link
+                  href={`/${s.slug}/`}
+                  className="inline-block rounded-full bg-zand px-3 py-1 text-[0.8rem] text-inkt no-underline hover:bg-zand-diep transition-colors"
+                >
+                  {s.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </li>
+  );
+}
+
+export default async function CollectieOverzicht(props: Props) {
+  let alle: ProductKort[] = [];
+  try {
+    alle = await getAlleProductenKort();
+  } catch {
+    return null;
+  }
+  const rijen = COLLECTIES.map((c) => ({
+    c,
+    producten: alle.filter((p) => c.subs.some((s) => s.slug === p.gids)),
+  })).filter((r) => r.producten.length > 0);
+  if (!rijen.length) return null;
+  const totaal = rijen.reduce((n, r) => n + r.producten.length, 0);
+
+  return (
+    <section id={props.id} className="bg-zand-diep scroll-mt-20">
+      <div className="max-w-wide mx-auto px-6 py-16 sm:py-20">
+        <div className="max-w-content">
+          <h2 className="kop font-display text-3xl sm:text-4xl">
+            <em>{props.aanloop}</em>
+            {props.titel}
+          </h2>
+          <p className="mt-4 mb-0">
+            {props.tekst} Op dit moment {totaal} producten in {rijen.length} collecties.
+          </p>
+        </div>
+        <ul className="mt-10 mb-0 p-0 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {rijen.map((r) => (
+            <Kaart key={r.c.titel} c={r.c} producten={r.producten} />
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}

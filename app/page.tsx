@@ -14,6 +14,7 @@ import { getGepubliceerdeGidsen } from "@/lib/koopgidsen";
 import JsonLd from "@/components/JsonLd";
 import { homepageSchema, ogBeeld } from "@/lib/seo";
 import CollectieBanner from "@/components/shop/CollectieBanner";
+import CollectieOverzicht from "@/components/shop/CollectieOverzicht";
 import UspBalk from "@/components/shop/UspBalk";
 import ProductRij from "@/components/shop/ProductRij";
 import BreedBanner from "@/components/shop/BreedBanner";
@@ -123,17 +124,11 @@ export default function Home() {
 
       <UspBalk />
 
-      <CollectieBanner
+      <CollectieOverzicht
         id="winkel"
-        achtergrond="zand-diep"
         aanloop="Uit onze winkel"
-        titel="Warm walnoot"
-        tekst="Walnoot met beige en zand is waar Japandi nu om draait. Spiegels, kasten en tafels in walnoot, door ons uitgekozen op vorm, maat en prijs."
-        beeld="https://d8j0ntlcm91z4.cloudfront.net/user_30K67cR6GCwZDpzvhJBFob0ZcL2/hf_20261122_101457_fafeac74-9aaf-49da-b67c-20a08861b7aa.png"
-        beeldAlt="Walnoten dressoir onder een ronde spiegel in een Japandi eetkamer"
-        href="/japandi-dressoir/"
-        knop="Bekijk walnoot"
-        handles={["angel-cerda-walnoten-dressoir-3077", "angel-cerda-ronde-spiegel-walnoot-leren-band", "angel-cerda-walnoten-salontafel-tijdschriftenvak", "angel-cerda-rond-nachtkastje-notenhout"]}
+        titel="Deze collecties verkopen we zelf"
+        tekst="Alles hieronder hebben we zelf uitgekozen op vorm, materiaal, maat en prijs, en verkopen we via deze site. Hout, rotan, linnen en steen, in de warme tinten van Japandi."
       />
 
       <section id="definitie" className="scroll-mt-20">
