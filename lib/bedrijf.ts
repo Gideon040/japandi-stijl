@@ -5,16 +5,16 @@
 // getoond.
 
 export const BEDRIJF = {
-  naam: "GRG Great Resources Group B.V.",
+  naam: "GOSTACK",
   handelsnaam: "japandi-stijl.nl",
-  adres: "Twekkelerweg 106",
-  postcode: "7553 LN",
-  plaats: "Hengelo",
+  adres: "Dauphinelaan 70",
+  postcode: "5627 CR",
+  plaats: "Eindhoven",
   land: "Nederland",
-  kvk: "82016666",
-  btw: "NL862306139B01",
+  kvk: "98679112",
+  btw: "NL005347335B26",
   email: "info@japandi-stijl.nl",
-  telefoon: "",
+  telefoon: "06 24242177",
 };
 
 export const BEDRIJF_REGEL = `${BEDRIJF.naam}, ${BEDRIJF.adres}, ${BEDRIJF.postcode} ${BEDRIJF.plaats}. KvK ${BEDRIJF.kvk}, btw ${BEDRIJF.btw}`;
