@@ -54,3 +54,7 @@ export const STAPPEN: { titel: string; tekst: string }[] = [
     tekst: "Thuis toch anders dan gedacht? Je hebt 14 dagen bedenktijd vanaf de dag dat je het product ontvangt.",
   },
 ];
+
+// Betaalmethodes onder de koopknop en in de winkelwagen. Houd deze lijst gelijk
+// aan wat in de Shopify-kassa (Mollie) echt aan staat.
+export const BETAALMETHODES = ["iDEAL", "Visa", "Mastercard", "Apple Pay"];

@@ -1,5 +1,6 @@
 "use client";
 
+import BetaalLogos from "./BetaalLogos";
 import { useEffect } from "react";
 import Link from "next/link";
 import { useCart } from "./CartProvider";
@@ -149,6 +150,7 @@ export default function CartPaneel() {
             >
               Afrekenen
             </a>
+            <BetaalLogos className="mt-3" />
           </div>
         )}
       </div>

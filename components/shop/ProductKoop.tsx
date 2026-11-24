@@ -6,6 +6,7 @@ import { formatPrijs } from "@/lib/prijs";
 import { track } from "@/lib/track";
 import { LEVERING_LABEL } from "@/lib/winkel";
 import InWinkelwagenKnop from "./InWinkelwagenKnop";
+import BetaalLogos from "./BetaalLogos";
 
 // Koopblok op de productpagina: uitvoering kiezen, leveringskaart met prijs en
 // levertijd, en de brede winkelwagenknop.
@@ -143,6 +144,7 @@ export default function ProductKoop({ naam, merk, levertijd, varianten }: Props)
             prijs: Number(variant.price.amount),
           }}
         />
+        <BetaalLogos className="mt-3" />
       </div>
     </div>
   );
