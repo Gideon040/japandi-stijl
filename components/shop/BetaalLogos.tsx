@@ -1,18 +1,23 @@
 import { BETAALMETHODES } from "@/lib/winkel";
 
-// Rustige rij met de betaalmethodes, als tekstbadges in de huisstijl.
+// De echte logo's van de betaalmethodes, als losse bestanden in /public/betaal.
+// iDEAL en Apple Pay komen uit react-pay-icons (MIT), Visa en Mastercard uit
+// payment-icons (MPL-2.0).
 export default function BetaalLogos({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex flex-wrap items-center justify-center gap-1.5 ${className}`} aria-label="Betaalmethodes">
-      <span className="sr-only">Betalen met </span>
+    <ul className={`m-0 flex list-none flex-wrap items-center justify-center gap-1.5 p-0 ${className}`} aria-label="Betaalmethodes">
       {BETAALMETHODES.map((m) => (
-        <span
-          key={m}
-          className="rounded-sm border border-lijn bg-papier px-2 py-0.5 text-[0.7rem] font-medium tracking-wide text-inkt/80"
-        >
-          {m}
-        </span>
+        <li key={m.bestand} className="m-0 p-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/betaal/${m.bestand}.svg`}
+            alt={m.naam}
+            width={38}
+            height={24}
+            className="h-6 w-[38px] rounded-[3px] border border-lijn bg-white object-contain"
+          />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

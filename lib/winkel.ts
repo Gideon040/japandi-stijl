@@ -57,4 +57,9 @@ export const STAPPEN: { titel: string; tekst: string }[] = [
 
 // Betaalmethodes onder de koopknop en in de winkelwagen. Houd deze lijst gelijk
 // aan wat in de Shopify-kassa (Mollie) echt aan staat.
-export const BETAALMETHODES = ["iDEAL", "Visa", "Mastercard", "Apple Pay"];
+export const BETAALMETHODES = [
+  { naam: "iDEAL", bestand: "ideal" },
+  { naam: "Visa", bestand: "visa" },
+  { naam: "Mastercard", bestand: "mastercard" },
+  { naam: "Apple Pay", bestand: "applepay" },
+];

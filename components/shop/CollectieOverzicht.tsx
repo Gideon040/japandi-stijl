@@ -14,6 +14,18 @@ type Collectie = { titel: string; beeld: string; href: string; subs: Sub[] };
 
 const COLLECTIES: Collectie[] = [
   {
+    titel: "Tv-meubels",
+    beeld: "japandi-tv-meubel-beige-hero",
+    href: "/japandi-tv-meubel/",
+    subs: [
+      { slug: "japandi-tv-meubel", label: "Tv-meubels" },
+      { slug: "japandi-tv-kast", label: "Tv-kasten" },
+      { slug: "japandi-tv-meubel-walnoot", label: "Tv-meubels walnoot" },
+      { slug: "japandi-tv-meubel-beige", label: "Tv-meubels beige" },
+      { slug: "japandi-cinewall", label: "Tv-wanden" },
+    ],
+  },
+  {
     titel: "Zitten",
     beeld: "japandi-fauteuil-hero",
     href: "/japandi-fauteuil/",
@@ -48,9 +60,6 @@ const COLLECTIES: Collectie[] = [
       { slug: "japandi-dressoir", label: "Dressoirs" },
       { slug: "japandi-ladekast", label: "Ladekasten" },
       { slug: "japandi-boekenkast", label: "Boekenkasten" },
-      { slug: "japandi-tv-kast", label: "Tv-kasten" },
-      { slug: "japandi-tv-meubel-walnoot", label: "Tv-meubels walnoot" },
-      { slug: "japandi-tv-meubel-beige", label: "Tv-meubels beige" },
       { slug: "japandi-schoenenkast", label: "Schoenenkasten" },
       { slug: "japandi-kapstok", label: "Kapstokken" },
       { slug: "japandi-wasmand", label: "Wasmanden" },
