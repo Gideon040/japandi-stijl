@@ -169,6 +169,27 @@ export default async function ProductPagina({ params }: Params) {
             : "https://schema.org/OutOfStock",
           itemCondition: "https://schema.org/NewCondition",
           seller: { "@id": `${SITE_URL}/#organization` },
+          // Verzend- en retourgegevens, gelijk aan lib/winkel.ts en de
+          // herroepingspagina: 5,95 in NL, gratis vanaf 100 euro; 14 dagen
+          // bedenktijd, retour per post, kosten voor de klant.
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingDestination: { "@type": "DefinedRegion", addressCountry: "NL" },
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: Number(v.price.amount) >= 100 ? 0 : 5.95,
+              currency: "EUR",
+            },
+          },
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            applicableCountry: "NL",
+            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+            merchantReturnDays: 14,
+            returnMethod: "https://schema.org/ReturnByMail",
+            returnFees: "https://schema.org/ReturnFeesCustomerResponsibility",
+            merchantReturnLink: `${SITE_URL}/herroepingsrecht/`,
+          },
         })),
       },
       {
